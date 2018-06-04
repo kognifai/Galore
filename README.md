@@ -5,7 +5,7 @@ Welcome to the Galore!
 
 This open source project contains sample codes, documentation for using Galore.
 
-to get started developing application using Galore and the sample code .
+To get started developing your first application using Galore read the  and the sample code .
 
 # Overview
 
@@ -43,4 +43,5 @@ components of the Galore system are:
 
 
 
-
+# License
+Read the copyright information and terms and conditions for Usage and Development of the software [here](https://github.com/kognifai/Kognifai/blob/master/License.md#copyright--year-kongsberg-digital-as).
