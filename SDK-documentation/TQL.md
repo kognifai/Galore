@@ -826,7 +826,7 @@ This example will return a new sampleset with one channel each element
 of the first row of the input channel is multiply by the elements of the
 second input channel
 
-Note:
+>Note:
 
 -   To use expression on multiple inputs use combine to combine the
     inputs into a vector.
@@ -1587,7 +1587,7 @@ input ~/Test/somedata |> timeout 1m
 input ~/Test/somedata |> timeout 1m useinputtime
 
 ```
-![The marble diagram should be here](.\TQL_Marbles\timeout-marble.svg) "timeout marble diagram")
+![The marble diagram should be here](https://github.com/kognifai/Galore/blob/master/.attachments/timeout-marble.png)
 
 monitor
 -------------
@@ -1623,7 +1623,7 @@ input ~/Test/somedata |> monitor start in 1
 
 
 ```
-![The marble diagram should be here](.\TQL_Marbles\monitor-marble.svg) "monitor diagram")
+![The marble diagram should be here](https://github.com/kognifai/Galore/blob/master/.attachments/monitor-marble.png)
 
 groupdata
 ---------
