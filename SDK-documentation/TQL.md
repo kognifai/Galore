@@ -1122,7 +1122,7 @@ in the sequence may lead to undefined behaviour. This is because the
 input sequence is run backwards until the desired count of event is
 reached.
 
-![The marble diagram should be here](.\TQL_Marbles\takebefore-marble.svg) "takebefore marble diagram")
+![The marble diagram should be here](https://github.com/kognifai/Galore/blob/master/.attachments/takebefore-marble.png)
 
 takeafter
 ---------
@@ -1146,7 +1146,7 @@ takeafter now excl 5. takes 5 items after the given date counting an itme at tim
 Note: The operation only works on historical data. This is expected to
 change.
 
-![The marble diagram should be here](.\TQL_Marbles\takeafter-marble.svg) "takeafter marble diagram")
+![The marble diagram should be here](https://github.com/kognifai/Galore/blob/master/.attachments/takeafter-marble.png)
 
 takefrom
 --------
@@ -1169,7 +1169,7 @@ input ~/Simulator/WTUR01 [defaultTurbinePower] 1d
     |> taketo 2016-01-01T04:00:00Z
 ```
 
-![The marble diagram should be here](.\TQL_Marbles\takefrom-marble.svg) "takefrom marble diagram")
+![The marble diagram should be here](https://github.com/kognifai/Galore/blob/master/.attachments/takefrom-marble.png)
 
 taketo
 ------
@@ -1192,7 +1192,7 @@ input ~/Simulator/WTUR01 [defaultTurbinePower] 1d
     |> takefrom 2016-01-01T00:00:00Z
     |> taketo 2016-01-01T04:00:00Z
 ```
-![The marble diagram should be here](.\TQL_Marbles\taketo-marble.svg) "taketo marble diagram")
+![The marble diagram should be here](https://github.com/kognifai/Galore/blob/master/.attachments/taketo-marble.png)
 
 gapfill
 -------
