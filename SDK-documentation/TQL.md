@@ -1,159 +1,3 @@
-﻿#Table of Contents
-
-[1 Galore Asset Model](#1-galore-asset-model)
-
-[2 Streams of events](#2-streams-of-events)
-
-[3 Event types](#3-event-types)
-
-[4 TQL Syntax](#4-tql-syntax)
-
-[5 Table of All TQL Commands](#5-table-of-all-tql-commands)
-
-[6 TQL Name Constants](#6-tql-name-constants)
-
-[6.1 TQL Name Periods 12](#tql-name-periods)
-
-[6.2 TQL Name Date 12](#tql-name-date)
-
-[6.3 TQL Name Index 12](#tql-name-index)
-
-[6.4 TQL Name Value 13](#tql-name-value)
-
-[7 Node Selector 13](#node-selector)
-
-[7.1 path 13](#path)
-
-[7.2 id 14](#id)
-
-[7.3 attribute name 14](#attribute-name)
-
-[7.4 attribute value 14](#attribute-value)
-
-[7.5 template value 14](#template-value)
-
-[7.6 Chained selectors 14](#chained-selectors)
-
-[7.7 And selectors 14](#and-selectors)
-
-[7.8 Or Selectors 14](#or-selectors)
-
-[8 Parameters 15](#parameters)
-
-[8.1 Interval 15](#interval)
-
-[8.2 Period 15](#period)
-
-[8.3 Expression 15](#expression)
-
-[8.4 Time 16](#time)
-
-[9 Pipeline Operations 16](#pipeline-operations)
-
-[9.1 input 16](#input)
-
-[9.2 tounit 17](#tounit)
-
-[9.3 jitter 17](#jitter)
-
-[9.4 resample 17](#resample)
-
-[9.5 generate 17](#generate)
-
-[9.6 aggregate 18](#aggregate)
-
-[9.7 combine 18](#combine)
-
-[9.8 combinewithouthold 19](#combinewithouthold)
-
-[9.9 merge 19](#merge)
-
-[9.10 debounce 19](#debounce)
-
-[9.11 dotmap 20](#dotmap)
-
-[9.12 topevent 20](#topevent)
-
-[9.13 activeevent 21](#activeevent)
-
-[9.14 activeeventcount 21](#activeeventcount)
-
-[9.15 where 21](#where)
-
-[9.16 wheretext 21](#wheretext)
-
-[9.17 wheretext 21](#wheretext-1)
-
-[9.18 map 21](#map)
-
-[9.19 boolop 23](#boolop)
-
-[9.20 startWithLatest 23](#startwithlatest)
-
-[9.21 takebefore 23](#takebefore)
-
-[9.22 takeafter 23](#takeafter)
-
-[9.23 takefrom 24](#takefrom)
-
-[9.24 taketo 24](#taketo)
-
-[9.25 gapfill 24](#gapfill)
-
-[9.26 dump 24](#dump)
-
-[9.27 amplitudespectrum 24](#amplitudespectrum)
-
-[9.28 powerspectrum 25](#powerspectrum)
-
-[9.29 orderspectrum 25](#orderspectrum)
-
-[9.30 evenangleresampling 25](#evenangleresampling)
-
-[9.31 transpose 25](#transpose)
-
-[9.32 rootmeansquare 25](#rootmeansquare)
-
-[9.33 sliding window 25](#sliding-window)
-
-[9.34 timeseries to matrix 25](#timeseries-to-matrix)
-
-[9.35 lookup, where etc. 25](#lookup-where-etc.)
-
-[9.36 fastfouriertransform 26](#fastfouriertransform)
-
-[9.37 amplitudespectrumfft 26](#amplitudespectrumfft)
-
-[9.38 powerspectrumfft 26](#powerspectrumfft)
-
-[9.39 hanningwindow 26](#hanningwindow)
-
-[9.40 fftavg 26](#fftavg)
-
-[9.41 firfilter 27](#firfilter)
-
-[9.42 fftzeroing 27](#fftzeroing)
-
-[9.43 decimation 27](#decimation)
-
-[9.44 fftcrossphase 28](#fftcrossphase)
-
-[9.45 orbitplot 29](#orbitplot)
-
-[9.46 rollplot 30](#rollplot)
-
-[9.49 pick 30](#pick)
-
-[9.47 slicesampleset 31](#slicesampleset)
-
-[9.48 tosampleset 32](#tosampleset)
-
-[9.49 timeout 33](#timeout)
-
-[9.49 timeout 33](#monitor)
-
-[9.50 groupdata 30](#groupdata)
-[9.51 maps 22](#maps)
 
 # Galore Asset Model
 
@@ -169,7 +13,7 @@ traversal separated by the slash character `/`.
 
 Example: `/Farm/Turbine/Nacelle/WindSpeed`
 
-# Streams of events
+# Streams of Events
 
 The fundamental data structure of Galore is a stream of events Most streams in Galore persists history (but not all). An event in Galore is a time stamped piece of data. [More on events here](#event-types). In Galore, streams are ordered on timestamp.
 
@@ -536,8 +380,7 @@ brackets and semicolon:
 
 # TQL Name Constants
 
-TQL Name Periods
-----------------
+## TQL Name Periods
 
 -   hour
 -   day
@@ -547,8 +390,7 @@ TQL Name Periods
 -   decade
 -   century
 
-TQL Name Date
--------------
+## TQL Name Date
 
 -   now
 -   mintime
@@ -568,16 +410,14 @@ TQL Name Date
 -   nextyear
 -   maxtime
 
-TQL Named Input Element
---------------
+## TQL Named Input Element
 
 -   avg
 -   min
 -   max
 -   count
 
-TQL Named Value
---------------
+## TQL Named Value
 
 -   minvalue
 -   maxvalue
@@ -978,16 +818,16 @@ Parameters:
     omitted or 0, the combine operation will emit for every input
     change.
 
-Note: The force delay should be more than the expected interval of the
+>Note: The force delay should be more than the expected interval of the
 slowest input. I.e. the forcing should only be applied when an input is
 actually and significantly delayed as opposed to just having a bit of
 timing jitter. It should not be used to force a fixed output rate.
 
-Tip: If the input events are not clustered in time, it makes more sense
+>Tip: If the input events are not clustered in time, it makes more sense
 to not use the debounce interval option. Instead, follow the operation
 by resample to sample the inputs at specific times.
 
-Note: The real time and historical version of this operation produces
+>Note: The real time and historical version of this operation produces
 slightly different results since the historical will emit o n every
 distinct timestamp.
 
@@ -1186,7 +1026,7 @@ map 'c["MP"]' Havoygavlen\_Max\_effekt bindings {
 MP=farmMaxPowerInMW[~/HAVGAV [farmMaxPowerInMW]]
 ```
 
-Note:
+>Note:
 
 -   To use expression on multiple inputs use combine to combine the
     inputs into a vector.
