@@ -155,7 +155,7 @@
 [9.50 groupdata 30](#groupdata)
 [9.51 maps 22](#maps)
 
-##1 Galore Asset Model
+# Galore Asset Model
 
 The Galore asset model is a Directed Acyclic Graph (DAG), which is to say that each
 node (except the root node) has a one or more parents and zero or more
@@ -169,7 +169,7 @@ traversal separated by the slash character `/`.
 
 Example: `/Farm/Turbine/Nacelle/WindSpeed`
 
-##2 Streams of events
+# Streams of events
 
 The fundamental data structure of Galore is a stream of events Most streams in Galore persists history (but not all). An event in Galore is a time stamped piece of data. [More on events here](#event-types). In Galore, streams are ordered on timestamp.
 
@@ -202,7 +202,7 @@ Examples of streams in Galore:
     as weather forecasts, production forecasts, power curves, amplitude
     spectrum and much more.
 
-##3 Event types 
+# Event types 
 
 The following event types are supported by TQL
 
@@ -242,7 +242,7 @@ Most TQL operations work on a subset of types. Some operations have
 different parameters for different types of input Streams. Boolean
 operations works on alarm Streams active property.
 
-##4 TQL Syntax
+# TQL Syntax
 
 TQL defines a functional pipeline.
 
@@ -275,7 +275,7 @@ brackets and semicolon:
 |> map 'v[0]+v[1]+v[2]+v[3]'
 ```
 
-##5 Table of All TQL Commands
+# Table of All TQL Commands
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   Legend:
@@ -283,11 +283,10 @@ brackets and semicolon:
   -  *H* = *History*                                                
 ----------------------- --------- -------------------------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-​                                                                                             
+| Command | R,H |Signature | Short Description|
+|------|------|----------|----------|                                                                                            
 
-  Command                 **R,H**   **Signature**                                            **Short Description**
-
-  aggregate               R,H       DoublesEvent -\> DoublesEvent                            Aggregates the input sequence into a single value or a value for each period
+  aggregate |   R,H |  DoublesEvent -\> DoublesEvent  |  Aggregates the input sequence into a single value or a value for each period|
 
   aligneventtime          R,H                                                                
 
@@ -534,9 +533,8 @@ brackets and semicolon:
                                     AlarmEvent -\> AlarmEvent\                               
                                     StateChangeEvent -\> StateChangeEvent                    
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-##6 TQL Name Constants
+# TQL Name Constants
 
 TQL Name Periods
 ----------------
