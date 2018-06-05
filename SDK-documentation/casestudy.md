@@ -52,7 +52,7 @@ set up the "Connectors" to gather all the data from the various data
 producing systems. The edge solution will automatically set up an asset
 model in Galore that might look something like this:
 
-![EdgeModel](images/EdgeModel.png) Edge Model
+![EdgeModel](https://github.com/kognifai/Galore/blob/master/.attachments/EdgeModel.png) Edge Model
 
 The asset model can be viewed in and edited the galore configuration
 tool. The circular items represent assets and sub-assets. The other
@@ -99,7 +99,7 @@ semantic model.
 
 Our turbine asset model could look something like this:
 
-![AssetModel](TurbineAssetModel.png) Turbine Asset Model
+![AssetModel](https://github.com/kognifai/Galore/blob/master/.attachments/TurbineAssetModel.png) Turbine Asset Model
 
 This is a very much simplified model of a wind turbine, but we already
 have a representation of some of the main components of a real turbine.
