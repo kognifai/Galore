@@ -1,5 +1,4 @@
 
-
 # Galore
 
 Welcome to the Galore!
@@ -42,14 +41,21 @@ components of the Galore system are:
 
 
 # Galore Asset Model
-To get started developing your first application using Galore read the Galore Asset model content and use the sample codes in [Galore Asset Model](https://github.com/kognifai/Galore/blob/master/SDK-documentation/TQL.md).
+To start developing your application using Galore, read the topics in the  following table:
 
+| Topic | Link | Description | 
+|------|----------|----------|
+ Galore Asset Model | [Galore Asset Model](https://github.com/kognifai/Galore/blob/master/SDK-documentation/TQL.md)|The Galore asset model is a Directed Acyclic Graph (DAG)|
+ TQL Syntax| [TQL Syntax](https://github.com/kognifai/Galore/blob/master/SDK-documentation/TQL%20Syntax.md)|TQL defines a functional pipeline. |
+  Node Selector | [Node Selector](https://github.com/kognifai/Galore/blob/master/SDK-documentation/Node%20Selector.md)|The node selector is an expression for selecting one or more nodes from the Galore. |
+ Pipeline Operations | [Pipeline Operations](https://github.com/kognifai/Galore/blob/master/SDK-documentation/Pipeline%20Operations.md)|
 
 
 # Case Study
 In order to get a better overview of the galore capabilities, we will explore it in a simplified case study.
 
 [Case Study](https://github.com/kognifai/Galore/blob/master/SDK-documentation/casestudy.md)
+
 
 # License
 Read the copyright information and terms and conditions for Usage and Development of the software [here](https://github.com/kognifai/Kognifai/blob/master/License.md#copyright--year-kongsberg-digital-as).
