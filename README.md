@@ -42,9 +42,9 @@ components of the Galore system are:
 
 
 # Galore Asset Model
-To get started developing your first application using Galore read the Galore Asset model content and use the sample codes given in the following link .
+To get started developing your first application using Galore read the Galore Asset model content and use the sample codes in [Galore Asset Model](https://github.com/kognifai/Galore/blob/master/SDK-documentation/TQL.md).
 
-[Galore Asset Model](https://github.com/kognifai/Galore/blob/master/SDK-documentation/TQL.md)
+
 
 # Case Study
 In order to get a better overview of the galore capabilities, we will explore it in a simplified case study.
