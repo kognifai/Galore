@@ -7,7 +7,7 @@ This open source project contains sample codes, documentation for you to get sta
 
 # Overview
 
-Galore is one of the storage systems that can be leveraged by kognifai
+Galore is one of the storage systems that can be leveraged by Kognifai
 applications. Galore is native to Kognifai and is used by many of the
 Kognifai applications provided by Kongsberg Digital. The major
 components of the Galore system are:
