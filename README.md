@@ -1,7 +1,7 @@
 
 # Galore
 
-Welcome to the Galore!
+Welcome to Galore!
 
 This open source project contains sample codes, documentation for you to get started with Galore.
 
@@ -23,7 +23,7 @@ components of the Galore system are:
 
     -   Sample set streams.
 
-    -   We will explore the capabilities of these services in more details later.
+   We will explore the capabilities of these services in more details later.
     
 -   A query service that allows simple and complex combined historical and realtime queries using the TQL functional query language.
 
