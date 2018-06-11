@@ -4,14 +4,14 @@ Galore Case Study
 In order to get a better overview of the galore capabilities, we will
 explore it in a simplified case study.
 
-Lets assume that we are a small Wind Farm owner and operator and we want
+Let us assume that we are a small Wind Farm owner and operator and we want
 to get better control over our assets. In this case the assets are wind
 turbines and related infrastructure. Galore is very general with regards
 to what type of assets it can model. We could just as well have chosen
 our case study to be about ships, oil rigs, fish farms and so on. In
 other words, any asset that lends itself to hierarchical modelling and
 that produces data that can be represented as streams of measurements,
-events and samplesets is a good match for Galore.
+events and sample sets is a good match for Galore.
 
 Data Acquisition/Data Ingest
 ============================
@@ -84,7 +84,7 @@ each tag that describes the data in the stream e.g.:
     where each column can represent any physical parameter sampled at
     regular interval along another physical dimension such as time. The
     metadata describes what each column represent. In our simplified
-    case, we have 3 columns with temperature, windspeed and wind
+    case, we have 3 columns with temperature, wind speed and wind
     direction sampled every hour for the next 48 hours
 
 Asset modelling
@@ -140,7 +140,7 @@ about that particular part of the system. For example:
 -   TQL \<ref to TQL doc\> queries (for nodes generating new streams
     derived from other streams)
 
--   Parameters for TQL queries such as constants and lookuptables.
+-   Parameters for TQL queries such as constants and lookup tables.
 
 -   Access control attributes. These allow nodes to be hidden or write
     protected so that only certain users can read or modify them.
@@ -160,7 +160,7 @@ meant. The Galore stream is an abstraction of data that has several
 attractive properties:
 
 -   It is an ordered sequence of data items, This makes it suitable to
-    represent sequences of measurements, in other words timeseries.
+    represent sequences of measurements, in other words time series.
 
 -   It lends itself to pipeline processing that is, processing
     operations can be chained to transform streams into new streams. TQL
@@ -234,11 +234,11 @@ The Galore asset model allows the creation of implicit streams for drill
 down. An event stream will be propagated to its parent node and merged
 with event streams from other child nodes. This allows implicit streams
 of events to be formed on each node comprising all the event on all
-subnodes. This allows the client application to easily extract events
+sub nodes. This allows the client application to easily extract events
 related to a particular subsystem. This allows the end user to drill
 down into the asset model and see only the relevant events.
 
-For timeseries nodes and sampleset nodes a number time based aggregated
+For time series nodes and sample set nodes a number time based aggregated
 streams are created in addition to the raw data streams. This allows
 very fast access to aggregate of large time periods. For events the
 aggregate contains the number and type events in the period. For
@@ -246,5 +246,5 @@ measurements, the aggregate contains average, minimum, maximum and
 number of measurements.
 
 The time series viewer (A general tool used to explore galore
-timeseries) relies heavily on this to provide a smooth interactive user
+time series) relies heavily on this to provide a smooth interactive user
 experience with fast interactive zooming.
