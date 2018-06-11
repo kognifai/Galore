@@ -15,9 +15,8 @@ components of the Galore system are:
 -   A number of services for storing, retrieving and processing data. The most
     important services are:
 
-    -   Asset modelling
-
-    -   Measurement aka vector streams aka timeseries
+  - [Assetmodelling](https://github.com/kognifai/Galore/blob/master/SDK-documentation/TQL.md)`
+  - Measurementakavectorstreamsakatimeseries
 
     -   StateEvent streams aka Alarms&Events
 
