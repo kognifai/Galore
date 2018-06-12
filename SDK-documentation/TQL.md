@@ -1,15 +1,9 @@
 
 # Galore Asset Model
 
-The Galore asset model is a Directed Acyclic Graph (DAG), which is to say that each
-node (except the root node) has a one or more parents and zero or more
-children. Each node in the DAG has a tag (except the root node). The
-tag is a string that identifies the node in the context of its parent
-node. The tag must not be confused with the nodes display node. Each
-node has a path that uniquely identifies it. The path describes how to
-traverse the DAG from the root to reach the node. The path is
-effectively a list of the tags of each node visited during this
-traversal separated by the slash character `/`.
+The Galore asset model is a Directed Acyclic Graph (DAG), in other words, each node (except the root node) has one or more parents and zero or more children. Each node in the DAG has a tag (except the root node). Tag is a string that identifies the node in the context of its parent node. The tag must not be confused with the nodes' display node. Each node has a path that uniquely identifies it. 
+
+The path describes how to traverse the DAG from the root to reach the node. The path is a list of tags of each node visited during this traversal and separated by the Slash character `/`.
 
 Example: `/Farm/Turbine/Nacelle/WindSpeed`
 
