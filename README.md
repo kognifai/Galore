@@ -24,7 +24,7 @@ Galore is native to Kognifai and many Kognifai applications leverage Galore capa
 
 -   A calculation service that allows simple and complex creation of new streams (with  history stored) using the TQL functional query language.
 
-    These services are accessible by end user applications and other services by REST APIs, Signal R and WCF services.
+    These services are accessible by end user applications and other services through REST APIs, Signal R and WCF services.
 
 -   Client libraries (C\# and javascript/typescript) can be leveraged by end user applications.
 
