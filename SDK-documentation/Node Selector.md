@@ -12,14 +12,14 @@ the Galore. A node can be selected in several ways:
 
 Node selectors can also be "chained" to select nodes in multiple steps,
 as described below. Nodes selected by the previous part of a chain
-becomes the context in which the current part of a chain is applied.
+become the context in which the current part of a chain is applied.
 This makes it possible to use relative paths.
 
 path
 ----
 
 A path selector is a path prefixed by a tilde `~` character. Paths are
-similar to file system paths. Wildcards "*" will match any character in
+similar to file system paths. Wildcards "*" matches any character in
 a node tag. "." matches the current context node. ".." matches the
 parent node. The context node depends on the execution context of the
 selector, normally this is the root node or the previous part of a
