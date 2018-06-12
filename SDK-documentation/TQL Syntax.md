@@ -2,18 +2,16 @@
 
 TQL defines a functional pipeline.
 
-The general form of a query is
+The general form of a query is:
 ```
 Operation1 p1a p1b ... |> Operation2 p2a p2b |> Operation p3a p3b
 ...
 ```
-p1a, p1b etc are parameters
+p1a, and p1b etc are parameters.
 
-Note that parameters are not usually named. The order of the parameters is 
-important unless explicitly stated.
-
-More complex queries can be formed by grouping subqueries using square
-brackets and semicolon:
+> Note: 
+- Parameters are not usually named. The order of the parameters is important unless explicitly stated.
+- More complex queries can be formed by grouping subqueries using square brackets and semicolon.
 
 ```
 [
@@ -33,13 +31,13 @@ brackets and semicolon:
 
 # Table of All TQL Commands
 
- > Legend:
+ > Note:
   -  *R* = *Real time*
   -  *H* = *History*                                                
--
+  
 | Command | R,H |Signature | Short Description|
 |------|------|----------|----------|                                                                                            
-aggregate |   R,H |  DoublesEvent -\> DoublesEvent  |  Aggregates the input sequence into a single value or a value for each period|
+aggregate |   R,H |  DoublesEvent -\> DoublesEvent  |  Aggregates the input sequence into a single value or a value for each period.|
 aligneventtime | R,H |                                                               
 amplitudespectrum| R,H | SampleSetEvent -\> SampleSetEvent| Creates an amplitude spectrum for each channel in the sample set|
 amplitudespectrumfft|   R,H | SampleSetEvent(*2) -\> SampleSetEvent | Creates an amplitude spectrum based on output from the fastfouriertransform-operation for each channel in the sample set. Each channel must have real and imaginary values.|
