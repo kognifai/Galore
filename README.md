@@ -1,30 +1,30 @@
 
 # Galore
 
-Welcome to Galore!
+Welcome to Galore documentation!
 
-This open source project contains sample codes, documentation for you to get started with Galore.
+Our Galore documentation page includes  all the documentation and sample codes. Everything from SDK, to sample codes. 
+
 
 # Overview
 
-Galore is one of the storage systems that can be leveraged by Kognifai
-applications. Galore is native to Kognifai and used by many of the
-Kognifai applications provided by Kongsberg Digital. The major
-components of the Galore system are:
+Kognifai applications leverage Galore capabilities for storage because it is one of the storage system.
 
--   A number of services for storing, retrieving and processing data. The most
-    important services are:
+Galore is native to Kognifai and  many Kognifai applications use it for storage. The major Components of the Galore system are:
 
-  - [Assetmodelling](https://github.com/kognifai/Galore/blob/master/SDK-documentation/TQL.md)`
-  - Measurementakavectorstreamsakatimeseries
+A number of services is used for storing, retrieving and processing data. The most important services are:
+
+  - [Asset modelling](https://github.com/kognifai/Galore/blob/master/SDK-documentation/TQL.md)
+  
+  - Measurement aka vector streams aka time series
 
     -   StateEvent streams aka Alarms&Events
 
     -   Sample set streams.
 
-   We will explore the capabilities of these services in more details later.
+       We will explore the capabilities of these services in more details later.
     
--   A query service that allows simple and complex combined historical and realtime queries using the TQL functional query language.
+-   A query service that allows simple and complex (historical and real-time combined) queries using the TQL functional query language.
 
 -   A calculation service that allows simple and complex creation of new streams with stored history using the TQL functional query language.
 
@@ -39,7 +39,7 @@ components of the Galore system are:
 
 
 # Galore Asset Model
-To start developing your application using Galore, read the topics in the  following table:
+To start developing your application using Galore. Here are few quick links in the following table to get you started faster.
 
 | Topic | Link | Description | 
 |------|----------|----------|
