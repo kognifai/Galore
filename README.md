@@ -1,5 +1,5 @@
-
-# Galore
+ 
+# Galore    [![Gitter Join the chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/kognifai/Lobby)
 
 Welcome to Galore documentation!
 
