@@ -6,7 +6,7 @@ Welcome to Galore documentation!
 Our Galore documentation page includes  all the documentation and sample codes. Everything from SDK, to sample codes. 
 
 
-# Overview
+### Overview
 
 Galore is native to Kognifai and many Kognifai applications leverage Galore capabilities for storage because it is one of the storage system. The major Components of the Galore system are:
 
@@ -33,7 +33,7 @@ Galore is native to Kognifai and many Kognifai applications leverage Galore capa
 -   General Tools for exploring data, stored by the system.
 
 
-# Galore Asset Model
+### Components of Galore system
 A number of services is used for storing, retrieving and processing data. Here are the quick links to access the most important services.
 
 | Topic | Link | Description | 
@@ -44,9 +44,9 @@ Streams|[Streams](https://github.com/kognifai/Galore/blob/master/SDK-documentati
  Node Selector | [Node Selector](https://github.com/kognifai/Galore/blob/master/SDK-documentation/Node%20Selector.md)|The node selector is an expression for selecting one or more nodes from the Galore. |
  Pipeline Operations | [Pipeline Operations](https://github.com/kognifai/Galore/blob/master/SDK-documentation/Pipeline%20Operations.md)| Operations that can be performed in pipeline are described in this topic.
 
-# Case Study
+### Case Study
 In order to get a better overview of the Galore capabilities in a simplified case study, click [here](https://github.com/kognifai/Galore/blob/master/SDK-documentation/casestudy.md).
 
-# License
+### License
 Read the copyright information and terms and conditions for Usage and Development of the software [here](https://github.com/kognifai/Kognifai/blob/master/License.md#copyright--year-kongsberg-digital-as).
 
