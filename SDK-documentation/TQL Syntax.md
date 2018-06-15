@@ -10,8 +10,9 @@ Operation1 p1a p1b ... |> Operation2 p2a p2b |> Operation p3a p3b
 p1a, and p1b etc are parameters.
 
 > Note: 
-- Parameters are not usually named. The order of the parameters is important unless explicitly stated.
-- More complex queries can be formed by grouping subqueries using square brackets and semicolon.
+- Parameters are not generally named. The order of the parameters is important unless explicitly stated.
+- Complex queries are formed by grouping sub queries, the formation must be: subqueires in square brackets and ends with semicolons.
+ 
 
 ```
 [
@@ -32,7 +33,7 @@ p1a, and p1b etc are parameters.
 # Table of All TQL Commands
 
  > Note:
-  -  *R* = *Real time*
+  -  *R* = *Real-time*
   -  *H* = *History*                                                
   
 | Command | R,H |Signature | Short Description|
@@ -108,12 +109,12 @@ mlptrainer |             H  |       DoublesEvent -\> SampleSetEvent   |         
 mma   |                  R,H  |     DoublesEvent -\> DoublesEvent     |                       An alias of Aggregate operation that use minmaxaverage as type.|
 multilayerperceptron|    R,H |      DoublesEvent -\> DoublesEvent\    |                       Run the trained neural network on the current input.|
 | | |                                    DoublesEvent, SampleSetEvent -\> DoublesEvent |           
-|mux |                    R,H |      [ SampleSetEvent ] -\> SampleSetEvent\  |               Select whihc of its inputs (not including the first one) will be output base on the state of the first input which must be of StateChangeEvent type.|
+|mux |                    R,H |      [ SampleSetEvent ] -\> SampleSetEvent\  |               Select which of its inputs (not including the first one) will be output base on the state of the first input which must be of StateChangeEvent type.|
 | | |                                   [ DoublesEvent ] -\> DoublesEvent\|                     
  | | |                                   [ AlarmEvent ] -\> AlarmEvent\ |                        
  | | |                                   [ AggregatedLargeEvents ] -\> AggregatedLargeEvents\ |  
  | | |                                   [ TimeLineEvent ] -\> TimeLineEvent |                   
-  normalization |          R,H |      DoublesEvent -\> DoublesEvent\  |                         Nomalization of the data by the mean and/or standard deviation.|
+  normalization |          R,H |      DoublesEvent -\> DoublesEvent\  |                         Normalization of the data by the mean and/or standard deviation.|
  | | |                                   SampleSetEvent -\> SampleSetEvent  |                      
 onedit |                 H    |     void -\> TimeRangeEvent    |                              Emits an event when the history data referenced by the input selector changed.|
   onconfig  |              R|         void -\> ConfigurationEvent   |                           Emits an event when the selected node configuration change.|
@@ -147,7 +148,7 @@ sliceperiod |            R,H  |     SampleSetEvent -\> SampleSetEvent     |     
 slicesampleset |         R,H  |     SampleSetEvent -\> DoublesEvent   |                       Return a slice of a sampleset as a sequence of double events.|
   slidingwindow |          R,H  |     DoublesEvent -\> SampleSetEvent |                         Slides a window over a sequence of vectors and emits a matrix with the contents of the window.|
  splitperiod |            H    |     SampleSetEvent -\> SampleSetEvent  |                      Split a sampleset that was sample in time in a sequence of n given period.|
-startwithlatest|         R,H   |    SampleSetEvent -\> SampleSetEvent\  |                     Modifies the input operation so that it starts with the last known element. Intented for use in realtime queries only.|
+startwithlatest|         R,H   |    SampleSetEvent -\> SampleSetEvent\  |                     Modifies the input operation so that it starts with the last known element. Intented for use in real-time queries only.|
 | | |                                   DoublesEvent -\> DoublesEvent\   |                        
 | | |                                    AlarmEvent -\> AlarmEvent\     |                          
 | | |                                    ListEvent -\> ListEvent\    |                             
@@ -195,7 +196,7 @@ taketo |                 H |        SampleSetEvent -\> SampleSetEvent\ |     Spe
 | | |                                    TimeLineEvent -\> TimeLineEvent|                          
 timeline |              R,H |     Void -\> TimeLineEvent|                                  
  topevent |              R,H   |   AlarmEvent -\> ListEvent | Produces the top N active events (alarms) at each point in time as a list.|
-tosampleset |           H  |      DoublesEvent -\> SampleSetEvent |  convert a squence of double events to a sampleset.|
+tosampleset |           H  |      DoublesEvent -\> SampleSetEvent |  convert a sequence of double events to a sampleset.|
 totimerange|            R,H|      SampleSetEvent -\> TimeRangeEvent   |                    Convert a sampleset with at least one channel sample in time to a time range event.|
   tounit  |               R,H |     DoublesEvent -\> DoublesEvent\  |                        Define the output unit of a query operation.|
 | | |                                    SampleSetEvent -\> SampleSetEvent  |                     
