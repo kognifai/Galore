@@ -28,7 +28,7 @@ Examples of streams in Galore:
 
 -  **Alarm log** is a sequence of alarms on a system or subsystem
 
--  **Active alarms** is a sequence of lists where each list contains the
+- **Active alarms** is a sequence of lists where each list contains the
     active alarms at that time. Whenever an alarms active state changes,
     the change is reflected in the by active alarms sequence. All
     systems and sub systems have an active alarms sequence.
