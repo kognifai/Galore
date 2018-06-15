@@ -1,20 +1,23 @@
 # Streams
 
-Many time series databases and systems have a strict separation between real-time and historical data and provide very different abstraction for accessing them. Galore uses a stream abstraction that provides access to both real-time and historical data in the same way.
+Galore uses stream abstraction which provides access to both real-time and histroical data, whereas, many time series databases and systems have  strict data separation methods for real-time and historical data as well as they have different abstraction methods for accessing real-time and historical data. 
 
-A stream can be compared to a pipe with some continuous flow of some medium often a fluid. The Galore streams do not have a flow of a continuous medium of course but rather discrete items called events. The events have different types related to which type of stream they belong to. But all events have a UTC timestamp set as close to the origin of the event as possible.
+A stream can be compared to a pipe with continuous flow of some medium often a fluid. The streams do not have a continuous flow of  a course medium, rather have discrete items called events. 
 
-The galore streams have certain properties
+Events have different types related to which type of stream they belong to. But all events have a UTC timestamp set as close to the origin of the event as possible.
 
-  - They are strictly ordered by timestamp (this can be  violated by some types of aggregate streams)
 
-  - Event timestamps are unique for most stream types (this can be  violated by some types of streams)
+The following are the Galore Streams properties:
+
+  - They are strictly ordered by timestamp (this can be  violated by some aggregate stream types)
+
+  - Event timestamps are unique for most of the stream types (this can be  violated by some stream types)
 
   - They are strongly typed
 
-  - The can contain history, but some are real-time only
+  - They can contain history, but some are real-time only
 
-When data is ingested into galore, the individual events are dispatched to their respective streams depending on their source identifier, either an "external id" identifying the sensor or device producing the measurement or event, or a galore specific stream id or path in the asset model.
+When data is ingested into Galore, the individual events are dispatched to their respective streams depending on their source identifier, either an **external id** to identify the sensor or device producing the measurement or event, or a galore specific stream id or path in the asset model.
 
 This streams are often called the "raw data" streams. Each raw data stream is associated with a set of metadata describing the stream. The raw data stream is always associated with a single node in the asset model.
 
