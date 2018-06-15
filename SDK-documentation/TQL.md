@@ -23,42 +23,40 @@ Other important properties of Galore streams:
 
 Examples of streams in Galore:
 
--  **Measurement time series** is a sequence of timestamp values or
-    vectors. Value is a vector with a single element.
+-  **Measurement time series** is a sequence of timestamp values or vectors. Value is a vector with a single element.
 
 -  **Alarm log** is a sequence of alarms on a system or a subsystem
 
-- **Active alarms** is a sequence of lists where each list contains active alarms. Whenever the state of an active alarm changes, it       reflects in active alarms sequence. Each system and sub system has an active alarms sequence.
+- **Active alarms** is a sequence of lists where each list contains active alarms. Each system and sub system has an active alarms sequence, whenever the state of an active alarm changes, it reflects in the active alarms sequence.
 
--  **Sample set logs** are streams of complex data structures such as weather forecasts, production forecasts, power curves,           amplitude spectrum and much more.
+-  **Sample set logs** are streams of complex data structures such as weather forecast, production forecast, power curves,           amplitude spectrum, and much more.
 
 # Event types 
 
 The following event types are supported by TQL:
 
--   **Vector -** This event has a vector of floating point values with one or more elements. Stored Streams of vector events have an associated time series node in the Galore asset model. The node contains **element descriptors** describing the vector element properties such as storage unit and display unit. The elements descriptors are also referred to as **metadata** for the vector or time series.
+-   **Vector -** This event has a vector of floating point values with one or many elements. Stored streams of vector events have an associated time series node in the Galore asset model. The node contains **element descriptors** which describes the vector element properties such as storage unit and display unit. The element descriptors is also referred as **metadata** in vector and time series.
 
--   **Sample set -** This event is a matrix or table. Each column in the matrix is a **channel**. 
+-   **Sample set -** This event is a matrix or a table. Each column in the matrix is a **channel**. 
       For example,  for a weather forecast one channel can be a wind speed and another a temperature. 
-    Stored Streams of sample set events have an associated sample set node in the Galore asset model. The node contains **channel descriptors** describing the channel properties such as storage unit display unit, sample rate and sample dimension. The channel descriptors are also referred to as **meta data** for the sample set sequence.
+    Stored streams of sample set events have an associated sample set node in the Galore asset model. The node contains **channel descriptors** which describes the channel properties such as storage unit display unit, sample rate and sample dimension. The channel descriptors is also referred as **meta data** in the sample set sequence.
 
--   Alarm. An alarm event has the following properties:
+-   **Alarm-** An alarm event has the following properties:
 
     -   Level: (Info/light blue, Warning/yellow, Alarm/red,
         Emergency/magenta)
 
     -   Active: (true, false/green)
 
-    -   Acknowledged (true or false). User or system(auto ack.) has
-        acknowledge the alarm
+    -   Acknowledged: (true or false). A user or system(auto ack.) has
+        acknowledged the alarm
 
-    -   Passed (true or false). Triggering condition has passed but
+    -   Passed: (true or false). Triggering condition has passed but
         alarm is not acknowledged
 
-    -   message
+    -   Message
 
-Most TQL operations work on a subset of types. Some operations have
-different parameters for different types of input Streams. Boolean
-operations works on alarm Streams active property.
+Most TQL operations work on subset types. Some operations have different parameters for different input stream types. Boolean
+operations work on alarm streams active property.
 
 
