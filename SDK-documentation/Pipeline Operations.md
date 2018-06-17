@@ -4,67 +4,43 @@ Pipeline Operations
 input
 -----
 
-The input operation is used to specify a starting point for a pipeline.
-A single input operation can specify one or more event source nodes from
-the Galore asset model. If multiple nodes are selected, parallel
-pipelines are created and each consecutive single input operation is
-applied to each pipeline. The first multi input operation will merge the
-pipelines.
+The input operation is used to specify starting point for a pipeline. A single input operation can specify one or more event source nodes from Galore asset model. If multiple nodes are selected, parallel pipelines are created and each consecutive single input operation is applied to each pipeline. The first multi-input operation will merge the pipelines.
 
 The input operation has the form:
 ```
 input <nodeselector> [stream selector] [acceptStale]
 ```
-The stream selector has the form
+The stream selector has the form:
 ```
 -[related-|count-]<streamtype> [[>=|<=]pre-aggregate interval]
 ```
-Streamtype can be prefixed with:
--   related. Selects events that have propagated to the selected node
-    from different source nodes e.g. from subsystem or as causes of
+Stream type can be prefixed with:
+-   related - Selects events that have propagated to the selected node from different source nodes e.g. from subsystem or as causes of
     other events
--   count. For large event types such as samplesets and matrixes count
-    can be used to indicate where they exist in time e.g. for navigation
-    without loading the whole event. This also combines with the
-    preaggregate interval parameter to get number of events in a period.
+-   count - For large event types such as sample sets and matrixes count can be used to indicate where they exist in time e.g. for         navigation without loading the whole event. This also combines with the pre aggregate interval parameter to get number of events       in a period.
 
-The optional `>=` and `<=` operators are used to select a preaggregate without
-knowing the exact level This is used e.g. when calculating a suitable
-resolution for plotting or event aggregates and allows the client
-application to not know the exact levels available.
+The optional `>=` and `<=` operators are used to select a pre aggregate without knowing the exact level. This is used e.g. when calculating a suitable resolution for plotting or event aggregates and allows the client application to not know the exact levels available.
 
 Stream types can be customized but these are predefined by the system:
-
--   timeline: Obsolete but kept for use by Galore timelines. Should
-    move to custom types.
--   vec: timestamp + vector, also known as timeseries
--   ss: sampleset
--   matrices: lists of matrix
--   matrix: matrix
--   alarm: galore built in alarm type
--   sc: generic state change: use custom type in stead
--   streamedit: real time only information about changes in history for a
-    stream. real time only.
--   configedit: notification about asset model changes
--   calculatorstate: the state of a calculator. Real time only.
--   userack: for clients to acknowledge alarms with this options set in
-    the calculator or monitor
+ 
+-   timeline- Obsolete but kept for use by Galore timelines. Must move to custom types
+-   vec- Timestamp + vector, also known as time series
+-   ss- Sample set
+-   matrices- List of matrixes
+-   matrix- Matrix
+-   alarm- Galore built-in alarm type
+-   sc- Generic state change, use custom type instead
+-   streamedit- Real-time information about changes in history for a stream. Real-time only
+-   configedit- Notification about asset model changes
+-   calculatorstate- The state of a calculator. Real-time only
+-   userack- for clients to acknowledge alarms with this options set in the calculator or monitor
 
 Parameters:
 
--   nodeSelector. See chapter 5 Node Selector. Selects one or more nodes
-    in the Galore asset model. If the node is not an event
-    source node, all descendants that are alarm log nodes is
--   streamSelector. See X. Stream selector. Nodes may have multiple
-    streams associated e.g. propagated or related events, preaggregates,
-    change notifications etc. In many cases the stream selector can be
-    left out because it is inferred from the node type.
--   interval. Is a part of the stream selector. Determines which
-    pre-aggregate interval is selected. The closest larger preaggregate
-    interval will be selected. Default is 0 i.e. not aggregated data.
-    See 6.1 Interval.
--   acceptStale. Forces the underlying index to update before reading
-    alarms. Default is false.
+-   nodeSelector- See [Node Selector](https://github.com/kognifai/Galore/blob/master/SDK-documentation/Node%20Selector.md) selects one     or many nodes in the Galore asset model. If the node is not an event source node, all descendants that are alarm log nodes
+-   streamSelector- See [Stream selector](#Strea,selector). Nodes may have multiple streams associated e.g. propagated or relate           events, preaggregates, change notifications etc. In many cases the stream selector can be left out because it is inferred from the     node type.
+-   interval- Interval is a part of the stream selector. Determines which pre-aggregate interval is selected. The closest larger pre       aggregate interval will be selected. Default is 0 i.e. not aggregated data. See 6.1 Interval.
+-   acceptStale. Forces the underlying index to update before reading alarms. Default is false.
 
     Examples:
 ```
@@ -199,7 +175,7 @@ input ~/Simulator/WTUR* [defaultTurbinePower] |> combine 10s
 Parameters:
 
 -   optional debounce interval (real time only, default 0). If one or
-    more of the input is delayed, emit a new combined event by reusing
+    many of the input is delayed, emit a new combined event by reusing
     the previous value of the delayed inputs. I.e resample with hold. If
     omitted or 0, the combine operation will emit for every input
     change.
@@ -393,7 +369,7 @@ map
 
 Parameters:
 
--   One or more expression(s). See 6.3 Expression. The first calculates
+-   One or many expression(s). See 6.3 Expression. The first calculates
     the first element of the output vector, the second expression
     calculates the second element of the output vector.
 
