@@ -11,7 +11,7 @@ p1a, and p1b etc are parameters.
 
 > Note: 
 - Parameters are not generally named. The order of the parameters is important unless explicitly stated.
-- Complex queries are formed by grouping sub queries, the formation must be: subqueires in square brackets and ends with semicolons.
+- Complex queries are formed by grouping sub queries, the formation must be: subqueires in square brackets and ends with semicolons. 
  
 
 ```
@@ -42,12 +42,12 @@ aggregate |   R,H |  DoublesEvent -\> DoublesEvent  |  Aggregates the input sequ
 aligneventtime | R,H |                                                               
 amplitudespectrum| R,H | SampleSetEvent -\> SampleSetEvent| Creates an amplitude spectrum for each channel in the sample set|
 amplitudespectrumfft|   R,H | SampleSetEvent(*2) -\> SampleSetEvent | Creates an amplitude spectrum based on output from the fastfouriertransform-operation for each channel in the sample set. Each channel must have real and imaginary values.|
-armaxbuilder | R,H | SampleSetEvent -\> SampleSetEvent| Build a first order armax model based on the given parameters|
-boolop| R,H | [ AlarmEvent ] -\> AlarmEvent| Takes multiple (alarm) inputs and calculates a Boolean result.|
-combine|R,H| [ SampleSetEvent ] -\> SampleSetEvent\| Combines with hold multiple inputs into a single output vector by trying to align the input Streams on time.|
+armaxbuilder | R,H | SampleSetEvent -\> SampleSetEvent| Builds a first order armax model based on the given parameters|
+boolop| R,H | [ AlarmEvent ] -\> AlarmEvent| Gets multiple (alarums) inpts, calculates, and generates Boolean result.|
+combine|R,H| [ SampleSetEvent ] -\> SampleSetEvent\| Combines hold multiple inputs into a single output vector by aligning input streams on time.|
  |       | | [ DoublesEvent ] -\> DoublesEvent\ | 
  |	| | [ IEvent ] -\> ListEvent|                             
-combinewithouthold | R,H | [ SampleSetEvent ] -\> SampleSetEvent\ | Combines without hold multiple inputs into a single output vector by trying to align the input Streams on time.|
+combinewithouthold | R,H | [ SampleSetEvent ] -\> SampleSetEvent\ | Combines without hold multiple inputs into a single output vector by aligning input streams on time.|
 | | |[ DoublesEvent ] -\> DoublesEvent |                     
 |debounce| R,H | SampleSetEvent -\> SampleSetEvent\|Ignores elements from a sequence which are followed by another value within a computed throttle duration.|
 |  |  | DoublesEvent -\> DoublesEvent\  |  
@@ -57,18 +57,18 @@ combinewithouthold | R,H | [ SampleSetEvent ] -\> SampleSetEvent\ | Combines wit
 | | | AggregatedLargeEvents -\> AggregatedLargeEvents\|  
 | | | TimeRangeEvent -\> TimeRangeEvent\  |  
 | | | IEvent -\> IEvent  |   
-|decimation| R,H | SampleSetEvent -\> SampleSetEvent| Creates new sampleset by downsampling input sampleset channels by a decimation factor (which is calculated from parameter Fmax)|
-|dotmap| R,H  | SampleSetEvent -\> SampleSetEvent| Apply an expression to each row of a SampleSet. Each new column in the output SampleSet represent an input expression.|
-|downscalex| R,H | ListEvent -\> SampleSetEvent\| Divide the SampleRate (or SampleInterval) of a SampleSet by a factor.|
+|decimation| R,H | SampleSetEvent -\> SampleSetEvent| Creates new sampleset by down sampling input sampleset channels by a decimation factor (which is calculated from parameter Fmax)|
+|dotmap| R,H  | SampleSetEvent -\> SampleSetEvent| Applies an expression to each row of a SampleSet. Each new column in the output SampleSet represents an input expression.|
+|downscalex| R,H | ListEvent -\> SampleSetEvent\| Divides the SampleRate (or SampleInterval) of a SampleSet by a factor.|
 | | |  *ListEvent must be:\    [ DoublesEvent , SampleSetEvent ] or\   [ SampleSetEvent , DoublesEvent ]*   |
-|dump | R,H |  SampleSetEvent -\> Void\ | Writes information about the items in the sequence to the system log. Intended for debugging.|
+|dump | R,H |  SampleSetEvent -\> Void\ | Writes information about the items in a sequence in the system log. Intended for debugging.|
 | | | DoublesEvent -\> Void\ |                                  
 | | | ListEvent -\> Void\  |                                    
 | | | AlarmEvent -\> Void |                                     
-|execute | R,H | IEvent -\> SampleSetEvent | Run a query and return it's result as a SampleSet |
-|fastfouriertransform| R.H  | SampleSetEvent -\> SampleSetEvent(*2) | Calculates the FFT which is to be used in various fft-operations for each channel. The output from this operation is two channels -- one for real and one for imaginary numbers.|
-|fftavg | R,H  | SampleSetEvent -\> SampleSetEvent | Creates an averaged FFT for each channel in the sample set.|
-|formatlabel |  H | SampleSetEvent -\> SampleSetEvent\ | Allow the user to format the descriptor name for each input |
+|execute | R,H | IEvent -\> SampleSetEvent | Runs a query and returns the result as a SampleSet |
+|fastfouriertransform| R.H  | SampleSetEvent -\> SampleSetEvent(*2) | Calculates FFT which is used in various fft-operations for each channel. The output from this operation is two channels -- one for real and one for imaginary numbers.|
+|fftavg | R,H  | SampleSetEvent -\> SampleSetEvent | Creates an average FFT for each channel in the sample set.|
+|formatlabel |  H | SampleSetEvent -\> SampleSetEvent\ | Allows user to format the descriptor name for each input |
 | | | DoublesEvent -\> DoublesEvent\ |                          
 | | | AlarmEvent -\> AlarmEvent\ |                              
 | | | ListEvent -\> ListEvent\ |                                
