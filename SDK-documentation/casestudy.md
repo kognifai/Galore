@@ -1,8 +1,7 @@
 Galore Case Study
 =================
 
-In order to get a better overview of the galore capabilities, we will
-explore it in a simplified case study.
+In order to get a better overview of the Galore capabilities, we explores it in a simplified case study.
 
 Let us assume that we are a small Wind Farm owner and operator and we want
 to get better control over our assets. In this case the assets are wind
@@ -25,20 +24,20 @@ Our small windfarm has these major components that we want to monitor:
 -   A weather station
 
 Each of these assets have built in controllers and instrumentation that
-continuously produces data:
+continuously produce data:
 
 -   Measurements of physical parameters important to the operation of
-    the asset and its subcomponents. E.g. current power output, wind
+    the asset and its sub components. For example, current power output, wind
     speed, wind direction, rotation speed etc.
 
 -   State information amount the whole asset or one of its subsystem.
-    E.g. Stopped, Starting, Operational, Shutting down
+    For example, Stopped, Starting, Operational, Shutting down
 
 -   Alarms/Events from the controllers when it detects errors in a
     subsystem
 
-In addition, we have external data sources we would like to integrate
-into our system e.g.
+In addition, we have external data sources we like to integrate
+into our system. That is:
 
 -   Weather forecasts
 
@@ -46,10 +45,10 @@ into our system e.g.
 
 -   Actual prices
 
-In order to get all these data connected to our Galore system, we will
-use a suitable Kognifai Edge solution \<insert reference\>. Here we will
-set up the "Connectors" to gather all the data from the various data
-producing systems. The edge solution will automatically set up an asset
+In order to get all these data connected to our Galore system, we
+use a suitable Kognsberg Edge solution \<insert reference\>. Here we 
+set up the **Connectors** to gather all the data from the various data
+producing systems. The edge solution automatically sets up an asset
 model in Galore that might look something like this:
 
 ![EdgeModel](https://github.com/kognifai/Galore/blob/master/.attachments/EdgeModel.png)
@@ -58,40 +57,40 @@ model in Galore that might look something like this:
 
 The asset model can be viewed in and edited the galore configuration
 tool. The circular items represent assets and sub-assets. The other
-items represents streams of data, often referred to as tags. A real
+items represent streams of data, often referred as tags. A real
 system can have hundreds or thousands of tags per asset so this is
 simplified a great deal.
 
 A few things to note about the tags. The system contains metadata about
 each tag that describes the data in the stream e.g.:
 
--   Power output. Is a stream timestamped single measurements with a
+-   Power output- Is a stream timestamp single measurements with a
     unit of Watts. The expected update rate is part of the metadata.
 
--   Wind. Is a stream of vectors (speed and direction) with the units of
+-   Wind- Is a stream of vectors (speed and direction) with the units of
     Metres per second and direction in degrees. The expected update rate
     is part of the metadata.
 
--   State is a stream of states and is represented by the event stream
+-   State- Is a stream of states and is represented by the event stream
     type. Each possible state is described by metadata. The system keeps
     track of the duration of each state and when it transitions to
     another state. Each event can have custom attributes with extra
     information related to the event e.g. descriptions and messages.
 
--   Weather forecasts is a stream of sample sets. A new forecasts is
+-   Weather forecast- Is a stream of sample sets. A new forecasts is
     expected to arrive every six hours and predicts the "average"
-    weather for the next 48 hours. A sampleset is essentially a table
+    weather for the next 48 hours. A sample set is essentially a table
     where each column can represent any physical parameter sampled at
-    regular interval along another physical dimension such as time. The
-    metadata describes what each column represent. In our simplified
-    case, we have 3 columns with temperature, wind speed and wind
+    regular interval along another physical dimension such as Time. The
+    metadata describes what each column represents. In our simplified
+    case, we have three columns with temperature, wind speed and wind
     direction sampled every hour for the next 48 hours
 
 Asset modelling
 ===============
 
-To make our data more accessible, we will create a more detailed model
-of our turbine assets. This will give more context to the data and make
+To make our data more accessible, we create a more detailed model
+of our turbine assets. This gives more context to the data and make
 it easier for a user to navigate the data and for and application
 developer to create context sensitive user interfaces, dashboards and
 reports.
@@ -115,7 +114,7 @@ detail.
 When we are happy with the model, we can make it into a "model template"
 and then apply the same template to each turbine in our wind farm.
 
-Note that the tags here are indicated with dashed lines. This indicates
+> Note that the tags here are indicated with dashed lines. This indicates
 that this is a link to another part of the complete asset model. In this
 case the nodes representing data tags are the same as we got
 automatically from the Edge system. We just point to them in our asset
@@ -128,7 +127,7 @@ Attributes
 ==========
 
 Each node in the asset model can store attributes. Some of the
-attributes are used by galore itself to store important information
+attributes are used by Galore itself to store important information
 about that particular part of the system. For example:
 
 -   Node name
@@ -145,17 +144,17 @@ about that particular part of the system. For example:
 -   Access control attributes. These allow nodes to be hidden or write
     protected so that only certain users can read or modify them.
 
--   Attributes can also be used to mark nodes so that the can be
+-   Attributes can also be used to mark nodes so that they can be
     selected by an node selector with attribute matching \<ref to TQL
     doc\>
 
-Other attributes are defined by the application and galore itself does
+Other attributes are defined by the application and Galore itself does
 not care about their content.
 
 Streams
 =======
 
-We have already mentioned streams several times without explain what is
+We have already mentioned streams several times without explaining what it is
 meant. The Galore stream is an abstraction of data that has several
 attractive properties:
 
@@ -178,10 +177,10 @@ Calculators and derived streams
 ===============================
 
 While TQL queries can be used to run ad hoc processing from client
-application and services, they can also be stored in the galore asset
+application and services, they can also be stored in the Galore asset
 model.
 
-In our case study we will give to simplified examples of this can be
+In our case study, we will give to simplified examples of this can be
 used. We will skip over the details of the TQL queries. See the TQL
 documentation for more details \<ref\>.
 
