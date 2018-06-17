@@ -29,15 +29,16 @@ There are three types of raw data streams:
 
 - Sample set event stream- Events in a sample set stream have a data structure similar to a table. Each column in the table is called  channel and represents high frequency data that can be used with a vector stream, can be represented in lookup tables, calibration curves, reference curves and forecast, and can be periodically reproduced.
 
-From the raw data stream Galore creates a set of different aggregate streams. The type of aggregate produced is different for each stream type:
+Galore creates a set of different aggregate streams from the raw data stream. Each stream has different aggregate types:
 
-- Vector pre aggregates- An aggregate stream is produced for a set of predefined time intervals. The events in these streams are still vector put for each element in the raw vector there are three elements in the aggregate vector with the average, min and max value for the interval respectively. The last element of the aggregate vector is a count of the number of events that was aggregated for the interval.
+- Vector pre aggregates- An aggregate stream is produced for a set of predefined time intervals. Events in these streams are still vector. There are three elements in the aggregate vector with average, min and max values for the respective interval. The last element of the aggregate vector is a count of number of events that was aggregated for the interval.
 
-- State event pre aggregates- An aggregate stream is produced for a set of predefined time intervals. The events in these streams is a special state aggregate type with a count of the number of times a state has been visited and the total duration spent in that time during the aggregate interval. Propagated state events streams are also aggregated in this way (see next item). 
-> Note: At the time of writing these aggregate streams does not have a real time.
+- State event pre aggregates- An aggregate stream is produced for a set of predefined time intervals. The events in these streams are  special state aggregate type with a count of number of times a state has been visited and the total duration spent in that time for the aggregate interval. Propagated state event streams are also aggregated in this way (see next item). 
 
-- Propagated state events streams- These streams are associated with all nodes in the asset model. A merged stream of all the event streams considered related to this node, usually by being a descendant node in the asset model. Multiple propagated streams can be associated with each node if there are different type of state streams related to the node. Typical use of this feature is e.g. to find all alarms events on and asset or to find alarms caused by monitoring other streams.
+> Note: This article on aggreate stream is wrtten with no real-time data.
 
-- Sample set pre aggregate streams- These streams counts the number of sample set events in each pre aggregate interval.
+- Propagated state event streams- These streams are associated with all nodes in the asset model. A merged stream of all the event streams is considered for these nodes, usually by being a descendant node in the asset model. Multiple propagated streams can be associated with each node if different state stream types relate to them. A typical use of this feature is: e.g. to find all alarms events on and asset or to find alarms caused by monitoring other streams.
+
+- Sample set pre aggregate streams- These streams count the number of sample set events in each pre aggregate interval.
 
 
