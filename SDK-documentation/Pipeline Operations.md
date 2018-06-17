@@ -500,8 +500,8 @@ Starts the sequence with the Nth item before the given time.
 
 Parameters:
 
--   Time. See Time
--   incl | excl (default incl) Specifies how an item exactly at the time should be handled. By default it is included in the result stream before the count is started
+-   Time. See [Time](https://github.com/kognifai/Galore/blob/master/SDK-documentation/Node%20Selector.md)
+-   incl | excl (default incl) Specifies how an item exactly at the time must be handled. By default, it is included in the result stream before the count is started
 -   Number of elements
 
 Example: 
@@ -511,9 +511,9 @@ takebefore 09.02.2016 5
 takebefore now 5. takes 5 items before the given date not counting an item at time now
 takebefore now excl 5. takes 5 items before the given date counting an item at time now
 ```
-Starts the input sequence with 5 items before the given time
+Starts the input sequence with five items before the given time.
 
-Note: the operation is intended for use more or less directly after the
+>Note: the operation is intended for use more or less directly after the
 input operation.
 
 Operations that depend on the normal chronological order of the events
@@ -526,13 +526,12 @@ reached.
 takeafter
 ---------
 
-Modifies the input operation so that it ends with N items after the
-given time.
+Modifies the input operation so that it ends with N items after the given time.
 
 Parameters:
 
--   Time. See Time
--   incl | excl (default incl) Specifies how an item exacly at the time should be handled. By default it is included in the result stream before the count is started
+-   Time.
+-   incl | excl (default incl) Specifies how an item exactly at the time must be handled. By default, it is included in the result stream before the count is started
 -   Number of elements
 
 Example:
@@ -554,8 +553,8 @@ Specifies the start time of the input range
 
 Parameters:
 
--   Time. See Time
--   incl | excl (default incl) Specifies how an item exacly at the time should be handled. By default it is included in the result stream
+-   Time.
+-   incl | excl (default incl) Specifies how an item exactly at the time must be handled. By default, it is included in the result stream
 
 Examples:
 ```
@@ -577,8 +576,8 @@ Specifies the end time of the input range
 
 Parameters:
 
--   Time. See Time
--   incl | excl (default incl) Specifies how an item exacly at the time should be handled. By default it is included in the result stream before the count is started
+-   Time.
+-   incl | excl (default incl) Specifies how an item exactly at the time must be handled. By default, it is included in the result stream before the count is started
 
 Examples:
 ```
@@ -626,12 +625,12 @@ powerspectrum
 -------------
 
 Creates the power spectrum (normalized) from each channel in the input
-sampleset
+sample set
 
 orderspectrum
 -------------
 
-Creates the order spectrum from a sampleset with one channel of samples
+Creates the order spectrum from a sample set with one channel of samples
 and one channel of rotational positions.
 
 Parameters
@@ -679,16 +678,16 @@ Parameters:
 
 Interval only: Emits all events in window for every new input
 
-Count only: Emits all events in window for every new input. Optionally
+Count only: Emits all events in window for every new input. Optionally,
 emit only on full count.
 
 Both interval and count. Emit the last N=count events in the window.
-Optionally emit only on full count.
+Optionally, emit only on full count.
 
 timeseries to matrix
 --------------------
 
-Convert a time series to a sampleset. Useful for doing frequency
+Convert a time series to a sample set. Useful for doing frequency
 spectrum analysis on time series data.
 
 lookup, where etc.
@@ -765,8 +764,8 @@ input ~/Test/somedata |> fftavg 0.67 4
 firfilter
 ---------
 
-Create filter functions for lowpass- highpass- and bandpass filtering of
-a signal. The filter type used is finite impulse response (FIR) filter.
+Creates filter functions for lowpass- highpass- and bandpass filtering of
+a signal. The filter type is finite impulse response (FIR) filter.
 
 Parameters
 
@@ -851,10 +850,10 @@ orbitplot
 
 Creates an orbit plot with two output signals, distributed in separate
 channels. The output sample rate is changed in relation to the input
-sample rate. Three input channels are required. Channel 1 shall be the
-horizontal vibration sensor signal. Channel2 shall be the vertical
-vibration sensor signal. Channel 3 shall be the induction sensor signal.
-All three signal shall have equal length.
+sample rate. Three input channels are required. Channel 1 can be the
+horizontal vibration sensor signal. Channel 2 can be the vertical
+vibration sensor signal. Channel 3 can be the induction sensor signal.
+All three signal must have equal length.
 
 Parameters
 
@@ -875,8 +874,8 @@ rollplot
 
 Creates a roll plot with two output signals, distributed in separate
 channels. The output sample rate is changed in relation to the input
-sample rate. Two input channels are required. Channel 1 shall be the
-vibration sensor signal. Channel 2 shall be the rpm sensor signal.
+sample rate. Two input channels are required. Channel 1 must be the
+vibration sensor signal. Channel 2 must be the rpm sensor signal.
 Both signal shall have equal length.
 
 Parameters
@@ -901,7 +900,7 @@ pick channels from a sampleset
 Parameters
 
 - list of channels. The _ is a place holder, put an empty channels at that position
-- expression for setting the channel index to pick. If negative, it will be ignore.
+- expression for setting the channel index to pick. If negative, it is ignored.
 - fillwithempty, when using expression this will insert an empty channel whenever the index is negative.
 
 Example:
@@ -927,7 +926,7 @@ input ~/Test/somedata |> pick 'index>2 ? index : -1' 'index<=2 ? index : -1'
 slicesampleset
 -------------
 
-slice a sampleset into doubles events.
+slice a sample set into doubles events.
 
 Parameters
 
@@ -954,11 +953,11 @@ input #1 |> slicesampleset 1h 0 4
 tosampleset
 -------------
 
-convert a list of doublesevents to a sampleset. The offset of the sampleset will always be the unix time of the first event in the list. The samplerate will be the inverse of the total hours in the output interval (of the input). For example day data, the samplerate will be 1.0/24.
+converts a list of doublesevents to a sample set. The offset of the sample set can always be the unix time of the first event in the list. The samplerate must be the inverse of the total hours in the output interval (of the input). For example day data, the samplerate will be 1.0/24.
 
 Parameters
 
--   uselasttime, if set this flag will use the last event time to set the time of the output sampleset, 
+-   uselasttime, if set this flag must use the last event time to set the time of the output sampleset, 
 	otherwise use the first one.
 
 Example:
@@ -994,7 +993,7 @@ monitor
 Defines a state machine with conditions for going from one state to another. Emits state change events when a state transition happens. The event contains information that
 - identifies the current and previous state
 - the time it entered the current and previous state
-- a description of the transition
+- a descriptior of the transition
 
 Parameters
 -   Optional start state, the default is state 0
@@ -1027,8 +1026,8 @@ input ~/Test/somedata |> monitor start in 1
 groupdata
 ---------
 
-Multidimensional data grouping for Model Output Statistics (MOS) and some other machine learning algorithm. The input data must be a sampleset with at least one channel
-This function will group the input data base on the number of subdivision for each channel. The number of subdivision and the min max for each column are parameters that the user can enter. If no min/max are given, the operation will pick the min/max automatically for each channel.
+Multidimensional data grouping for Model Output Statistics (MOS) and some other machine learning algorithm. The input data must be a sample set with at least one channel
+This function groups the input data base on the number of subdivision for each channel. The number of subdivision and the min max for each column are parameters that the user can enter. If no min/max are given, the operation picks the min/max automatically for each channel.
 
 The output of this operation will be a sampleset containing the following channels:
 
@@ -1044,7 +1043,7 @@ The output of this operation will be a sampleset containing the following channe
 
 
 
-So base on the above, one can see that the output sampleset set will have a number of channels that depends on the number of input channels and the number of groups per channel.
+So based on the above, one can see that the output sample set set can have a number of channels that depends on the number of input channels and the number of groups per channel.
 
 For example, for a  sampleset with 2 channels, the following tql command:
 
@@ -1052,7 +1051,7 @@ For example, for a  sampleset with 2 channels, the following tql command:
 input ~sampleset |> groupdata 2 4
 ````
 
-will produce an output sampleset of 2x2 + 2x4 = 12 channels
+Produces an output sampleset of 2x2 + 2x4 = 12 channels
 
 In the example above, **#grp_n** represent the number of subdivision in group n.
 
@@ -1076,32 +1075,31 @@ input ~/Test/somedata |> groupdata 2 5 (0,10),(0,100) # divide the input data in
 maps
 ----
 
-same as map (See 9.18) but the return value of the expressions can be a single value, an array or an array of array. The output of this operation 
-will be a sampleset containing all the channels comming from the expressions. It is also possible to specify the samplerate and the offset in each expression. 
-In that case, it will affect all the channels in that expression.
+same as **map** but the return value of the expressions can be a single value, an array or an array of array. The output of this operation must be a sample set containing all the channels coming from the expressions. It is also possible to specify the samplerate and the offset in each expression. 
+In that case, it may affect all the channels in that expression.
 
 Example:
 
-The expression below produce a sampleset with one channel which is the first channel of the input. The output sampleset will have a samplerate 1 and offset 0.
+The expression below produce a sample set with one channel which is the first channel of the input. The output sample set can have a samplerate 1 and offset 0.
 ```
 input ~/Test/somedata |> maps 's[0]'
 
-The expression below produce a sampleset with one channel having a samplerate twice the original sampleset
+The expression below produces a sample set with one channel having a samplerate twice the original sampleset
 ```
 input ~/Test/somedata |> maps 's[0], sampleRates[0]*2'
 
-The expression below produce a sampleset with one channel having a samplerate twice the original sampleset and the opriginal offset+100
+The expression below produces a sample set with one channel having a samplerate twice the original sampleset and the opriginal offset+100
 ```
 input ~/Test/somedata |> maps 's[0], sampleRates[0]*2, offsets[0]+100'
 
 
-The Histogram function return an array of array containing : the bins count, the lower bounds and the upper bounds for each bin.
-The 2 expressions below will produce a sampleset with 6 channels, 3 for the first histogram and 3 for the second one.
+The Histogram function returns an array of array containing : the bins count, the lower bounds and the upper bounds for each bin.
+The two expressions below produce a samplec set with 6 channels, 3 for the first histogram and 3 for the second one.
 ```
 input ~/Test/somedata |> maps 'Histogram(s[0],10)' 'Histogram(s[0],10,0.0,100.0)'
 ```
 
-The expression below will produce a sampleset with 4 chanels, 3 comming from the Histogram and 1 which is the first channel of the input
+The expression below produces a sample set with 4 channels, 3 comming from the Histogram and 1 which is the first channel of the input
 ```
 input ~/Test/somedata |> maps 'Histogram(s[0],10)' 's[0]'
 ```
