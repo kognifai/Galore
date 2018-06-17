@@ -33,14 +33,14 @@ Stream types can be customized but these are predefined by the system:
 -   streamedit- Real-time information about changes in history for a stream. Real-time only
 -   configedit- Notification about asset model changes
 -   calculatorstate- The state of a calculator. Real-time only
--   userack- for clients to acknowledge alarms with this options set in the calculator or monitor
+-   userack- This option set is used for clients to acknowledge alarms in the calculator or monitor
 
 Parameters:
 
--   nodeSelector- See [Node Selector](https://github.com/kognifai/Galore/blob/master/SDK-documentation/Node%20Selector.md) selects one     or many nodes in the Galore asset model. If the node is not an event source node, all descendants that are alarm log nodes
--   streamSelector- See [Streamselector](#Streamselector). Nodes may have multiple streams associated e.g. propagated or relate           events, preaggregates, change notifications etc. In many cases the stream selector can be left out because it is inferred from the     node type.
--   interval- Interval is part of the stream selector. Determines which pre-aggregate interval is selected. The closest larger pre       aggregate interval will be selected. Default is 0 i.e. not aggregated data.
--   acceptStale. Forces the underlying index to update before reading alarms. Default is false.
+-   nodeSelector- See [Node Selector](https://github.com/kognifai/Galore/blob/master/SDK-documentation/Node%20Selector.md) selects one     or many nodes in the Galore asset model. If the node is not an event source node, all descendants that are alarm log nodes.
+-   streamSelector- See [Streamselector](#Streamselector). Nodes may have multiple streams associated e.g. propagated or relate           events, pre aggregates, change notifications etc. In many cases, the stream selector can be left out because it is inferred from the     node type.
+-   interval-  See [Interval](https://github.com/kognifai/Galore/blob/master/SDK-documentation/Node%20Selector.md). Interval is part of     the stream selector. It Determines which pre-aggregate interval is selected. The closest larger pre  aggregate interval will be         selected. Default is 0 i.e. not aggregated data.
+-   acceptStale - Forces the underlying index to update before reading alarms. Default is False.
 
     Examples:
 ```
@@ -56,51 +56,43 @@ Parameters:
 tounit
 ------
 
-Define the output unit of a query operation. This should be use whenever
-the system could not find the unit by itself or to override the one
-found by the system.
-Example:
+Defines the output unit of a query operation. This must be used whenever the system could not find the unit by itself or to override the one found by the system.
 
+Example:
 ```
 input ../W, ../WNAC/WdSpd 
     |> combine
     |> tounit Power:SI:W Speed:SI:m/s
 ```
-This example set the unit for each input that is in the output of the
-combine operation.
+This example sets a unit for each input that is in the output of the
+combined operation.
 
 jitter
 ------
 
-The jitter operation is used to remove jitter from timestamps. This is
-particularly useful before the merge operation to align timestamps in
-multiple inputs.
+The jitter operation is used to remove jitter from time stamps. This is particularly useful before the merge operation to align the time stamps in multiple inputs.
 
 Parameters:
 
--   interval. See 6.1 Interval.
+-   interval. See [Interval](https://github.com/kognifai/Galore/blob/master/SDK-documentation/Node%20Selector.md)
 
 resample
 --------
 
-Resamples the input sequence with the given sample interval. At present,
-the input value right before the resample time will be used with no
-interpolation.
+This operation resamples the input sequence with in the given sample interval. At present,
+the input value must be used right before the resample time with no interpolation.
 
 Parameters:
 
--   interval. Interval between each sample. See 6.1 Interval.
+-   interval- Interval between each sample. See 6.1 Interval.
 
--   type. Upsample or Downsample. Needed for correct handling of gaps in
-    the input data. Upsample will fill gaps with the same value.
-    Downsample will not.
+-   type- Upsample or Downsample. Needed for correct handling of gaps in the input data. Upsample fills gap with the same value.
+    Downsample does not.
 
 generate
 --------
 
-Generate creates a (recurring) time series from a scalar value. The
-interval between entries, the number of values for each entry and the
-number of entries can be controlled.
+Generate creates a (recurring) time series from a scalar value. The interval between entries, the number of values for each entry and the number of entries can be controlled.
 
 Usage:
 ```
@@ -108,18 +100,16 @@ generate time period [value] [vectorSize] [realtime [count]]
 ```
 Parameters:
 
--   time. Starting time for series
+-   time- Starting time for series
 
--   period. Interval between entries. See 6.2 Period
+-   period- Interval between entries. See [Period](https://github.com/kognifai/Galore/blob/master/SDK-documentation/Node%20Selector.md-
 
--   value. The value of each entry. Defaults to 0 if missing
+-   value- The value of each entry. Defaults to 0 if missing
 
--   vectorSize. Number of values produced per entry
+-   vectorSize- Number of values produced per entry
 
--   real time. States if the time series should be recurring. If set the
-    time parameter is ignored. Time series will start on current time
-
--   count. Number of repeating entries. Only relevant if real time
+-   real time- States if the time series must be recurring. If set, the time parameter is ignored. Time series starts on current           time
+-   count- Number of repeating entries. Relevant if real-time only
 
 Examples:
 ```
@@ -130,15 +120,14 @@ generate now 5s 3.1415 2 realtime 10
 aggregate
 ---------
 
-Aggregates the input sequence into a single value or a value for each
-period
+Aggregates the input sequence into a single value or a value for each period
 
 Parameters:
 
--   period. If given the aggregate produces an aggregate for each
-    period. See 6.2 Period
+-   period- If given, the aggregate produces an aggregate for each
+    period. See [Period](https://github.com/kognifai/Galore/blob/master/SDK-documentation/Node%20Selector.md)
 
--   isRunning. A partial aggregate is produced for every input value
+-   isRunning- A partial aggregate is produced for every input value
 
 -   type
 
@@ -155,17 +144,12 @@ Parameters:
     -   AvgUnitVector, The output is the average of the input treated as
         an angle
 
--   output time unit. Only used with integrate. E.q. if the input is "W" (Watt)
-    the default output unit is "Ws" (Watt seconds). Using an output unit of "h" will give
-    "Wh" (Watt hours) in stead
+-   output time unit- Only used with integrate. E.g. if the input is "W" (Watt) the default output unit is "Ws" (Watt seconds). Using       an output unit of "h" is "Wh" (Watt hours) instead
 
 combine
 -------
 
-Combines multiple inputs into a single output vector by trying to align
-the input Streams on time. If some inputs do not have a value at a
-particular time, the previous value is used. Most useful for time series
-inputs.
+Combines multiple inputs into a single output vector by trying to align the input streams on time. If some inputs do not have a value at a particular time, the previous value is used. Most useful for time series inputs.
 
 Example:
 ```
@@ -174,36 +158,26 @@ input ~/Simulator/WTUR* [defaultTurbinePower] |> combine 10s
 
 Parameters:
 
--   optional debounce interval (real time only, default 0). If one or
-    many of the input is delayed, emit a new combined event by reusing
-    the previous value of the delayed inputs. I.e resample with hold. If
-    omitted or 0, the combine operation will emit for every input
-    change.
+-   Optional, debounce interval (real-time only, default 0). If one or
+    many input is delayed, emit a new combined event by reusing the previous value of the delayed inputs. I.e resample with hold. If
+    omitted or 0, the combine operation will emit for every input change.
 
->Note: The force delay should be more than the expected interval of the
-slowest input. I.e. the forcing should only be applied when an input is
-actually and significantly delayed as opposed to just having a bit of
-timing jitter. It should not be used to force a fixed output rate.
+>Note: The force delay must be more than the expected interval of the slowest input. I.e. the forcing must only be applied when an input is actually and significantly delayed as opposed to just having a bit of timing jitter. It must not be used to force a fixed output rate.
 
->Tip: If the input events are not clustered in time, it makes more sense
-to not use the debounce interval option. Instead, follow the operation
-by resample to sample the inputs at specific times.
+>Tip: If the input events are not clustered in time, it makes more sense to not to use the debounce interval option. Instead, follow the operation by resample to sample the inputs at specific time.
 
->Note: The real time and historical version of this operation produces
-slightly different results since the historical will emit o n every
-distinct timestamp.
+>Note: The real-time and historical version of this operation produces slightly different results since the historical emits on every distinct timestamp.
 
 combinewithouthold
 ------------------
 
-It's the same as combine but it doesn't use the last value if there is
-no new value in the given interval
+It is as same as **combine** but it does not use the last value if there is no new value in the given interval.
 
-It has 2 parameters:
+It has two parameters:
 
--   The interval to wait for the inputs to get a value
+-  The interval to wait for the inputs to get a value
 
--   What to fill for the inputs which have no new value (fillWithNaN,
+-  What to fill for the inputs that have no new value (fillWithNaN,
     fillWithZero, fillWithDefault, fillWithValue)
 
 Examples:
@@ -215,8 +189,7 @@ combinewithouthold 10m fillWithValue 5
 merge
 -----
 
-Combines multiple inputs into a single output by interleaving the input
-events based on their timestamp. Most useful for alarm/event inputs.
+Combines multiple inputs into a single output by interleaving the input events based on their timestamp. Most useful for alarm/event inputs.
 
 Example:
 ```
@@ -230,8 +203,7 @@ Example:
 debounce
 --------
 
-Ignores elements from a sequence which are followed by another value
-within a computed throttle duration.
+Ignores elements from a sequence which are followed by another value within a computed throttle duration.
 
 Parameters: Time interval to wait new data
 
@@ -254,22 +226,18 @@ Example:
 dotmap
 ------
 
-apply an expression to each row of a sampleset and return a sampleset
-with n channels, where n is the number of expression.
+Applies an expression to each row of a sample set and return a sample set with n channels, where n is the number of expression.
 
 Example:
 ```
 Input ~/path/to/samplerset |> dotmap 'v[0]*v[1]'
 ```
 
-This example will return a new sampleset with one channel each element
-of the first row of the input channel is multiply by the elements of the
-second input channel
+This example returns a new sample set with one channel; each element of the first row of the input channel is multiply by the elements of the second input channel.
 
 >Note:
 
--   To use expression on multiple inputs use combine to combine the
-    inputs into a vector.
+-   To use expression on multiple inputs, use **combine** to combine the inputs into a vector.
 
 -   Available variables:
 
@@ -278,15 +246,15 @@ second input channel
 
     -   `prev` -- previous output value
 
-    -   `dt` -- time difference between current event and previous one in
+    -   `dt` -- time difference between previous and current event in
         milliseconds.
 
     -   `sampleRate` -- channel sampleRate (in dot map all the channels
         must have the same sampleRate)
 
-    -   `rowIndex` -- index of the current row being processed
+    -   `rowIndex` -- index of the current row is being processed
 
-    -   `totalRows` -- total number of rows in the input sampleset (all
+    -   `totalRows` -- total number of rows in the input sample set (all
         channels have the same amount of rows)
 
     -   `c` -- vector of constant values bound from attributes in nodes.
@@ -302,8 +270,7 @@ second input channel
 topevent
 --------
 
-Produces the top N active events (alarms) at each point in time as a
-list.
+Produces the top N active events (alarms) at each point in time as a list.
 
 Parameters:
 
@@ -332,46 +299,38 @@ where
 
 Parameters:
 
--   expression. A boolean expression (also known as a predicate) to
-    determine which items of the sequence to discard. See 6.3 Expression
+-   expression. A boolean expression (also known as a predicate) to determine which items of the sequence to discard. See [Expression](https://github.com/kognifai/Galore/blob/master/SDK-documentation/Node%20Selector.md)
 
 Example: 
 ```
 discard 'v[0] \> 1'. 
 ```
-Discards all items where the first
-vector element is larger than 1
+Discards all items where the first vector element is larger than 1
 
 wheretext
 ---------
 
 Parameters:
 
--   string. A search text (that may contain wildcards) that is matched
-    against textual properties and attribute values of events.
+-   string- A search text (that may contain wildcards) that is matched against textual properties and attribute values of events.
 
--   attribute-selector. A [key=value] search to target a specific
-    attribute in the search.
+-   attribute-selector- A [key=value] search to target a specific attribute in the search.
 
 wheretext
 ---------
 
 Parameters:
 
--   string. A search text (that may contain wildcards) that is matched
-    against textual properties and attribute values of events.
+-   string- A search text (that may contain wildcards) that is matched against textual properties and attribute values of events.
 
--   attribute-selector. A [key=value] search to target a specific
-    attribute in the search.
+-   attribute-selector- A [key=value] search to target a specific attribute in the search.
 
 map
 ---
 
 Parameters:
 
--   One or many expression(s). See 6.3 Expression. The first calculates
-    the first element of the output vector, the second expression
-    calculates the second element of the output vector.
+-   One or many expression(s). See [Expression](https://github.com/kognifai/Galore/blob/master/SDK-documentation/Node%20Selector.md).       The first calculates the first element of the output vector, the second expression calculates the second element of the output         vector.
 
 -   Column name
 
@@ -390,7 +349,7 @@ MP=farmMaxPowerInMW[~/HAVGAV [farmMaxPowerInMW]]
 
 >Note:
 
--   To use expression on multiple inputs use combine to combine the
+-   To use expression on multiple inputs use **combine** to combine the
     inputs into a vector.
 
 -   Available variables:
@@ -400,7 +359,7 @@ MP=farmMaxPowerInMW[~/HAVGAV [farmMaxPowerInMW]]
 
     -   `prev` -- previous vector of values
 
-    -   `dt` -- time difference between current event and previous one in
+    -   `dt` -- time difference between  previous current event in
         milliseconds.
 
     -   `sampleRates[]` -- sampleRate array that contains the sampleRate
@@ -527,7 +486,7 @@ startWithLatest
 ---------------
 
 Modifies the input operation so that it starts with the last known
-element. Intended for use in realtime queries only.
+element. Intended for use in real-time queries only.
 
 Example:
 ```
@@ -542,7 +501,7 @@ Starts the sequence with the Nth item before the given time.
 Parameters:
 
 -   Time. See Time
--   incl | excl (default incl) Specifies how an item exacly at the time should be handled. By default it is included in the result stream before the count is started
+-   incl | excl (default incl) Specifies how an item exactly at the time should be handled. By default it is included in the result stream before the count is started
 -   Number of elements
 
 Example: 
