@@ -2,7 +2,7 @@ Node Selector
 =============
 
 The node selector is an expression for selecting one or more nodes from
-the Galore. A node can be selected in several ways:
+Galore. A node can be selected in several ways:
 
 -   Path
 -   Id
@@ -10,7 +10,7 @@ the Galore. A node can be selected in several ways:
 -   Attribute value
 -   Template reference (planned obsolete)
 
-Node selectors can also be "chained" to select nodes in multiple steps,
+Node selectors can also be chained to select nodes in multiple steps,
 as described below. Nodes selected by the previous part of a chain
 become the context in which the current part of a chain is applied.
 This makes it possible to use relative paths.
@@ -19,12 +19,16 @@ path
 ----
 
 A path selector is a path prefixed by a tilde `~` character. Paths are
-similar to file system paths. Wildcards "*" matches any character in
-a node tag. "." matches the current context node. ".." matches the
-parent node. The context node depends on the execution context of the
-selector, normally this is the root node or the previous part of a
-chained selector. If the selector is part of a TQL query configured on a
-calculator or a monitor node, that node is the context node. Examples:
+similar to file system paths. 
+
+| Wildcard | Description |
+|------|----------|
+"*"  | matches any character in a node tag.|
+"." | matches the current context node. |
+".."|matches the parent node.
+
+The context node depends on the execution context of the selector, normally this is the root node or the previous part of a
+chained selector. If the selector is part of a TQL query configured on a calculator or a monitor node, that node is the context node. Examples:
 
 - `/` Select the root node
 - `/Farm/Turbine1`: Select the "Turbine1" node under the "Farm" node
@@ -35,10 +39,8 @@ calculator or a monitor node, that node is the context node. Examples:
 id
 --
 
-An id selector is a numeric id prefixed by the hash/pound character
-"#". The id selector is normally used in dynamic commands/or queries
-where the id has been resolved and not in configured/static queries.
-Selectors with ids cannot be reused in other instances of Galore
+An id selector is a numeric id prefixed by the hash/pound character "#". The id selector is normally used in dynamic commands/or queries
+where the id has been resolved and not in configured/static queries. Selectors with ids cannot be reused in other instances of Galore
 because the "same" node will have a different id.
 
 attribute name
@@ -90,8 +92,7 @@ Select all nodes under "Farm1" with the attribute "nodeType" of value "Turbine" 
 Or Selectors
 ------------
 
-Multiple criteria can be specified for nodes to be included in a
-selection. Multiple criteria are separated with comma "," characters.
+Multiple criteria can be specified for nodes to be included in a selection. Multiple criteria are separated with comma "," characters.
 
 Example:
 ```
@@ -99,10 +100,8 @@ Example:
 ```
 Select all nodes under "Farm1" with the attribute "nodeType" of value "Turbine" OR the attribute "maxPower" of value 2300.
 
-Note: There is presently no way to group parts of the selector, e.g. to
-write the above example as
-
-Not allowed: `/Farm1 ([nodeType=Turbine], [maxPower=2300])`
+> Note: There is presently no way to group parts of the selector, e.g. to write the above example as
+> Not allowed: `/Farm1 ([nodeType=Turbine], [maxPower=2300])`
 
 Parameters
 ==========
@@ -121,39 +120,27 @@ Interval can be a floating point number with a time unit postfix "s",
 
 -   `1.5h`: 1 hour 30 minutes
 
-The interval can also be written as mm:ss where mm is the number of
-minutes and ss is the number of seconds.
+The interval can also be written as mm:ss where mm is the number of minutes and ss is the number of seconds.
 
 Period
 ------
 
-A period is similar to an interval and can have all the same values. In
-addition a period can have the values "week", "month", "year",
-"quarter", "decade" and "century".
+A period is similar to an interval and can have values of an interval. In addition, a period can have the following values: "week", "month", "year", "quarter", "decade" and "century".
 
-The main difference between a period and an interval is that periods are
-aligned to the local time. An interval of 24h is just an amount of time.
-A period of 24h is aligned to the local time. A period parameter is
-usually used to "periodize" a sequence into a new sequence of events
-grouped by the period they occurred in.
+The main difference between a period and an interval is that periods are aligned to the local time. An interval of 24h is just an amount of time. A period of 24h is aligned to the local time. A period parameter is usually used to "periodize" a sequence into a new sequence of events grouped by the period they occurred in.
 
 Expression
 ----------
 
-Some operations take one or more expressions as their parameter.
+Some operations take one or more expressions as their parameters.
 
-Expression are have the same syntax as C# expressions and are between
-single quotes: `'expression'`
+Expressions have the same syntax as C# expressions and are between single quotes: `'expression'`
 
-The variable "v" refers to the input vector of the expression if the
-input is a time series type. v[0] refers to the first element of the
-vector, v[1] to the second and so forth. For alarm input the variable
-b is used. m
+Variable "v" refers to the input vector of the expression, if the input is a time series type. v[0] refers to the first element of the
+vector, v[1] refers to the second element and so forth. For alarm input the variable b is used.
 
-Expressions are optionally followed by a result unit identifier. The
-system is not yet capable of inferring the result unit from the
-expression. If the unit is omitted, the result is assumed to have the
-same unit as the first input.
+Expressions are optionally followed by a result unit identifier. The system is not yet capable of inferring the result unit from the
+expression. If the unit is omitted, the result is assumed to have the same unit as the first input.
 
 Examples:
 
@@ -181,6 +168,6 @@ Examples:
 -   `2015-03-01T01:13`: 13 past one, 1<sup>st</sup> of mars 2015
 -   `2015-03-15T12:47:33.12345Z 12:47:33`: 15<sup>th</sup> of mars 2015
 
-Note the "T" separating date and time
+Note the "T" separates date and time
 
-Note the Z designating the time zone "Zulu" = UTC/GMT
+Note the Z designates the time zone "Zulu" = UTC/GMT
