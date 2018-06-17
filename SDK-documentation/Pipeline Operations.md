@@ -38,8 +38,8 @@ Stream types can be customized but these are predefined by the system:
 Parameters:
 
 -   nodeSelector- See [Node Selector](https://github.com/kognifai/Galore/blob/master/SDK-documentation/Node%20Selector.md) selects one     or many nodes in the Galore asset model. If the node is not an event source node, all descendants that are alarm log nodes
--   streamSelector- See [Stream selector](#Strea,selector). Nodes may have multiple streams associated e.g. propagated or relate           events, preaggregates, change notifications etc. In many cases the stream selector can be left out because it is inferred from the     node type.
--   interval- Interval is a part of the stream selector. Determines which pre-aggregate interval is selected. The closest larger pre       aggregate interval will be selected. Default is 0 i.e. not aggregated data. See 6.1 Interval.
+-   streamSelector- See [Streamselector](#Streamselector). Nodes may have multiple streams associated e.g. propagated or relate           events, preaggregates, change notifications etc. In many cases the stream selector can be left out because it is inferred from the     node type.
+-   interval- Interval is part of the stream selector. Determines which pre-aggregate interval is selected. The closest larger pre       aggregate interval will be selected. Default is 0 i.e. not aggregated data.
 -   acceptStale. Forces the underlying index to update before reading alarms. Default is false.
 
     Examples:
