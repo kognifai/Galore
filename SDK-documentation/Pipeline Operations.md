@@ -84,7 +84,7 @@ the input value must be used right before the resample time with no interpolatio
 
 Parameters:
 
--   interval- Interval between each sample. See 6.1 Interval.
+-   interval- Interval between each sample.
 
 -   type- Upsample or Downsample. Needed for correct handling of gaps in the input data. Upsample fills gap with the same value.
     Downsample does not.
@@ -159,7 +159,7 @@ input ~/Simulator/WTUR* [defaultTurbinePower] |> combine 10s
 Parameters:
 
 -   Optional, debounce interval (real-time only, default 0). If one or
-    many input is delayed, emit a new combined event by reusing the previous value of the delayed inputs. I.e resample with hold. If
+    many input is delayed, emit a new combined event by reusing the previous value of the delayed inputs. I.e. resample with hold. If
     omitted or 0, the combine operation will emit for every input change.
 
 >Note: The force delay must be more than the expected interval of the slowest input. I.e. the forcing must only be applied when an input is actually and significantly delayed as opposed to just having a bit of timing jitter. It must not be used to force a fixed output rate.
@@ -299,7 +299,7 @@ where
 
 Parameters:
 
--   expression. A boolean expression (also known as a predicate) to determine which items of the sequence to discard. See [Expression](https://github.com/kognifai/Galore/blob/master/SDK-documentation/Node%20Selector.md)
+-   expression- A boolean expression (also known as a predicate) to determine which items of the sequence to discard. See [Expression](https://github.com/kognifai/Galore/blob/master/SDK-documentation/Node%20Selector.md)
 
 Example: 
 ```
@@ -642,8 +642,8 @@ Parameters
 evenangleresampling
 -------------------
 
-Resamples a sampleset channel sampled with a sample interval of delta t
-to a new sampleset with a fixed delta pos/angle
+Resamples a sample set channel sampled with a sample interval of delta t
+to a new sample set with a fixed delta pos/angle
 
 Parameters
 
@@ -654,12 +654,12 @@ Parameters
 transpose
 ---------
 
-Transpose a matrix/sampleset
+Transpose a matrix/sample set
 
 rootmeansquare
 --------------
 
-Compute rms value for a channel in a sampleset.
+Compute rms value for a channel in a sample set.
 
 sliding window
 --------------
@@ -735,8 +735,7 @@ input ~/Test/somedata
 hanningwindow
 -------------
 
-Multiplies the values in each channel in the sample set with a hanning
-window.
+Multiplies the values in each channel in the sample set with a hanningwindow.
 
 Example:
 ```
@@ -747,7 +746,7 @@ fftavg
 ------
 
 Creates an averaged FFT with overlap for each channel in the sample set.
-Each part is multiplied with a hanning window and the product is an
+Each part is multiplied with a hanningwindow and the product is an
 amplitude spectrum.
 
 Parameters
@@ -790,7 +789,7 @@ input ~/Test/somedata |> firfilter 2000.0 20000.0 2 2 32
 fftzeroing
 ----------
 
-Set signal values to zero(0) for given frequencies after FFT. All values
+Sets signal values to zero(0) for given frequencies after FFT. All values
 below the highest value of Fcutoff and Fmin are set to zero. All values
 above Fmax is set to zero,
 
@@ -810,7 +809,7 @@ input ~/Test/somedata |> fftzeroing 5000 4000 15000
 decimation
 ----------
 
-Shortens a timeseries by selecting values spaced by a decimation factor.
+Shortens a time series by selecting values spaced by a decimation factor.
 The decimation factor is calculated from parameter Fmax.
 
 Valid Fmax values: 100, 200, 400, 800, 1500, 3000, 6000, 12500, 25000,
@@ -830,7 +829,7 @@ fftcrossphase
 
 Creates a cross phase spectrum with overlap based on two channels input.
 Divided into a number of subsamples, each subsample is multiplied with a
-hanning window. Each complient subset of the two input signals are
+hanninwindow. Each compliant subset of the two input signals are
 multiplied together. The average of these subsets are the resulting
 cross phase spectrum.
 
@@ -895,7 +894,7 @@ input ~/Test/somedata |> rollplot 0.7 linint rising
 pick
 -------------
 
-pick channels from a sampleset
+Picks channels from a sample set
 
 Parameters
 
@@ -926,7 +925,7 @@ input ~/Test/somedata |> pick 'index>2 ? index : -1' 'index<=2 ? index : -1'
 slicesampleset
 -------------
 
-slice a sample set into doubles events.
+Slices a sample set into doubles events.
 
 Parameters
 
@@ -953,11 +952,11 @@ input #1 |> slicesampleset 1h 0 4
 tosampleset
 -------------
 
-converts a list of doublesevents to a sample set. The offset of the sample set can always be the unix time of the first event in the list. The samplerate must be the inverse of the total hours in the output interval (of the input). For example day data, the samplerate will be 1.0/24.
+converts a list of doublesevents to a sample set. The offset of the sample set can always be the UNIX time of the first event in the list. The samplerate must be the inverse of the total hours in the output interval (of the input). For example day data, the samplerate will be 1.0/24.
 
 Parameters
 
--   uselasttime, if set this flag must use the last event time to set the time of the output sampleset, 
+-   uselasttime, if set this flag must use the last event time to set the time of the output sample set, 
 	otherwise use the first one.
 
 Example:
@@ -1026,10 +1025,10 @@ input ~/Test/somedata |> monitor start in 1
 groupdata
 ---------
 
-Multidimensional data grouping for Model Output Statistics (MOS) and some other machine learning algorithm. The input data must be a sample set with at least one channel
+Multidimensional data grouping for Model Output Statistics (MOS) and some other machine learning algorithm. The input data must be a sample set with at least one channel.
 This function groups the input data base on the number of subdivision for each channel. The number of subdivision and the min max for each column are parameters that the user can enter. If no min/max are given, the operation picks the min/max automatically for each channel.
 
-The output of this operation will be a sampleset containing the following channels:
+The output of this operation will be a sample set containing the following channels:
 
 * channel containing the lower bounds of the first input channel (**length** = #grp_0 * #grp_1* #grp_n)
 * channel containing the upper bounds of the first input channel (**length** = #grp_0 * #grp_1* #grp_n)
@@ -1043,15 +1042,15 @@ The output of this operation will be a sampleset containing the following channe
 
 
 
-So based on the above, one can see that the output sample set set can have a number of channels that depends on the number of input channels and the number of groups per channel.
+So based on the above, one can see that the output sample set can have a number of channels that depends on the number of input channels and the number of groups per channel.
 
-For example, for a  sampleset with 2 channels, the following tql command:
+For example, for a  sample set with 2 channels, the following tql command:
 
 ````
 input ~sampleset |> groupdata 2 4
 ````
 
-Produces an output sampleset of 2x2 + 2x4 = 12 channels
+Produces an output sample set of 2x2 + 2x4 = 12 channels
 
 In the example above, **#grp_n** represent the number of subdivision in group n.
 
@@ -1061,7 +1060,7 @@ Parameters
 -   number of subdivision vectors: #grp_0 #grp_1 ... #grp_n
 -   min/max border values: pair of float, of the form (min0,max0),(min1,max1),...
 
-The length of the groups vector must match the length of the min/max pair if the last last is given.
+The length of the group's vector must match to the length of the min/max pair if the last is given.
 
 Example:
 ```
@@ -1075,7 +1074,7 @@ input ~/Test/somedata |> groupdata 2 5 (0,10),(0,100) # divide the input data in
 maps
 ----
 
-same as **map** but the return value of the expressions can be a single value, an array or an array of array. The output of this operation must be a sample set containing all the channels coming from the expressions. It is also possible to specify the samplerate and the offset in each expression. 
+Same as **map** but the return value of the expressions can be a single value, an array or an array of array. The output of this operation must be a sample set containing all the channels coming from the expressions. It is also possible to specify the samplerate and the offset in each expression. 
 In that case, it may affect all the channels in that expression.
 
 Example:
@@ -1093,8 +1092,8 @@ The expression below produces a sample set with one channel having a samplerate 
 input ~/Test/somedata |> maps 's[0], sampleRates[0]*2, offsets[0]+100'
 
 
-The Histogram function returns an array of array containing : the bins count, the lower bounds and the upper bounds for each bin.
-The two expressions below produce a samplec set with 6 channels, 3 for the first histogram and 3 for the second one.
+The Histogram function returns an array of array containing: the bins count, the lower bounds and the upper bounds for each bin.
+The two expressions below produce a sample set with 6 channels, 3 for the first histogram and 3 for the second one.
 ```
 input ~/Test/somedata |> maps 'Histogram(s[0],10)' 'Histogram(s[0],10,0.0,100.0)'
 ```
@@ -1104,7 +1103,7 @@ The expression below produces a sample set with 4 channels, 3 comming from the H
 input ~/Test/somedata |> maps 'Histogram(s[0],10)' 's[0]'
 ```
 
-The followinf functions are also available and also all those define in map:
+The following functions are also available and also all those define in map:
 ​```csharp
 		double[][] Rows(this double[][] values, params int[][] rows)
 		double[] Col(this double[][] values, int col)
