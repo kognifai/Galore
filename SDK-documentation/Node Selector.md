@@ -1,4 +1,4 @@
-Node Selector
+Node Selector  [![Gitter Join the chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/kognifai/Lobby)
 =============
 
 The node selector is an expression for selecting one or more nodes from
