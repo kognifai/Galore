@@ -3,7 +3,7 @@
 
 Welcome to Galore documentation!
 
-Our Galore documentation page includes  all the documentation and sample codes. Everything from SDK, to sample codes. 
+
 
 
 ### Overview
@@ -12,13 +12,11 @@ Galore is native to Kognifai and many Kognifai applications leverage Galore capa
 
   - [Asset modelling](https://github.com/kognifai/Galore/blob/master/SDK-documentation/TQL.md)
   
-  - Measurement aka vector streams aka time series.
+  - Vector streams and time series.
 
-    -   StateEvent streams aka Alarms&Events.
+    -   StateEvent streams and Alarms&Events.
 
-    -   Sample set streams.
-
-       We will explore the capabilities of these services in more details later.
+    -   Sample set streams. see [Sample set streams]()
     
 -   A query service that allows simple and complex (historical and real-time combined) queries using the TQL functional query language.
 
