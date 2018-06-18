@@ -1,4 +1,4 @@
- 
+  
 # Galore    [![Gitter Join the chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/kognifai/Lobby)
 
 Welcome to Galore documentation!
@@ -20,7 +20,7 @@ In this section, we talk about:
 [Case Study](https://github.com/kognifai/Galore/blob/master/SDK-documentation/casestudy.md)
 
 
-### Overview
+## Overview
 
 Many Kognifai applications leverage Galore capabilities for storage because it is one of the storage system. The major Components of the Galore system are:
 
