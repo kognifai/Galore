@@ -4,8 +4,7 @@ Galore uses stream abstraction which provides access to both real-time and histo
 
 A stream can be compared to a pipe with continuous flow of some medium often a fluid. The streams do not have a continuous flow of  a course medium, rather have discrete items called events. 
 
-Events have different types related to which type of stream they belong to. But all events have a UTC timestamp set as close to the origin of the event as possible.
-
+There are different types of events, depend on the streams they belong. All events have a UTC timestamp set as close to the origin of the event.
 
 The following are the Galore Streams' properties:
 
