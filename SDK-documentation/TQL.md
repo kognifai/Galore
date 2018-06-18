@@ -1,5 +1,5 @@
-
-# Galore Asset Model
+ 
+# Galore Asset Model [![Gitter Join the chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/kognifai/Lobby)
 
 The Galore asset model is a Directed Acyclic Graph (DAG), in other words, each node (except the root node) has one or more parents and zero or more children. Each node in the DAG has a tag (except the root node). Tag is a string that identifies the node in the context of its parent node. The tag must not be confused with the node's display node. Each node has a path that uniquely identifies it. 
 
