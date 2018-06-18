@@ -34,8 +34,6 @@ Galore creates a set of different aggregate streams from the raw data stream. Ea
 
 - State event pre aggregates- An aggregate stream is produced for a set of predefined time intervals. The events in these streams are  special state aggregate type with a count of number of times a state has been visited and the total duration spent in that time for the aggregate interval. Propagated state event streams are also aggregated in this way (see next item). 
 
-> Note: This article on aggreate stream is wrtten with no real-time data.
-
 - Propagated state event streams- These streams are associated with all nodes in the asset model. A merged stream of all the event streams is considered for these nodes, usually by being a descendant node in the asset model. Multiple propagated streams can be associated with each node if different state stream types relate to them. A typical use of this feature is: e.g. to find all alarms events on and asset or to find alarms caused by monitoring other streams.
 
 - Sample set pre aggregate streams- These streams count the number of sample set events in each pre aggregate interval.
