@@ -16,7 +16,7 @@ Galore is native to Kognifai and many Kognifai applications leverage Galore capa
 
     -   StateEvent streams and Alarms&Events.
 
-    -   Sample set streams. see [Sample set streams]()
+    -   Sample set streams. See [Sample set event stream](https://github.com/kognifai/Galore/blob/master/SDK-documentation/streams.md)           for more details.
     
 -   A query service that allows simple and complex (historical and real-time combined) queries using the TQL functional query language.
 
@@ -32,7 +32,7 @@ Galore is native to Kognifai and many Kognifai applications leverage Galore capa
 
 
 ### Components of Galore system
-A number of services is used for storing, retrieving and processing data. Here are the quick links to access the most important services.
+Here are the quick links to access the compoents of Galore system.
 
 | Topic | Link | Description | 
 |------|----------|----------|
