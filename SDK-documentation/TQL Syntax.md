@@ -211,9 +211,9 @@ where  |                R,H   |   SampleSetEvent -\> SampleSetEvent\  |         
 | | |                                    StateChangeEvent -\> StateChangeEvent|                   
 
 
-# TQL Name Constants
+## TQL Name Constants
 
-## TQL Name Periods
+### TQL Name Periods
 
 -   hour
 -   day
@@ -223,7 +223,7 @@ where  |                R,H   |   SampleSetEvent -\> SampleSetEvent\  |         
 -   decade
 -   century
 
-## TQL Name Date
+### TQL Name Date
 
 -   now
 -   mintime
@@ -243,14 +243,14 @@ where  |                R,H   |   SampleSetEvent -\> SampleSetEvent\  |         
 -   nextyear
 -   maxtime
 
-## TQL Named Input Element
+### TQL Named Input Element
 
 -   avg
 -   min
 -   max
 -   count
 
-## TQL Named Value
+### TQL Named Value
 
 -   minvalue
 -   maxvalue
