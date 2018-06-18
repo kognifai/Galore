@@ -4,11 +4,9 @@
 Welcome to Galore documentation!
 
 
-
-
 ### Overview
 
-Galore is native to Kognifai and many Kognifai applications leverage Galore capabilities for storage because it is one of the storage system. The major Components of the Galore system are:
+Many Kognifai applications leverage Galore capabilities for storage because it is one of the storage system. The major Components of the Galore system are:
 
   - [Asset modelling](https://github.com/kognifai/Galore/blob/master/SDK-documentation/TQL.md)
   
