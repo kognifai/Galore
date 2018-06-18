@@ -1,4 +1,4 @@
-Galore Case Study
+Galore Case Study  [![Gitter Join the chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/kognifai/Lobby)
 =================
 
 In order to get a better overview of the Galore capabilities, we explores it in a simplified case study.
