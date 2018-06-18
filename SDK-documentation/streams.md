@@ -1,5 +1,5 @@
-
-# Streams
+ 
+# Streams  [![Gitter Join the chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/kognifai/Lobby)
 Galore uses stream abstraction which provides access to both real-time and historical data, whereas, many time series databases and systems have  strict data separation methods for real-time and historical data as well as they have different abstraction methods for accessing real-time and historical data. 
 
 A stream can be compared to a pipe with continuous flow of some medium often a fluid. The streams do not have a continuous flow of  a course medium, rather have discrete items called events. 
