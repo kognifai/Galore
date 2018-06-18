@@ -103,7 +103,7 @@ Select all nodes under "Farm1" with the attribute "nodeType" of value "Turbine" 
 > Note: There is presently no way to group parts of the selector, e.g. to write the above example as
 > Not allowed: `/Farm1 ([nodeType=Turbine], [maxPower=2300])`
 
-Parameters
+Parameters  [![Gitter Join the chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/kognifai/Lobby)
 ==========
 
 Some parameters have special syntax and are used in many operations.
