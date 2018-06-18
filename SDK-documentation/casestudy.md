@@ -154,24 +154,19 @@ not care about their content.
 Streams
 =======
 
-We have already mentioned streams several times without explaining what it is
+The term **stream** is used several times in this article without explaining what it is
 meant. The Galore stream is an abstraction of data that has several
 attractive properties:
 
--   It is an ordered sequence of data items, This makes it suitable to
-    represent sequences of measurements, in other words time series.
+-   It is an ordered sequence of data items, which is suitable to
+    represent sequences of measurements, in other words, time series.
 
--   It lends itself to pipeline processing that is, processing
+-   It lends itself to a pipeline processing, that is, processing
     operations can be chained to transform streams into new streams. TQL
-    is a language for describing such processing pipelines
+    is a language that describes such processing pipelines
 
--   It allows the unification of real-time processing and processing of
-    historical data. Many systems with some similar capabilities as
-    Galore have strict separation between historical data processing and
-    real-time data processing.
-
--   It allows processing definitions (TQL) to take several types of
-    streams as input.
+-   It allows the unification of real-time  and historical data. Many other systems with similar capabilities as Galore have strict           separation methods for real-time and historical data processing.
+-   It allows processing definitions (TQL) to get several types of streams as input.
 
 Calculators and derived streams
 ===============================
@@ -180,45 +175,37 @@ While TQL queries can be used to run ad hoc processing from client
 application and services, they can also be stored in the Galore asset
 model.
 
-In our case study, we will give to simplified examples of this can be
-used. We will skip over the details of the TQL queries. See the TQL
-documentation for more details \<ref\>.
+See [TQL documentation](https://github.com/kognifai/Galore/blob/master/SDK-documentation/TQL%20Syntax.md) for more details.
 
 1.  Production forecast
 
-Wind turbines have a defined relationship between wind speed and power
-output. This is called the power curve. We can add the power curve to
-our asset model, either as an Attribute or as A sample set stream. The
-latter has the advantage of keeping a history of power curves which can
-be useful if the turbine is modified over the lifetime in a way that
-changes the power-curve. In both cases the power-curve will be entered
-manually using the Galore config tool.
+Wind turbines have a defined relationship between wind speed and power output which is called the power curve. We can add the power curve to Galore asset model, either as an attribute or as a sample set stream, the latter has an advantage of keeping a history of power curves which is useful if the turbine is modified over the lifetime, in a way, it changes the power curve. In these cases, the power curve must be entered manually using the Galore config tool.
 
 The next step is to add a calculator node and a sample set node to the
-asset model. The sample set node will represent the production forecast.
+asset model. The sample set node represents the production forecast.
 
-The calculator node will have a query that will take the predicted wind
-from the weather forecast and use that to look up the expected power
+The calculator node may have a query that takes the predicted wind
+from the weather forecast and use it to lookup the expected power
 output of the turbine. Each time a new weather forecast arrives in the
-system it will trigger a new production forecast.
+system it triggers a new production forecast.
 
-The inputs of the query (weather forecast and power-curve streams) will
-be specified using relative paths in the asset model. This allow the
-calculator to be added to the asset template an as such work on each
+The inputs of the query (weather forecast and power curve streams) must
+be specified using relative paths in the asset model. This allows the
+calculator to be added to the asset template as such work on each
 turbine it is applied to.
 
-The next step is to produce a farm total production forecast. To do this
+The next step is to produce a farm total production forecast. To do this,
 we add a new calculator and sample set node to the farm node in the
 asset model
 
-Now we specify a query on the calculator that will sum all the forecasts
-from each individual turbine. Now the input of the query uses a path
-with wildcards to select all the individual forecast streams and sum
-them to a farm level forecasts stream.
+Now, we specify a query on the calculator that sums all the forecasts
+from each individual turbine. The input of the query uses a path
+with wildcards to select all the individual forecast streams and sums
+them to a farm level forecast stream.
 
 2.  High bearing temperature warning
 
-Now we add a calculator and event node to the bearing node in the asset
+Now, we add a calculator and event node to the bearing node in the asset
 model
 
 We add a query to the calculator that selects the temperature as input
@@ -230,20 +217,20 @@ Implicit Derived streams and Drill Down
 =======================================
 
 The Galore asset model allows the creation of implicit streams for drill
-down. An event stream will be propagated to its parent node and merged
+down. An event stream can be propagated to its parent node and merged
 with event streams from other child nodes. This allows implicit streams
 of events to be formed on each node comprising all the event on all
 sub nodes. This allows the client application to easily extract events
 related to a particular subsystem. This allows the end user to drill
 down into the asset model and see only the relevant events.
 
-For time series nodes and sample set nodes a number time based aggregated
-streams are created in addition to the raw data streams. This allows
-very fast access to aggregate of large time periods. For events the
+For time series nodes and sample set nodes a number of time based aggregated
+streams are created, in addition to the raw data streams. This allows
+very fast access to aggregate of large time periods. For events, the
 aggregate contains the number and type events in the period. For
 measurements, the aggregate contains average, minimum, maximum and
 number of measurements.
 
-The time series viewer (A general tool used to explore galore
+The time series viewer (A general tool used to explore Galore
 time series) relies heavily on this to provide a smooth interactive user
 experience with fast interactive zooming.
