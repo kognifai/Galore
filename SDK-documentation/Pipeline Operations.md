@@ -37,9 +37,9 @@ Stream types can be customized but these are predefined by the system:
 
 Parameters:
 
--   nodeSelector- See [Node Selector](https://github.com/kognifai/Galore/blob/master/SDK-documentation/Node%20Selector.md) selects one     or many nodes in the Galore asset model. If the node is not an event source node, all descendants that are alarm log nodes.
+-   nodeSelector- See [Node Selector](Node%20Selector.md) selects one     or many nodes in the Galore asset model. If the node is not an event source node, all descendants that are alarm log nodes.
 -   streamSelector- See [Streamselector](#Streamselector). Nodes may have multiple streams associated e.g. propagated or relate           events, pre aggregates, change notifications etc. In many cases, the stream selector can be left out because it is inferred from the     node type.
--   interval-  See [Interval](https://github.com/kognifai/Galore/blob/master/SDK-documentation/Node%20Selector.md). Interval is part of     the stream selector. It Determines which pre-aggregate interval is selected. The closest larger pre  aggregate interval will be         selected. Default is 0 i.e. not aggregated data.
+-   interval-  See [Interval](Node%20Selector.md). Interval is part of     the stream selector. It Determines which pre-aggregate interval is selected. The closest larger pre  aggregate interval will be         selected. Default is 0 i.e. not aggregated data.
 -   acceptStale - Forces the underlying index to update before reading alarms. Default is False.
 
     Examples:
@@ -74,7 +74,7 @@ The jitter operation is used to remove jitter from time stamps. This is particul
 
 Parameters:
 
--   interval. See [Interval](SDK-documentation/Node%20Selector.md)
+-   interval. See [Interval](Node%20Selector.md)
 
 resample
 --------
@@ -102,7 +102,7 @@ Parameters:
 
 -   time- Starting time for series
 
--   period- Interval between entries. See [Period](SDK-documentation/Node%20Selector.md-
+-   period- Interval between entries. See [Period](Node%20Selector.md-
 
 -   value- The value of each entry. Defaults to 0 if missing
 
@@ -125,7 +125,7 @@ Aggregates the input sequence into a single value or a value for each period
 Parameters:
 
 -   period- If given, the aggregate produces an aggregate for each
-    period. See [Period](https://github.com/kognifai/Galore/blob/master/SDK-documentation/Node%20Selector.md)
+    period. See [Period](Node%20Selector.md)
 
 -   isRunning- A partial aggregate is produced for every input value
 
@@ -299,7 +299,7 @@ where
 
 Parameters:
 
--   expression- A boolean expression (also known as a predicate) to determine which items of the sequence to discard. See [Expression](https://github.com/kognifai/Galore/blob/master/SDK-documentation/Node%20Selector.md)
+-   expression- A boolean expression (also known as a predicate) to determine which items of the sequence to discard. See [Expression](Node%20Selector.md)
 
 Example: 
 ```
@@ -330,7 +330,7 @@ map
 
 Parameters:
 
--   One or many expression(s). See [Expression](https://github.com/kognifai/Galore/blob/master/SDK-documentation/Node%20Selector.md).       The first calculates the first element of the output vector, the second expression calculates the second element of the output         vector.
+-   One or many expression(s). See [Expression](Node%20Selector.md). The first calculates the first element of the output vector, the second expression calculates the second element of the output vector.
 
 -   Column name
 
@@ -500,7 +500,7 @@ Starts the sequence with the Nth item before the given time.
 
 Parameters:
 
--   Time. See [Time](SDK-documentation/Node%20Selector.md)
+-   Time. See [Time](Node%20Selector.md)
 -   incl | excl (default incl) Specifies how an item exactly at the time must be handled. By default, it is included in the result stream before the count is started
 -   Number of elements
 
