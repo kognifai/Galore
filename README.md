@@ -51,7 +51,7 @@ Many Kognifai applications leverage Galore capabilities for storage because it i
 -   General Tools for exploring data, stored by the system.
  
  ### Galore WCF Sample Code
-[Here](https://github.com/kognifai/Galore/blob/master/SDK-documentation/GaloreWCFSample.md) is the short description and what to expect from the  WCF Sample codes. 
+[Here](https://github.com/kognifai/Galore/tree/master/GaloreWCFSample) is the short description and what to expect from the  WCF Sample codes. 
  
 
 ### Case Study
