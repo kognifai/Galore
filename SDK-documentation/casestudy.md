@@ -1,16 +1,16 @@
 Galore Case Study  [![Gitter Join the chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/kognifai/Lobby)
 =================
 
-In order to get a better overview of the Galore capabilities, we explores it in a simplified case study.
+In order to get a better overview of the Galore capabilities, we explore it in a simplified case study.
 
 Let us assume that we are a small Wind Farm owner and operator and we want
-to get better control over our assets. In this case the assets are wind
+to get better control over our assets. In this case, the assets are wind
 turbines and related infrastructure. Galore is very general with regards
 to what type of assets it can model. We could just as well have chosen
-our case study to be about ships, oil rigs, fish farms and so on. In
+our case study to be about Ships, Oil rigs, Fish farms and so on. In
 other words, any asset that lends itself to hierarchical modelling and
-that produces data that can be represented as streams of measurements,
-events and sample sets is a good match for Galore.
+produces data that can be represented as streams of measurements,
+events, and sample sets is a good match for Galore.
 
 Data Acquisition/Data Ingest
 ============================
@@ -26,18 +26,18 @@ Our small windfarm has these major components that we want to monitor:
 Each of these assets have built in controllers and instrumentation that
 continuously produce data:
 
--   Measurements of physical parameters important to the operation of
+-   Measurements of physical parameters are important to the operation of
     the asset and its sub components. For example, current power output, wind
     speed, wind direction, rotation speed etc.
 
--   State information amount the whole asset or one of its subsystem.
+-   State information amounts the whole asset or one of its subsystem.
     For example, Stopped, Starting, Operational, Shutting down
 
 -   Alarms/Events from the controllers when it detects errors in a
     subsystem
 
 In addition, we have external data sources we like to integrate
-into our system. That is:
+into our system. They are:
 
 -   Weather forecasts
 
@@ -55,7 +55,7 @@ model in Galore that might look something like this:
 
                                         Edge Model
 
-The asset model can be viewed in and edited the galore configuration
+The asset model can be viewed and edited in the Galore configuration
 tool. The circular items represent assets and sub-assets. The other
 items represent streams of data, often referred as tags. A real
 system can have hundreds or thousands of tags per asset so this is
@@ -91,12 +91,11 @@ Asset modelling
 
 To make our data more accessible, we create a more detailed model
 of our turbine assets. This gives more context to the data and make
-it easier for a user to navigate the data and for and application
-developer to create context sensitive user interfaces, dashboards and
+it easier for a user to navigate the data and for any application
+developer to create context sensitive user interfaces, dashboards, and
 reports.
 
-\*The asset models are sometimes referred to as logical models or
-semantic model.
+\*The asset models are sometimes referred as logical models or semantic model.
 
 Our turbine asset model could look something like this:
 
@@ -106,18 +105,18 @@ Our turbine asset model could look something like this:
                       
 This is a very much simplified model of a wind turbine, but we already
 have a representation of some of the main components of a real turbine.
-In general, the more data we have and the more context we want to
-provide the more detail we will add to our model. It is also possible to
+In general, the more data we have, the more context we want to
+provide, and the more detail we add to our model. It is also possible to
 provide multiple models of the same asset with different level of
 detail.
 
 When we are happy with the model, we can make it into a "model template"
 and then apply the same template to each turbine in our wind farm.
 
-> Note that the tags here are indicated with dashed lines. This indicates
-that this is a link to another part of the complete asset model. In this
-case the nodes representing data tags are the same as we got
-automatically from the Edge system. We just point to them in our asset
+> Note that the tags here are indicated with dashed lines. This
+is a link to another part of the complete asset model. In this
+case, the nodes representing data tags are the same as we got
+automatically from the Kongsberg Edge system. We just point them in our asset
 model. These links are part of the template and as far as each edge
 model has the same tags, we can include the complete link in the
 template. If the tag varies from one asset to another we can adjust the
@@ -145,10 +144,10 @@ about that particular part of the system. For example:
     protected so that only certain users can read or modify them.
 
 -   Attributes can also be used to mark nodes so that they can be
-    selected by an node selector with attribute matching \<ref to TQL
+    selected by a node selector with attribute matching \<ref to TQL
     doc\>
 
-Other attributes are defined by the application and Galore itself does
+Other attributes are defined by the application and Galore themselves do
 not care about their content.
 
 Streams
@@ -175,11 +174,11 @@ While TQL queries can be used to run ad hoc processing from client
 application and services, they can also be stored in the Galore asset
 model.
 
-See [TQL documentation](https://github.com/kognifai/Galore/blob/master/SDK-documentation/TQL%20Syntax.md) for more details.
+See [TQL documentation](TQL%20Syntax.md) for more details.
 
 1.  Production forecast
 
-Wind turbines have a defined relationship between wind speed and power output which is called the power curve. We can add the power curve to Galore asset model, either as an attribute or as a sample set stream, the latter has an advantage of keeping a history of power curves which is useful if the turbine is modified over the lifetime, in a way, it changes the power curve. In these cases, the power curve must be entered manually using the Galore config tool.
+Wind turbines have a defined relationship between wind speed and power output which are called the power curve. We can add the power curve to Galore asset model, either as an attribute or as a sample set stream, the latter has an advantage of keeping a history of power curves which is useful if the turbine is modified over the lifetime, in a way, it changes the power curve. In these cases, the power curve must be entered manually using the Galore config tool.
 
 The next step is to add a calculator node and a sample set node to the
 asset model. The sample set node represents the production forecast.
@@ -224,12 +223,7 @@ sub nodes. This allows the client application to easily extract events
 related to a particular subsystem. This allows the end user to drill
 down into the asset model and see only the relevant events.
 
-For time series nodes and sample set nodes a number of time based aggregated
-streams are created, in addition to the raw data streams. This allows
-very fast access to aggregate of large time periods. For events, the
-aggregate contains the number and type events in the period. For
-measurements, the aggregate contains average, minimum, maximum and
-number of measurements.
+A number of time-based aggregated streams are created for time series nodes and sample set nodes, in addition to the raw data streams. This allows very fast access to aggregate of large time periods. For events, the aggregate contains the number and type events in the period. For measurements, the aggregate contains average, minimum, maximum and number of measurements.
 
 The time series viewer (A general tool used to explore Galore
 time series) relies heavily on this to provide a smooth interactive user
