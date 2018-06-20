@@ -7,8 +7,8 @@ In this section, we talk about:
 
  [Galore_Overview](#Overview)
 
-  - [Galore Asset Model](https://github.com/kognifai/Galore/blob/master/SDK-documentation/TQL.md)
-  [What is IoT?](https://github.com/kognifai/IoT#what-is-iot-----)
+  - [Galore Asset Model](https://github.com/kognifai/Galore#asset-modelling)
+
 
   - [Streams](https://github.com/kognifai/Galore/blob/master/SDK-documentation/streams.md)
 
