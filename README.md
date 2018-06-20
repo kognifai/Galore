@@ -19,11 +19,11 @@ In this section, we talk about:
 
   - [Case Study](https://github.com/kognifai/Galore/blob/master/SDK-documentation/casestudy.md)
   
-[GaloreWCFSamplec](https://github.com/kognifai/Galore/tree/master/GaloreWCFSample)
+[GaloreWCFSample code](https://github.com/kognifai/Galore/tree/master/GaloreWCFSample)
 
 ## Overview
 
-Many Kognifai applications leverage Galore capabilities for storage because it is one of the storage system. The major Components of the Galore system are: Here are the quick links to access the compoents of Galore system.
+Many Kognifai applications leverage Galore capabilities for storage because it is one of the storage system. Here are the major components of the Galore system:
 
   - [Asset modelling](https://github.com/kognifai/Galore/blob/master/SDK-documentation/TQL.md) - The Galore Asset Model is a Directed Acyclic Graph (DAG).
   
@@ -49,6 +49,7 @@ Many Kognifai applications leverage Galore capabilities for storage because it i
 
 -   General Tools for exploring data, stored by the system.
  
+ ### [Galore WCF Sample Code
  
 
 ### Case Study
