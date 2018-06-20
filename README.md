@@ -11,7 +11,7 @@ In this section, we talk about:
 
   - [Streams](https://github.com/kognifai/Galore/blob/master/SDK-documentation/streams.md)
 
-  - [TQL Syntax](https://github.com/kognifai/Galore/blob/master/SDK-documentation/TQL%20Syntax.md)
+  - [TQL functional query language](https://github.com/kognifai/Galore/blob/master/SDK-documentation/TQL%20Syntax.md)
 
   - [Node Selector](https://github.com/kognifai/Galore/blob/master/SDK-documentation/Node%20Selector.md)
  
@@ -27,7 +27,7 @@ Many Kognifai applications leverage Galore capabilities for storage because it i
 
   - [Asset modelling](https://github.com/kognifai/Galore/blob/master/SDK-documentation/TQL.md) - The Galore Asset Model is a Directed Acyclic Graph (DAG).
   
-  - [streams](https://github.com/kognifai/Galore/blob/master/SDK-documentation/streams.md) - Galore uses a stream abstraction to allow access to both real-time and historical data..
+  - [Streams](https://github.com/kognifai/Galore/blob/master/SDK-documentation/streams.md) - Galore uses a stream abstraction to allow access to both real-time and historical data..
 
     -   StateEvent streams and Alarms&Events.
 
@@ -43,13 +43,14 @@ Many Kognifai applications leverage Galore capabilities for storage because it i
  
 - These services are accessible by end user applications and other services through REST APIs, Signal R and WCF services.
 
--   Client libraries (C\# and javascript/typescript) can be leveraged by end user applications.
+-   Client libraries (C# and javascript/typescript) can be leveraged by end user applications.
 
 -   General Tools for configuring the system.
 
 -   General Tools for exploring data, stored by the system.
  
- ### [Galore WCF Sample Code
+ ### Galore WCF Sample Code
+[Here](https://github.com/kognifai/Galore/blob/master/SDK-documentation/GaloreWCFSample.md) is the short description and what to expect from the  WCF Sample codes. 
  
 
 ### Case Study
