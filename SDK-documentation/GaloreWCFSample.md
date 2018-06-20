@@ -1,13 +1,16 @@
 
 # GaloreWCF Sample 
 
-Properties
+In this section, we wi
+The WCF Sample project contains the following code samples. This section provides a  short description on each components and how to use 
+
 
 AssemblyInfo.cs
 
-// General Information about an assembly is controlled through the following
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
+### Description
+
+In AssemblyInfo, a set of attributes control the general information about an assembly, you can modify the attribute values to change the assembly information.
+
 
 // Setting ComVisible to false makes the types in this assembly not visible
 // to COM components.  If you need to access a type in this assembly from
