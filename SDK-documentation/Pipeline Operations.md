@@ -74,7 +74,7 @@ The jitter operation is used to remove jitter from time stamps. This is particul
 
 Parameters:
 
--   interval. See [Interval](https://github.com/kognifai/Galore/blob/master/SDK-documentation/Node%20Selector.md)
+-   interval. See [Interval](SDK-documentation/Node%20Selector.md)
 
 resample
 --------
@@ -102,7 +102,7 @@ Parameters:
 
 -   time- Starting time for series
 
--   period- Interval between entries. See [Period](https://github.com/kognifai/Galore/blob/master/SDK-documentation/Node%20Selector.md-
+-   period- Interval between entries. See [Period](SDK-documentation/Node%20Selector.md-
 
 -   value- The value of each entry. Defaults to 0 if missing
 
@@ -500,7 +500,7 @@ Starts the sequence with the Nth item before the given time.
 
 Parameters:
 
--   Time. See [Time](https://github.com/kognifai/Galore/blob/master/SDK-documentation/Node%20Selector.md)
+-   Time. See [Time](SDK-documentation/Node%20Selector.md)
 -   incl | excl (default incl) Specifies how an item exactly at the time must be handled. By default, it is included in the result stream before the count is started
 -   Number of elements
 
@@ -521,7 +521,7 @@ in the sequence may lead to undefined behaviour. This is because the
 input sequence is run backwards until the desired count of event is
 reached.
 
-![The marble diagram should be here](.attachments/takebefore-marble.png)
+![The marble diagram should be here](blob/master/.attachments/takebefore-marble.png)
 
 takeafter
 ---------
