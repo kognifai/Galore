@@ -39,7 +39,7 @@ Parameters:
 
 -   nodeSelector- See [Node Selector](Node%20Selector.md) selects one     or many nodes in the Galore asset model. If the node is not an event source node, all descendants that are alarm log nodes.
 -   streamSelector- See [Streamselector](#Streamselector). Nodes may have multiple streams associated e.g. propagated or relate           events, pre aggregates, change notifications etc. In many cases, the stream selector can be left out because it is inferred from the     node type.
--   interval-  See [Interval](Node%20Selector.md). Interval is part of     the stream selector. It Determines which pre-aggregate interval is selected. The closest larger pre  aggregate interval will be         selected. Default is 0 i.e. not aggregated data.
+-   interval-  See [Interval](Node%20Selector.md#Parameters). Interval is part of     the stream selector. It Determines which pre-aggregate interval is selected. The closest larger pre  aggregate interval will be         selected. Default is 0 i.e. not aggregated data.
 -   acceptStale - Forces the underlying index to update before reading alarms. Default is False.
 
     Examples:
@@ -521,7 +521,7 @@ in the sequence may lead to undefined behaviour. This is because the
 input sequence is run backwards until the desired count of event is
 reached.
 
-![The marble diagram should be here](blob/master/.attachments/takebefore-marble.png)
+![The marble diagram should be here](/.attachments/takebefore-marble.png)
 
 takeafter
 ---------
@@ -984,7 +984,7 @@ input ~/Test/somedata |> timeout 1m
 input ~/Test/somedata |> timeout 1m useinputtime
 
 ```
-![The marble diagram should be here](https://github.com/kognifai/Galore/blob/master/.attachments/timeout-marble.png)
+![The marble diagram should be here](.attachments/timeout-marble.png)
 
 monitor
 -------------
