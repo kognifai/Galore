@@ -31,7 +31,7 @@ Many Kognifai applications leverage Galore capabilities for storage because it i
 
     -   StateEvent streams and Alarms&Events.
 
-    -   Sample set streams. See [Sample set event stream](SDK-documentation/streams.md)           for more details.
+    -   Sample set streams. See [Sample set event stream](SDK-documentation/streams.md#sampel-set-event-stream)    for more details.
     
 -  [TQL functional query language](SDK-documentation/TQL%20Syntax.md) - A query service that allows simple and complex (historical and real-time combined) queries using the TQL .TQL defines a functional pipeline. 
 
