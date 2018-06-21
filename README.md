@@ -7,8 +7,7 @@ In this section, we talk about:
 
  [Galore_Overview](#Overview)
 
-  - [Galore Asset Model](https://github.com/kognifai/Galore#asset-modelling)
-
+  - [Galore Asset Model](SDK-documentation/TQL.md)
 
   - [Streams](https://github.com/kognifai/Galore/blob/master/SDK-documentation/streams.md)
 
