@@ -567,7 +567,7 @@ input ~/Simulator/WTUR01 [defaultTurbinePower] 1d
     |> taketo 2016-01-01T04:00:00Z
 ```
 
-![The marble diagram should be here](SDK-documentation/Images/takefrom-marble.png)
+![The marble diagram should be here](Images/takefrom-marble.png)
 
 taketo
 ------
@@ -984,7 +984,7 @@ input ~/Test/somedata |> timeout 1m
 input ~/Test/somedata |> timeout 1m useinputtime
 
 ```
-![The marble diagram should be here](images/timeout-marble.png)
+![The marble diagram should be here](Images/timeout-marble.png)
 
 monitor
 -------------
@@ -1020,7 +1020,7 @@ input ~/Test/somedata |> monitor start in 1
 
 
 ```
-![The marble diagram should be here](images/monitor-marble.png)
+![The marble diagram should be here](Images/monitor-marble.png)
 
 groupdata
 ---------
