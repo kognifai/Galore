@@ -1,7 +1,7 @@
 Node Selector  [![Gitter Join the chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/kognifai/Lobby)
 =============
 
-The node selector is an expression for selecting one or more nodes from
+The node selector is an expression for selecting one or many nodes from
 Galore. A node can be selected in several ways:
 
 -   Path
@@ -132,7 +132,7 @@ The main difference between a period and an interval is that periods are aligned
 Expression
 ----------
 
-Some operations take one or more expressions as their parameters.
+Some operations take one or many expressions as their parameters.
 
 Expressions have the same syntax as C# expressions and are between single quotes: `'expression'`
 
