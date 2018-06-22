@@ -521,7 +521,7 @@ in the sequence may lead to undefined behaviour. This is because the
 input sequence is run backwards until the desired count of event is
 reached.
 
-![The marble diagram should be here](SDK-documentation/images/takebefore-marble.png)
+![The marble diagram should be here](Images/takebefore-marble.png)
 
 takeafter
 ---------
@@ -544,7 +544,7 @@ takeafter now excl 5. takes 5 items after the given date counting an itme at tim
 Note: The operation only works on historical data. This is expected to
 change.
 
-![The marble diagram should be here](SDK-documentation/Images/takeafter-marble.png)
+![The marble diagram should be here](Images/takeafter-marble.png)
 
 takefrom
 --------
