@@ -19,7 +19,8 @@ In this section, we talk about:
 
   - [Case Study](SDK-documentation/casestudy.md)
   
-[dev stack SDK]SDK-documentation/dev%20stack%20SDK)
+[dev stack SDK](SDK-documentation/dev%20stack%20SDK)
+
 [GaloreWCFSample code](GaloreWCFSample)
 
 ## Overview
