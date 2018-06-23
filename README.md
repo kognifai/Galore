@@ -21,7 +21,7 @@ In this section, we talk about:
   
 [dev stack SDK](SDK-documentation/dev%20stack%20SDK.md)
 
-[GaloreWCFSample code](GaloreWCFSample)
+[Galore WCFSample code](GaloreWCFSample)
 
 ## Overview
 
@@ -29,7 +29,7 @@ Many Kognifai applications leverage Galore capabilities for storage because it i
 
   - [Asset modelling](SDK-documentation/TQL.md) - The Galore Asset Model is a Directed Acyclic Graph (DAG).
   
-  - [Streams](SDK-documentation/streams.md) - Galore uses a stream abstraction to allow access to both real-time and historical data..
+  - [Streams](SDK-documentation/streams.md) - Galore uses a stream abstraction to allow access to both real-time and historical data.
 
     -   StateEvent streams and Alarms&Events.
 
@@ -45,7 +45,7 @@ Many Kognifai applications leverage Galore capabilities for storage because it i
  
 - These services are accessible by end user applications and other services through REST APIs, Signal R and WCF services.
 
--   Client libraries (C# and javascript/typescript) can be leveraged by end user applications.
+-   Client libraries (C# and JavaScript/TypeScript) can be leveraged by end user applications.
 
 -   General Tools for configuring the system.
 
