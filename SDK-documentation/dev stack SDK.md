@@ -7,7 +7,7 @@ In this section, we talk about:
 - [Prerequisites](Prerequisites.md)
 - [Dev stack Installation](Installation.md)
 - [Uninstallation](Uninstallation.md)
-- [Upgrading Dev stack SDK](Upgrading%20Dev%20stack%20SDK)
+- [Upgrading Dev stack SDK](Upgrading%20Dev%20stack.md)
 - [Stack Endpoint Values](Stack%20Endpoint%20Values.md)
 - [Troubleshooting](Troubleshooting.md)
 
