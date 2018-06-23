@@ -21,11 +21,8 @@ Chocolatey Packages
 - galorecoreservices
 
 ## Related Topics
-- Prerequisites
-- Installation
-- Additional Installation Steps
-- Post-Installation
-- Installation Parameters
+- Prerequisites[Prerequisites.md)
+- Installation[Installation.md]
 - Uninstallation
 - Upgrading
 - Stack Endpoint Values
