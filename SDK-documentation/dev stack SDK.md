@@ -1,4 +1,17 @@
-## dev stack SDK Overview
+## dev stack SDK 
+
+In this section, we talk about:
+- [dev stack Overview](#Overview)
+
+## See Also
+- [Prerequisites](Prerequisites.md)
+- [Dev stack Installation](Installation.md)
+- [Uninstallation](Uninstallation.md)
+- [Upgrading Dev stack SDK](Upgrading%20Dev%20stack%20SDK)
+- [Stack Endpoint Values](Stack%20Endpoint%20Values.md)
+- [Troubleshooting](Troubleshooting.md)
+
+## Overview
 
 The following diagram depicts a basic idea on the dev stack SDK.
 
@@ -20,10 +33,3 @@ Chocolatey Packages
 - galoreapi
 - galorecoreservices
 
-## See Also
-- [Prerequisites](Prerequisites.md)
-- [Dev stack Installation](Installation.md)
-- [Uninstallation](Uninstallation.md)
-- [Upgrading Dev stack SDK](Upgrading%20Dev%20stack%20SDK)
-- [Stack Endpoint Values](Stack%20Endpoint%20Values.md)
-- [Troubleshooting](Troubleshooting.md)
