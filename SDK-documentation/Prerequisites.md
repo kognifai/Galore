@@ -1,4 +1,5 @@
-## Prerequisites
+## Prerequisites [![Gitter Join the chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/kognifai/Lobby)
+
 The following are the prerequisites:
 1.  Install Chocolatey (https://chocolatey.org/install)
 2.	Enable **Hyper-V** and **containers**. 
