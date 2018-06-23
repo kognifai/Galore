@@ -5,7 +5,7 @@ The Galore asset model is a Directed Acyclic Graph (DAG), in other words, each n
 
 Path describes how to traverse DAG from root to node. Path is a list of tags of each node visited during this traversal and separated by the Slash character `/`.
 
-Example: `/Farm/Turbine/Nacelle/WindSpeed`
+Example: `/Farm/Turbine/Nacelle/WindSpeed.
 
 # Streams of Events
 
@@ -39,7 +39,7 @@ The following event types are supported by TQL:
 
 -   **Sample set -** This event is a matrix or a table. Each column in the matrix is a **channel**. 
       For example,  for a weather forecast one channel can be a wind speed and another a temperature. 
-    Stored streams of sample set events have an associated sample set node in the Galore asset model. The node contains **channel descriptors** which describes the channel properties such as storage unit display unit, sample rate and sample dimension. The channel descriptors is also referred as **meta data** in the sample set sequence.
+    Stored streams of sample set events have an associated sample set node in the Galore asset model. The node contains **channel descriptors** which describes the channel properties such as storage unit display unit, sample rate and sample dimension. The channel descriptors is also referred as **metadata** in the sample set sequence.
 
 -   **Alarm-** An alarm event has the following properties:
 
