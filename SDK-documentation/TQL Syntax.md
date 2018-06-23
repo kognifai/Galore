@@ -7,11 +7,11 @@ The general form of a query is:
 Operation1 p1a p1b ... |> Operation2 p2a p2b |> Operation p3a p3b
 ...
 ```
-p1a, and p1b etc are parameters.
+p1a, and p1b are parameters.
 
 > Note: 
 - Parameters are not generally named. The order of the parameters is important unless explicitly stated.
-- Complex queries are formed by grouping sub queries, the formation must be: subqueires in square brackets and ends with semicolons. 
+- Complex queries are formed by grouping sub queries, the formation must be: subqueries in square brackets and ends with semicolons. 
  
 
 ```
@@ -43,7 +43,7 @@ aligneventtime | R,H |
 amplitudespectrum| R,H | SampleSetEvent -\> SampleSetEvent| Creates an amplitude spectrum for each channel in the sample set|
 amplitudespectrumfft|   R,H | SampleSetEvent(*2) -\> SampleSetEvent | Creates an amplitude spectrum based on output from the fastfouriertransform-operation for each channel in the sample set. Each channel must have real and imaginary values.|
 armaxbuilder | R,H | SampleSetEvent -\> SampleSetEvent| Builds a first order armax model based on the given parameters|
-boolop| R,H | [ AlarmEvent ] -\> AlarmEvent| Gets multiple (alarums) inpts, calculates, and generates Boolean result.|
+boolop| R,H | [ AlarmEvent ] -\> AlarmEvent| Gets multiple (alarums) inputs, calculates, and generates Boolean result.|
 combine|R,H| [ SampleSetEvent ] -\> SampleSetEvent\| Combines hold multiple inputs into a single output vector by aligning input streams on time.|
  |       | | [ DoublesEvent ] -\> DoublesEvent\ | 
  |	| | [ IEvent ] -\> ListEvent|                             
@@ -57,7 +57,7 @@ combinewithouthold | R,H | [ SampleSetEvent ] -\> SampleSetEvent\ | Combines wit
 | | | AggregatedLargeEvents -\> AggregatedLargeEvents\|  
 | | | TimeRangeEvent -\> TimeRangeEvent\  |  
 | | | IEvent -\> IEvent  |   
-|decimation| R,H | SampleSetEvent -\> SampleSetEvent| Creates new sampleset by down sampling input sampleset channels by a decimation factor (which is calculated from parameter Fmax)|
+|decimation| R,H | SampleSetEvent -\> SampleSetEvent| Creates new SampleSet by down sampling input SampleSet channels by a decimation factor (which is calculated from parameter Fmax)|
 |dotmap| R,H  | SampleSetEvent -\> SampleSetEvent| Applies an expression to each row of a SampleSet. Each new column in the output SampleSet represents an input expression.|
 |downscalex| R,H | ListEvent -\> SampleSetEvent\| Divides the SampleRate (or SampleInterval) of a SampleSet by a factor.|
 | | |  *ListEvent must be:\    [ DoublesEvent , SampleSetEvent ] or\   [ SampleSetEvent , DoublesEvent ]*   |
@@ -79,23 +79,23 @@ combinewithouthold | R,H | [ SampleSetEvent ] -\> SampleSetEvent\ | Combines wit
 |functionlookup|R,H |      SampleSetEvent -\> SampleSetEvent  |                      Lookup for an expression in a table and applies that expression to the input signal|
 |gapfill   |              H   |      DoublesEvent -\> DoublesEvent\  |                         Fills in zero or a given value where query fails to produce value(s) for output sequence|
 | | | SampleSetEvent -\> SampleSetEvent |                       
-|generate |               R,H |      Void -\> DoublesEvent      |                              creates a (recurring) time series from a scalar value.|
-|hanningwindow |          R,H  |     SampleSetEvent -\> SampleSetEvent  |                      Multiplies the values for each channel in the sample set with a hanning window.|
+|generate |               R,H |      Void -\> DoublesEvent      |                              Creates a (recurring) time series from a scalar value.|
+|hanningwindow |          R,H  |     SampleSetEvent -\> SampleSetEvent  |                      Multiplies the values for each channel in the sample set with a hann window.|
 |indexesofmax |        |             DoublesEvent -\> DoublesEvent   |                         Sorts the input array from maximum to minimum and returns the indexes.|
 indexesofmin |        |             DoublesEvent -\> DoublesEvent  |                          Sorts the input array from minimum to maximum and returns the indexes.|
 indexofmax|           |             DoublesEvent -\> StateChangeEvent |                       Returns the index of the maximum value in a double array.|
 indexofmin  |          |            DoublesEvent -\> StateChangeEvent  |                      Returns the index of the minimum value in a double array.|
-input |                  R,H |      void -\>IEvent     |  specifies a starting point for a pipeline. A single input operation can specify one or more event source nodes from the Galore asset model.|
+input |                  R,H |      void -\>IEvent     |  Specifies a starting point for a pipeline. A single input operation can specify one or more event source nodes from the Galore asset model.|
 integrate|  R,H|       DoublesEvent -\> DoublesEvent |  An alias of Aggregate operation that use Integrate as type.|
-jitter |   R,H |      DoublesEvent -\> DoublesEvent |  removes clock jitter from input signal.|
+jitter |   R,H |      DoublesEvent -\> DoublesEvent |  Removes clock jitter from input signal.|
 linearfit |              R,H |      SampleSetEvent -\> SampleSetEvent | Performs a Linear Least Square Estimate Signal and returns the estimate of the parameters and their covariance.|
 lookup |                 R,H  |     SampleSetEvent -\> SampleSetEvent\   |                    Lookup for a value in a lookup table by doing interpolation.|
 | | |  ListEvent -\> DoublesEvent\|                              
 | | | *ListEvent must be: [SampleSetEvent , DoublesEvent]*  | 
 |map                     |R,H    |   DoublesEvent -\> DoublesEvent\    |                       Applies the input C# expression(s) between single quote to the input data|
 | | |                                    SampleSetEvent -\> SampleSetEvent |                       
-mapv  |                  R,H  |     DoublesEvent -\> DoublesEvent |                           a map function that returns an array instead of a value. It takes only one expression. The default metadata is as same as the input.|
- maps  |                  R,H   |    SampleSetEvent -\> SampleSetEvent   |                     a map function that returns a sampleset. Each expression in this map can return an araay of array that is map to one or multiple channels in the sampleset.|
+mapv  |                  R,H  |     DoublesEvent -\> DoublesEvent |    A map function that returns an array instead of a value. It takes only one expression. The default metadata is as same as the input.|
+ maps  |                  R,H   |    SampleSetEvent -\> SampleSetEvent   |  A map function that returns a SampleSet. Each expression in this map can return an array of array that is map to one or multiple channels in the SampleSet.|
 maxenabled  |            R,H   |    [ AlarmEVent ] -\> StateChangeEvent   |                 Returns the index of the last new triggered alarm.|
 merge  |                 R,H |      [ SampleSetEvent ] -\> SampleSetEvent\   |              Combines multiple inputs into a single output by interleaving the input events based on their timestamp.|
 | | |                                  [ DoublesEvent ] -\> DoublesEvent\   |                  
@@ -122,7 +122,7 @@ orderspectrum |          R,H  |     SampleSetEvent -\> SampleSetEvent  |        
   pick |                   R,H   |    SampleSetEvent -\> SampleSetEvent  |                      Creates new sample set by selecting channels from the input sampleset.|
   pow |                    R,H  |     DoublesEvent -\> DoublesEvent\    |                       Raises each element in the input array or matrix (for a sample set) to the exponent.|
  | | |                                   SampleSetEvent -\> SampleSetEvent |                       
-powerspectrum  |         R,H |      SampleSetEvent -\> SampleSetEvent |                       Creates the power spectrum (normalized) from each channel in the input sample set.|
+powerspectrum  |         R,H |      SampleSetEvent -\> SampleSetEvent |                       Creates the power spectrum (normalized) from each channel in the input SampleSet.|
   powerspectrumfft |       R,H  |     SampleSetEvent(*2) -\> SampleSetEvent  |                 Creates a power spectrum based on an output from the fastfouriertransform-operation for each channel in the sample set. Each channel must have real and imaginary values.|
   recursivelinearfit |     R,H  |     SampleSetEvent, SampleSetEvent -\> SampleSetEvent\ |      Performs a Recursive Linear Least Square Estimate Signal and returns current compute values, current estimate of the parameters and their covariance.|
 | | |                                    DoublesEvent, SampleSetEvent -\> SampleSetEvent  |        
@@ -134,8 +134,8 @@ powerspectrum  |         R,H |      SampleSetEvent -\> SampleSetEvent |         
 | | |                               AggregatedLargeEvents -\> AggregatedLargeEvents\ |        
 | | |                              TimeRangeEvent -\> TimeRangeEvent\   |                    
 | | |                             IEvent -\> IEvent   |                                     
-rootmeansquare |         R,H   |    SampleSetEvent -\> DoublesEvent  |                        Computes the root mean square value for a channel in a sampleset.|
-  selectchannels |         R,H |      SampleSetEvent -\> SampleSetEvent    |                    Creates new sampleset by selecting channels from the input sampleset (**Use pick instead)**|
+rootmeansquare |         R,H   |    SampleSetEvent -\> DoublesEvent  |                        Computes the root mean square value for a channel in a SampleSet.|
+  selectchannels |         R,H |      SampleSetEvent -\> SampleSetEvent    |                    Creates new SampleSet by selecting channels from the input SampleSet (**Use pick instead)**|
   skip |                   R,H  |     SampleSetEvent -\> SampleSetEvent\  |                     Skips the first number of specified elements.|
 | | |                                   DoublesEvent -\> DoublesEvent\|                           
 | | |                                    AlarmEvent -\> AlarmEvent\|                               
@@ -144,7 +144,7 @@ rootmeansquare |         R,H   |    SampleSetEvent -\> DoublesEvent  |          
 | | |                                   AggregatedLargeEvents -\> AggregatedLargeEvents\ |        
 | | |                                   TimeRangeEvent -\> TimeRangeEvent\ |                      
 | | |                                   IEvent -\> IEvent  |                                      
-sliceperiod |            R,H  |     SampleSetEvent -\> SampleSetEvent     |                   returns a slice sample set based on the number of a given period. The sample set must have been sample in time.|
+sliceperiod |            R,H  |     SampleSetEvent -\> SampleSetEvent     |                   Returns a slice sample set based on the number of a given period. The sample set must have been sample in time.|
 slicesampleset |         R,H  |     SampleSetEvent -\> DoublesEvent   |                       Returns a slice of a sample set as a sequence of double events.|
   slidingwindow |          R,H  |     DoublesEvent -\> SampleSetEvent |                         Slides a window over a sequence of vectors and emits a matrix with the contents of the window.|
  splitperiod |            H    |     SampleSetEvent -\> SampleSetEvent  |                      Splits a sample set that was sample in time in a sequence of n given period.|
@@ -153,7 +153,7 @@ startwithlatest|         R,H   |    SampleSetEvent -\> SampleSetEvent\  |       
 | | |                                    AlarmEvent -\> AlarmEvent\     |                          
 | | |                                    ListEvent -\> ListEvent\    |                             
 | | |                                   StateChangeEvent -\> StateChangeEvent  |                  
-sync  |                  R,H  |     SampleSetEvent -\> SampleSetEvent    |                    Intersects all the channels of a sample set sample in time. and returns the samples having a common time window.|
+sync  |                  R,H  |     SampleSetEvent -\> SampleSetEvent    |                    Intersects all the channels of a sample set sample in time and returns the samples having a common time window.|
 take |                   R,H  |     SampleSetEvent -\> SampleSetEvent\ |                      Takes only the specified number of elements.|
 | | |                                    DoublesEvent -\> DoublesEvent\  |                         
 | | |                                    AlarmEvent -\> AlarmEvent\   |                            
@@ -196,11 +196,11 @@ taketo |                 H |        SampleSetEvent -\> SampleSetEvent\ |     Spe
 | | |                                    TimeLineEvent -\> TimeLineEvent|                          
 timeline |              R,H |     Void -\> TimeLineEvent|                                  
  topevent |              R,H   |   AlarmEvent -\> ListEvent | Produces the top N active events (alarms) at each point in time as a list.|
-tosampleset |           H  |      DoublesEvent -\> SampleSetEvent |  convert a sequence of double events to a sample set.|
+tosampleset |           H  |      DoublesEvent -\> SampleSetEvent |  Converts a sequence of double events to a sample set.|
 totimerange|            R,H|      SampleSetEvent -\> TimeRangeEvent   |                    Convert a sample set with at least one channel sample in time to a time range event.|
   tounit  |               R,H |     DoublesEvent -\> DoublesEvent\  |                        Defines the output unit of a query operation.|
 | | |                                    SampleSetEvent -\> SampleSetEvent  |                     
- transpose |             R,H |     SampleSetEvent -\> SampleSetEvent   |                    Transposes a matrix/sampleset (all the channels must have the same length).|
+ transpose |             R,H |     SampleSetEvent -\> SampleSetEvent   |                    Transposes a matrix/SampleSet (all the channels must have the same length).|
 unscentedkalmanfilter|  R,H |     DoublesEvent -\> DoublesEvent\ |   Computes the output of the current unscented kalman filter.|
 | | |DoublesEvent, DoublesEvent -\> DoublesEvent|             
 upscalex |              R,H |     ListEvent -\> SampleSetEvent\  | Multiplies the SampleRate (or SampleInterval) of a SampleSet by a factor.|
