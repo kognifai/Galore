@@ -39,7 +39,7 @@ Parameters:
 
 -   nodeSelector- See [Node Selector](Node%20Selector.md) selects one     or many nodes in the Galore asset model. If the node is not an event source node, all descendants that are alarm log nodes.
 -   streamSelector- Nodes may have multiple streams associated e.g. propagated or relate           events, pre aggregates, change notifications etc. In many cases, the stream selector can be left out because it is inferred from the     node type.
--   interval-  See [Interval](Node%20Selector.md#Parameters). Interval is part of     the stream selector. It Determines which pre-aggregate interval is selected. The closest larger pre  aggregate interval will be         selected. Default is 0 i.e. not aggregated data.
+-   interval-  See [Interval](Node%20Selector.md#Parameters). Interval is part of     the stream selector. It determines which pre-aggregate interval is selected. The closest larger pre  aggregate interval will be         selected. Default is 0 i.e. not aggregated data.
 -   acceptStale - Forces the underlying index to update before reading alarms. Default is False.
 
     Examples:
@@ -299,7 +299,7 @@ where
 
 Parameters:
 
--   expression- A boolean expression (also known as a predicate) to determine which items of the sequence to discard. See [Expression](Node%20Selector.md).
+-   expression- A Boolean expression (also known as a predicate) to determine which items of the sequence to discard. See [Expression](Node%20Selector.md).
 
 Example: 
 ```
@@ -538,7 +538,7 @@ Example:
 ```
 takeafter 09.02.2016 5. takes 5 items after the given date
 takeafter now 5. takes 5 items after the given date not counting an itme at time now
-takeafter now excl 5. takes 5 items after the given date counting an itme at time now
+takeafter now excl 5. takes 5 items after the given date counting an item at time now
 ```
 
 Note: The operation only works on historical data. This is expected to
@@ -582,8 +582,8 @@ Parameters:
 Examples:
 ```
 taketo 2016-01-31T23:59:59Z
-taketo now. takes items up to the the given date including an item at time now
-taketo now excl. takes items up to the the given date excluding an item at time now
+taketo now. takes items up to the given date including an item at time now
+taketo now excl. takes items up to the given date excluding an item at time now
 ```
 ```
 input ~/Simulator/WTUR01 [defaultTurbinePower] 1d
@@ -746,7 +746,7 @@ fftavg
 ------
 
 Creates an averaged FFT with overlap for each channel in the sample set.
-Each part is multiplied with a hanningwindow and the product is an
+Each part is multiplied with a hanning window and the product is an
 amplitude spectrum.
 
 Parameters
@@ -829,7 +829,7 @@ fftcrossphase
 
 Creates a cross phase spectrum with overlap based on two channels input.
 Divided into a number of subsamples, each subsample is multiplied with a
-hanninwindow. Each compliant subset of the two input signals are
+hanning window. Each compliant subset of the two input signals are
 multiplied together. The average of these subsets are the resulting
 cross phase spectrum.
 
@@ -992,7 +992,7 @@ monitor
 Defines a state machine with conditions for going from one state to another. Emits state change events when a state transition happens. The event contains information that
 - identifies the current and previous state
 - the time it entered the current and previous state
-- a descriptior of the transition
+- a description of the transition
 
 Parameters
 -   Optional start state, the default is state 0
@@ -1000,7 +1000,7 @@ Parameters
 A state transition defines:
     - The from and to state
     - An index reference to the input for the condition
-    - A boolean condition expression
+    - A Boolean condition expression
     - An optional message that will be added to the output events description field
 
 Examples:
@@ -1044,7 +1044,7 @@ The output of this operation will be a sample set containing the following chann
 
 So based on the above, one can see that the output sample set can have a number of channels that depends on the number of input channels and the number of groups per channel.
 
-For example, for a  sample set with 2 channels, the following tql command:
+For example, for a  sample set with 2 channels, the following TQL command:
 
 ````
 input ~sampleset |> groupdata 2 4
@@ -1066,9 +1066,9 @@ Example:
 ```
 input ~/Test/somedata |> groupdata 2 # divide the input data into 2 groups and using min/max from the first data
 
-input ~/Test/somedata |> groupdata 2 5 # divide the input data into 2 groups forst the first channel and each group will be divided into 5 groups base on the second channels data. Min/max are taken from the input data.
+input ~/Test/somedata |> groupdata 2 5 # divide the input data into 2 groups, the first channel and each group will be divided into 5 groups base on the second channels data. Min/max are taken from the input data.
 
-input ~/Test/somedata |> groupdata 2 5 (0,10),(0,100) # divide the input data into 2 groups forst the first channel and each group will be divided into 5 groups base on the second channels data. Min/max are take from the input arguments
+input ~/Test/somedata |> groupdata 2 5 (0,10),(0,100) # divide the input data into 2 groups, the first channel and each group will be divided into 5 groups base on the second channels data. Min/max are taken from the input arguments
 ```
 
 maps
