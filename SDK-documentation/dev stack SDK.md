@@ -24,6 +24,6 @@ Chocolatey Packages
 - [Prerequisites](Prerequisites.md)
 - [Dev stack Installation](Installation.md)
 - [Uninstallation](Uninstallation.md)
-- [Upgrading Dev stack SDK](Upgrading Dev stack SDK.md)
-- [Stack Endpoint Values](Stack Endpoint Values.md)
+- [Upgrading Dev stack SDK](Upgrading%20Dev%20stack%20SDK)
+- [Stack Endpoint Values](Stack%20Endpoint%20Values.md)
 - [Troubleshooting](Troubleshooting.md)
