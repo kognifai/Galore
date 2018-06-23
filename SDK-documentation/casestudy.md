@@ -46,7 +46,7 @@ into our system. They are:
 -   Actual prices
 
 In order to get all these data connected to our Galore system, we
-use a suitable Kognsberg Edge solution \<insert reference\>. Here we 
+use a suitable Kongsberg Edge solution \<insert reference\>. Here we 
 set up the **Connectors** to gather all the data from the various data
 producing systems. The edge solution automatically sets up an asset
 model in Galore that might look something like this:
@@ -68,7 +68,7 @@ each tag that describes the data in the stream e.g.:
     unit of Watts. The expected update rate is part of the metadata.
 
 -   Wind- Is a stream of vectors (speed and direction) with the units of
-    Metres per second and direction in degrees. The expected update rate
+    Metres per second and di    rection in degrees. The expected update rate
     is part of the metadata.
 
 -   State- Is a stream of states and is represented by the event stream
