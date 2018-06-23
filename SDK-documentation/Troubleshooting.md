@@ -1,6 +1,7 @@
-## Known issues & Workarounds
+## Known issues and Workarounds [![Gitter Join the chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/kognifai/Lobby)
 
-1)	The uninstallation of package fails, when Galore API or PoseidonNext hosting is in progress and you want to unstall it. 
+
+1)	The uninstallation of package fails, when Galore API or PoseidonNext hosting is in progress and you want to uninstall it. 
 Please ensure to stop these hosting before running the uninstallation or upgrade command.
 
 2)	PoseidonNext uses a dedicated 8080 port. Please ensure that no other application uses this port.
