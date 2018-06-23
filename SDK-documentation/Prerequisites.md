@@ -2,11 +2,11 @@
 The following are the prerequisites:
 1.  Install Chocolatey (https://chocolatey.org/install)
 2.	Enable **Hyper-V** and **containers**. 
-    Galore uses Couchbase as the data store which is hosted on docker and for installing and running docker, hyper-v must be enabled. 
+    Galore uses Couchbase as the data store which is hosted on Docker and for installing and running Docker, Hyper-V must be enabled. 
     The following links provide more information and quick tips on how to:
      -  [Install Hyper-V on Windows 10](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v)
      -  [Manually enable Docker for Windows prerequisites](https://success.docker.com/article/manually-enable-docker-for-windows-prerequisites)
-3.	Galore config tool is currently available from [KDI jfrog npm]( respository. If the repository is not setup, please refer the following link:
+3.	Galore config tool is currently available from [KDI jfrog npm] repository. If the repository is not setup, please refer the following link:
 https://kognifai.visualstudio.com/Kognifai%20Core/_wiki/wikis/PoseidonNext.wiki?wikiVersion=GBwikiMaster&pagePath=%2FPoseidon%20developers%2FDeveloper%20guides%2FJFrog%3A%20Configure%20NPM%20to%20use%20KDI%20JFrog
 
 4.	All the chocolatey packages are available from the private **KDI jfrog** repository. 
@@ -21,6 +21,6 @@ To get the encrypted password, log in to **KDI jfrog** and go to **User Profile*
 Copy and paste the value of field called “Encrypted Password."
 
 
-If you have KDI Integration AD, enter your email address in the **USERNAME** placeholder and API key in the **PASSWORD** placeholder. 
+If you have KDI Integration AD, enter your email address in the **USERNAME** placeholder and API key in the **PASSWORD**  placeholder. 
 To get the API key, log in to KDI jfrog using the AD account. 
 Go to **User Profile** section and copy and paste the value for the field called “API Key."
