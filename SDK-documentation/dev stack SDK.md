@@ -1,4 +1,4 @@
-## Overview
+## dev stack SDK Overview
 
 The following diagram depicts a basic idea on the dev stack SDK.
 
@@ -20,10 +20,10 @@ Chocolatey Packages
 - galoreapi
 - galorecoreservices
 
-## Related Topics
-- [Prerequisites](SPrerequisites.md)
-- [Installation](Installation.md)
-- Uninstallation
-- Upgrading
-- Stack Endpoint Values
-- Troubleshooting
+## See Also
+- [Prerequisites](Prerequisites.md)
+- [Dev stack Installation](Installation.md)
+- [Uninstallation](Uninstallation.md)
+- [Upgrading Dev stack SDK](Upgrading Dev stack SDK.md)
+- [Stack Endpoint Values](Stack Endpoint Values.md)
+- [Troubleshooting](Troubleshooting.md)
