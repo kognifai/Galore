@@ -7,17 +7,17 @@ In this section, we talk about:
 
  [Galore Overview](#Overview)
 
-  - [Galore Asset Model](Galore-documentation/TQL.md)
+  - [Galore Asset Model](Galore-Documentation/Asset Model.md )
 
-  - [Streams](SDK-documentation/streams.md)
+  - [Streams](Galore-Documentation/streams.md)
 
-  - [TQL functional query language](SDK-documentation/TQL%20Syntax.md)
+  - [TQL functional query language](Galore-Documentation/TQL%20Syntax.md)
 
-  - [Node Selector](SDK-documentation/Node%20Selector.md)
+  - [Node Selector](Galore-Documentation/Node%20Selector.md)
  
-  - [Pipeline Operations](SDK-documentation/Pipeline%20Operations.md)
+  - [Pipeline Operations](Galore-Documentation/Pipeline%20Operations.md)
 
-  - [Case Study](SDK-documentation/casestudy.md)
+  - [Case Study](Galore-Documentation/casestudy.md)
   
 [dev stack SDK](SDK-documentation/dev%20stack%20SDK.md)
 
@@ -27,21 +27,21 @@ In this section, we talk about:
 
 Many Kognifai applications leverage Galore capabilities for storage because it is one of the storage system. Here are the major components of the Galore system:
 
-  - [Asset modelling](SDK-documentation/TQL.md) - The Galore Asset Model is a Directed Acyclic Graph (DAG).
+  - [Asset modelling](Galore-Documentation/Asset Model.md) - The Galore Asset Model is a Directed Acyclic Graph (DAG).
   
-  - [Streams](SDK-documentation/streams.md) - Galore uses a stream abstraction to allow access to both real-time and historical data.
+  - [Streams](Galore-Documentation/streams.md) - Galore uses a stream abstraction to allow access to both real-time and historical data.
 
     -   StateEvent streams and Alarms&Events.
 
-    -   Sample set streams. See [Sample set event stream](SDK-documentation/streams.md)    for more details.
+    -   Sample set streams. See [Sample set event stream](Galore-Documentation/streams.md)    for more details.
     
--  [TQL functional query language](SDK-documentation/TQL%20Syntax.md) - A query service that allows simple and complex (historical and real-time combined) queries using the TQL .TQL defines a functional pipeline. 
+-  [TQL functional query language](Galore-Documentation/TQL%20Syntax.md) - A query service that allows simple and complex (historical and real-time combined) queries using the TQL .TQL defines a functional pipeline. 
 
    -   A calculation service that allows simple and complex creation of new streams (with  history stored) using the TQL functional query language.
 
-- [Node Selector](SDK-documentation/Node%20Selector.md)- The node selector is an expression for selecting one or more nodes from the Galore.
+- [Node Selector](Galore-Documentation/Node%20Selector.md)- The node selector is an expression for selecting one or more nodes from the Galore.
 
- - [Pipeline Operations](SDK-documentation/Pipeline%20Operations.md)- Operations that can be performed in pipeline are described in this topic.
+ - [Pipeline Operations](Galore-Documentation/Pipeline%20Operations.md)- Operations that can be performed in pipeline are described in this topic.
  
 - These services are accessible by end user applications and other services through REST APIs, Signal R and WCF services.
 
