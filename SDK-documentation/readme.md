@@ -1,16 +1,15 @@
 ## Dev Stack SDK [![Gitter Join the chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/kognifai/Lobby)
 
-Welcom to Galore SDK documentation.In this section you will learn about Galore Dev Stack Installation, uninstallation and upgradation process.
-
+Welcome to Galore SDK documentation. In this section, you will learn how to install, upgrade, troubleshoot Galore Dev Stack as well as you can know more about  Stack Endpoint values.
 
 - [dev stack Overview](#Overview)
 
 ## See Also
 - [Dev stack Installation](Installation.md)
-- [Uninstallation](Uninstallation.md)
 - [Upgrading Dev stack SDK](Upgrading%20Dev%20stack.md)
 - [Stack Endpoint Values](Stack%20Endpoint%20Values.md)
 - [Troubleshooting](Troubleshooting.md)
+- [Uninstallation](Uninstallation.md)
 
 ## Overview
 
