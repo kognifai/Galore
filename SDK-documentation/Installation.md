@@ -1,3 +1,4 @@
+
 ## Dev stack Installation    [![Gitter Join the chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/kognifai/Lobby)
 
 To start the installation of Galore Dev Stack, run the following command:
@@ -14,6 +15,8 @@ https://chocolatey.org/docs/commands-reference#default-options-and-switches
 
 There is a dependency on **docker-for-windows** package. If in case, this is not previously installed, chocolatey will install it and during the installation a system reboot is required. At this point of time, you see the following message in the console window:
  
+ ![](Images/MicrosoftTeams-image.png)
+ 
 You can now safely close the console and restart windows. After restart, run the following command to continue the installation of core services:
 ```
 choco install galorecoreservices
@@ -26,14 +29,22 @@ After Docker installation, three system resources are updated which needs window
 
 ### Post-Installation
 Galore core service is installed as a windows service and it starts automatically. To start a Galore API, open a new command prompt and type “galoreapi” command and press **enter**. 
+
+![](Images/2018-06-22%2017_22_38-Administrator_%20Command%20Prompt.png)
  
 This opens a windows PowerShell window and starts the Galore API in a self-hosted environment.
+
+![](Images/2018-06-22%2017_23_33-Administrator_%20C__WINDOWS_System32_WindowsPowerShell_v1.0_powershell.exe.png )
  
 To start PoseidonNext, host the environment type and run the following command in a separate window:
 ```
 poseidon-dev-host --next –applications “C:\Program Files\kognifai\SDK\PoseidonNext”
 ```
+![](Images/2018-06-22%2017_25_34-Cmder.png)
+
 PoseidonNext is now hosted on port 8080. You can now open a browser and navigate to http://localhost:8080/poseidon-home for the home page of PoseidonNext application and http://localhost:8080/galore-configtool for Galore config tool.
+
+![](Images/Poseidon%20Next.png)
  
 ### Installation Parameters
 
@@ -49,3 +60,7 @@ If these parameters are not passed, the default values are set. The complete lis
 Authority|	URL of the Platform authentication server that issues tokens|	http://localhost:8080/Security/auth
 ApiUrl|	Galore API URL|	http://localhost:5050
 
+
+## Next Step
+
+After succfessull installation, next step is [Upgrading](Upgrading%20Dev%20stack.md).
