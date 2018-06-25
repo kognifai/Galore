@@ -521,7 +521,7 @@ in the sequence may lead to undefined behaviour. This is because the
 input sequence is run backwards until the desired count of event is
 reached.
 
-![The marble diagram should be here](.%20Images/takebefore-marble.png)
+![The marble diagram should be here](Images/takebefore-marble.png)
 
 takeafter
 ---------
@@ -544,7 +544,7 @@ takeafter now excl 5. takes 5 items after the given date counting an item at tim
 Note: The operation only works on historical data. This is expected to
 change.
 
-![The marble diagram should be here](.%20Images/takeafter-marble.png)
+![The marble diagram should be here](Images/takeafter-marble.png)
 
 takefrom
 --------
@@ -567,7 +567,7 @@ input ~/Simulator/WTUR01 [defaultTurbinePower] 1d
     |> taketo 2016-01-01T04:00:00Z
 ```
 
-![The marble diagram should be here](.%20Images/takefrom-marble.png)
+![The marble diagram should be here](Images/takefrom-marble.png)
 
 taketo
 ------
@@ -590,7 +590,7 @@ input ~/Simulator/WTUR01 [defaultTurbinePower] 1d
     |> takefrom 2016-01-01T00:00:00Z
     |> taketo 2016-01-01T04:00:00Z
 ```
-![The marble diagram should be here](.%20Images/taketo-marble.png)
+![The marble diagram should be here](Images/taketo-marble.png)
 
 gapfill
 -------
@@ -937,8 +937,9 @@ Parameters
 
 -  allrows
 
--  time selector:
-		* maxoffset | minoffset | firstoffset | lastoffset | default | eventTime | samplesettime | offsetindex #idx
+-  time selector
+
+- maxoffset | minoffset | firstoffset | lastoffset | default | eventTime | samplesettime | offsetindex #idx
 
 Example:
 ```
@@ -984,15 +985,15 @@ input ~/Test/somedata |> timeout 1m
 input ~/Test/somedata |> timeout 1m useinputtime
 
 ```
-![The marble diagram should be here](.%20Images/timeout-marble.png)
+![The marble diagram should be here](Images/timeout-marble.png)
 
 monitor
 -------------
 
 Defines a state machine with conditions for going from one state to another. Emits state change events when a state transition happens. The event contains information that
-- identifies the current and previous state
-- the time it entered the current and previous state
-- a description of the transition
+- Identifies the current and previous state
+- The time it entered the current and previous state
+- A description of the transition
 
 Parameters
 -   Optional start state, the default is state 0
@@ -1020,7 +1021,7 @@ input ~/Test/somedata |> monitor start in 1
 
 
 ```
-![The marble diagram should be here](.%20Images/monitor-marble.png)
+![The marble diagram should be here](Images/monitor-marble.png)
 
 groupdata
 ---------
@@ -1032,12 +1033,10 @@ The output of this operation will be a sample set containing the following chann
 
 * channel containing the lower bounds of the first input channel (**length** = #grp_0 * #grp_1* #grp_n)
 * channel containing the upper bounds of the first input channel (**length** = #grp_0 * #grp_1* #grp_n)
-* ...
 * channel containing the lower bounds of the last input channel (**length** = #grp_0 * #grp_1* #grp_n)
 * channel containing the upper bounds of the last input channel (**length** = #grp_0 * #grp_1* #grp_n)
 * channel containing the row indexes of points that have fallen into group **0** 
 * channel containing the row indexes of points that have fallen into group **1**
-* ...
 * channel containing the row indexes of points that have fallen into group  **#grp_0 * #grp_1* #grp_n**
 
 
