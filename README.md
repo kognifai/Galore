@@ -7,7 +7,7 @@ In this section, we talk about:
 
  [Galore Overview](#Overview)
 
-  - [Galore Asset Model](SDK-documentation/TQL.md)
+  - [Galore Asset Model](Galore-documentation/TQL.md)
 
   - [Streams](SDK-documentation/streams.md)
 
