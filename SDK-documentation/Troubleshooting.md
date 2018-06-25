@@ -8,3 +8,6 @@ Please ensure to stop these hostings before running the uninstallation or upgrad
 
 3)	Under exceptional conditions, you may want to upgrade PoseidonNext packages and not the entire stack.
 For this, please run npm upgrade separately (to upgrade local modules, you have to run this command in C:\Program Files\kognifai\SDK\PoseidonNext folder).
+
+## Next Step
+If you are sure to uninstall the dev stack SDK and to know more about how to uninstall, please see [Uninstallation](Uninstallation.md)
