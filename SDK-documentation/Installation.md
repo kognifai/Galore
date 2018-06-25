@@ -1,7 +1,7 @@
 
 ## Dev stack Installation    [![Gitter Join the chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/kognifai/Lobby)
 
-To start the installation of Galore Dev Stack, run the following command:
+To begin the installation of Galore Dev Stack, run the following command:
 ```
 choco install poseidon-galore-dev-stack
 ```
