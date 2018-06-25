@@ -53,7 +53,7 @@ Many Kognifai applications leverage Galore capabilities for storage because it i
  
 
 ### Case Study
-In order to get a better overview of the Galore capabilities in a simplified case study, click [here](SDK-documentation/casestudy.md).
+In order to get a better overview of the Galore capabilities in a simplified case study, click [here](Galore-Documentation/casestudy.md).
 
 ### License
 Read the copyright information and terms and conditions for Usage and Development of the software [here](https://github.com/kognifai/Kognifai/blob/master/License.md#copyright--year-kongsberg-digital-as).
