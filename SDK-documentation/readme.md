@@ -2,10 +2,10 @@
 
 Welcom to Galore SDK documentation.In this section you will learn about Galore Dev Stack Installation, uninstallation and upgradation process.
 
+
 - [dev stack Overview](#Overview)
 
 ## See Also
-- [Prerequisites](Prerequisites.md)
 - [Dev stack Installation](Installation.md)
 - [Uninstallation](Uninstallation.md)
 - [Upgrading Dev stack SDK](Upgrading%20Dev%20stack.md)
@@ -16,7 +16,9 @@ Welcom to Galore SDK documentation.In this section you will learn about Galore D
 
 The following diagram depicts a basic idea on the dev stack SDK.
 
-We use the chocolatey windows package manager (https://chocolatey.org/) to distribute the Meta package. The Meta package takes care of installing and configuring various components of the PoseidonNext and Galore.  The following are the meta-package composition:
+![](Images/Dev%20stack%20SDK%20overview.png)
+
+We use the chocolatey windows package manager (https://chocolatey.org/) to distribute the Meta package. The Meta package takes care of installing and configuring various components of the PoseidonNext and Galore.  The following are the Meta package composition:
 
 Kognifai global node modules
 -	poseidon-dev-host
@@ -34,3 +36,6 @@ Chocolatey Packages
 - galoreapi
 - galorecoreservices
 
+## Next Step
+
+Next step is to explore the [Prerequisites](Prerequisites.md) for the installation.
