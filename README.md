@@ -19,7 +19,7 @@ In this section, we talk about:
 
   - [Case Study](Galore-Documentation/casestudy.md)
   
-[dev stack SDK](SDK-documentation/dev%20stack%20SDK.md)
+[dev stack SDK](SDK-documentation/readme.md )
 
 [Galore WCFSample code](GaloreWCFSample)
 
