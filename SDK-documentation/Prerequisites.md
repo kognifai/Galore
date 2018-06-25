@@ -1,6 +1,6 @@
 ## Prerequisites [![Gitter Join the chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/kognifai/Lobby)
 
-The following are the prerequisites of installing Galore Dev Stack:
+Following are the prerequisites of installing Galore Dev Stack:
 1.  Install Chocolatey (https://chocolatey.org/install)
 2.	Enable **Hyper-V** and **containers**. 
     Galore uses Couchbase as the data store which is hosted on Docker and for installing and running Docker, Hyper-V must be enabled. 
