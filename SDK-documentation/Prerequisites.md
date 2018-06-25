@@ -28,3 +28,7 @@ To get the API key, log in to KDI jfrog using the AD account.
 Go to **User Profile** section and copy and paste the value for the field called “API Key."
 
 ![](Images/2018-06-22%2017_19_05-kdi.png)
+
+## Next Step
+
+Once you are ready for the dev stack installation, refer [Installation](Installation.md) procedures.
