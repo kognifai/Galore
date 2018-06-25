@@ -1,6 +1,7 @@
 ## Dev Stack SDK [![Gitter Join the chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/kognifai/Lobby)
 
-In this section, we talk about:
+Welcom to Galore SDK documentation.In this section you will learn about Galore Dev Stack Installation, uninstallation and upgradation process.
+
 - [dev stack Overview](#Overview)
 
 ## See Also
