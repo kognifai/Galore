@@ -39,3 +39,5 @@ Galore creates a set of different aggregate streams from the raw data stream. Ea
 - **Sample set pre aggregate streams**- These streams count the number of sample set events in each pre aggregate interval.
 
 
+## Next Topic
+[TQL functional query language](Galore-Documentation/TQL%20Syntax.md) is the next topic to explore.
