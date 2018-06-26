@@ -171,3 +171,6 @@ Examples:
 Note the "T" separates date and time
 
 Note the Z designates the time zone "Zulu" = UTC/GMT
+
+## Next Topic
+ [Pipeline Operations](Pipeline%20Operations.md) is the topic to explore.
