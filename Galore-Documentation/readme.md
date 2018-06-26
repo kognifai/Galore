@@ -1,5 +1,24 @@
  
+Welcome to Galore Documentation! 
+
+Galore and its components are described in this section. You can read about each one of the Galore components that knowledge can help you to develop your own applications on Galore.
+
+See Also
+
+  - [Galore Asset Model](#Galore-Documentation)
+
+  - [Streams](Galore-Documentation/streams.md)
+
+  - [TQL functional query language](Galore-Documentation/TQL%20Syntax.md)
+
+  - [Node Selector](Galore-Documentation/Node%20Selector.md)
+ 
+  - [Pipeline Operations](Galore-Documentation/Pipeline%20Operations.md)
+
+  - [Case Study](Galore-Documentation/casestudy.md)
+
 # Galore Asset Model [![Gitter Join the chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/kognifai/Lobby)
+
 
 The Galore asset model is a Directed Acyclic Graph (DAG), in other words, each node (except the root node) has one or more parents and zero or more children. Each node in the DAG has a tag (except the root node). Tag is a string that identifies the node in the context of its parent node. The tag must not be confused with the node's display node. Each node has a path that uniquely identifies it. 
 
@@ -59,4 +78,5 @@ The following event types are supported by TQL:
 Most TQL operations work on subset types. Some operations have different parameters for different input stream types. Boolean
 operations work on alarm streams active property.
 
-
+## Next Topic
+[Streams](Galore-Documentation/streams.md) is the next topic you can explore. 
