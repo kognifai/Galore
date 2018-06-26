@@ -79,4 +79,4 @@ Most TQL operations work on subset types. Some operations have different paramet
 operations work on alarm streams active property.
 
 ## Next Topic
-[Streams](Galore-Documentation/streams.md) is the next topic you can explore. 
+[Streams](streams.md) is the next topic to explore. 
