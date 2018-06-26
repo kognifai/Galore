@@ -40,4 +40,4 @@ Galore creates a set of different aggregate streams from the raw data stream. Ea
 
 
 ## Next Topic
-[TQL functional query language](Galore-Documentation/TQL%20Syntax.md) is the next topic to explore.
+[TQL functional query language](TQL%20Syntax.md) is the next topic to explore.
