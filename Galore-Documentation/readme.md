@@ -15,7 +15,6 @@ See Also
  
   - [Pipeline Operations](Galore-Documentation/Pipeline%20Operations.md)
 
-  - [Case Study](Galore-Documentation/casestudy.md)
 
 # Galore Asset Model [![Gitter Join the chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/kognifai/Lobby)
 
