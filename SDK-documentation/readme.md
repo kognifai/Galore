@@ -15,7 +15,7 @@ Welcome to Galore SDK documentation. In this section, you will learn how to inst
 
 The following diagram depicts a basic idea on the dev stack SDK.
 
-![](Images/Dev%20stack%20SDK%20overview.png)
+![](.%20Images/Dev%20stack%20SDK%20overview.png)
 
 We use the chocolatey windows package manager (https://chocolatey.org/) to distribute the Meta package. The Meta package takes care of installing and configuring various components of the PoseidonNext and Galore.  The following are the Meta package composition:
 
