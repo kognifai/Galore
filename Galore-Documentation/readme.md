@@ -7,13 +7,13 @@ See Also
 
   - [Galore Asset Model](#Galore-Documentation)
 
-  - [Streams](Galore-Documentation/streams.md)
+  - [Streams](streams.md)
 
-  - [TQL functional query language](Galore-Documentation/TQL%20Syntax.md)
+  - [TQL functional query language](TQL%20Syntax.md)
 
-  - [Node Selector](Galore-Documentation/Node%20Selector.md)
+  - [Node Selector](Node%20Selector.md)
  
-  - [Pipeline Operations](Galore-Documentation/Pipeline%20Operations.md)
+  - [Pipeline Operations](Pipeline%20Operations.md)
 
 
 # Galore Asset Model [![Gitter Join the chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/kognifai/Lobby)
