@@ -22,7 +22,7 @@ Galore and its components are described in this  section. You can go over each o
 
   - [Galore Overview](#Overview)
 
-  - [Galore Asset Model](Galore-Documentation/Asset%20%20Model.md)
+  - [Galore Asset Model](Galore-Documentation/readme.md)
 
   - [Streams](Galore-Documentation/streams.md)
 
@@ -40,7 +40,7 @@ Galore and its components are described in this  section. You can go over each o
 
 Many Kognifai applications leverage Galore capabilities for storage because it is one of the storage system. Here are the major components of the Galore system:
 
-  - [Asset model](Galore-Documentation/Asset%20%20Model.md) - The Galore Asset Model is a Directed Acyclic Graph (DAG).
+  - [Asset model](Galore-Documentation/readme.md) - The Galore Asset Model is a Directed Acyclic Graph (DAG).
   
   - [Streams](Galore-Documentation/streams.md) - Galore uses a stream abstraction to allow access to both real-time and historical data.
 
