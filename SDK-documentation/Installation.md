@@ -30,21 +30,21 @@ After Docker installation, three system resources are updated which needs window
 ### Post-Installation
 Galore core service is installed as a windows service and it starts automatically. To start a Galore API, open a new command prompt and type “galoreapi” command and press **enter**. 
 
-![](Images/2018-06-22%2017_22_38-Administrator_%20Command%20Prompt.png)
+![](.%20Images/2018-06-22%2017_22_38-Administrator_%20Command%20Prompt.png)
  
 This opens a windows PowerShell window and starts the Galore API in a self-hosted environment.
 
-![](Images/2018-06-22%2017_23_33-Administrator_%20C__WINDOWS_System32_WindowsPowerShell_v1.0_powershell.exe.png )
+![](.%20Images/2018-06-22%2017_23_33-Administrator_%20C__WINDOWS_System32_WindowsPowerShell_v1.0_powershell.exe.png )
  
 To start PoseidonNext, host the environment type and run the following command in a separate window:
 ```
 poseidon-dev-host --next –applications “C:\Program Files\kognifai\SDK\PoseidonNext”
 ```
-![](Images/2018-06-22%2017_25_34-Cmder.png)
+![](.%20Images/2018-06-22%2017_25_34-Cmder.png)
 
 PoseidonNext is now hosted on port 8080. You can now open a browser and navigate to http://localhost:8080/poseidon-home for the home page of PoseidonNext application and http://localhost:8080/galore-configtool for Galore config tool.
 
-![](Images/Poseidon%20Next.png)
+![](.%20Images/Poseidon%20Next.png)
  
 ### Installation Parameters
 

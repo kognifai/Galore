@@ -21,13 +21,13 @@ If a KDI jfrog username and password are provided to you then enter the provided
 To get the encrypted password, log in to **KDI jfrog** and go to **User Profile** and then **Authentication Settings**. 
 Copy and paste the value of field called “Encrypted Password."
 
-![](Images/2018-06-21%2018_53_06-kdi.png)
+![](.%20Images/2018-06-21%2018_53_06-kdi.png)
 
 If you have KDI Integration AD, enter your email address in the ```<USERNAME>``` placeholder and API key in the ```<PASSWORD>```  placeholder. 
 To get the API key, log in to KDI jfrog using the AD account. 
 Go to **User Profile** section and copy and paste the value for the field called “API Key."
 
-![](Images/2018-06-22%2017_19_05-kdi.png)
+![](.%20Images/2018-06-22%2017_19_05-kdi.png)
 
 ## Next Step
 

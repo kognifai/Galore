@@ -51,7 +51,7 @@ set up the **Connectors** to gather all the data from the various data
 producing systems. The edge solution automatically sets up an asset
 model in Galore that might look something like this:
 
-![EdgeModel](Images/EdgeModel.png)
+![EdgeModel](.%20Images/EdgeModel.png)
 
                                         Edge Model
 
@@ -99,7 +99,7 @@ reports.
 
 Our turbine asset model could look something like this:
 
-![AssetModel](Images/TurbineAssetModel.png) 
+![AssetModel](.%20Images/TurbineAssetModel.png) 
 
                             Turbine Asset Model
                       
