@@ -2,12 +2,14 @@
 
 Following are the prerequisites of Galore Dev Stack Isntallation:
 ### 1. Chocolatey Package ###
+    
     Install Chocolatey from the official website https://chocolatey.org/install
 
 ### 2.	Enable Hyper-V and containers ###
 
     Galore uses Couchbase as the data store which is hosted on Docker and for installing and running Docker, Hyper-V must be enabled. 
     The following links provide more information and quick tips on how to:
+
      -  [Install Hyper-V on Windows 10](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v)
      -  [Manually enable Docker for Windows prerequisites](https://success.docker.com/article/manually-enable-docker-for-windows-prerequisites)
 
