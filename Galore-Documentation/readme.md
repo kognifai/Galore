@@ -1,7 +1,8 @@
  
+# Galore 
 Welcome to Galore Documentation! 
 
-Galore and its components are described in this section. You can read about each one of the Galore components that knowledge can help you to develop your own applications on Galore.
+Galore and its components are described in this section. 
 
 See Also
 
