@@ -8,12 +8,13 @@ Install Chocolatey from its official website https://chocolatey.org/install
 Galore uses Couchbase as the data store which is hosted on Docker and for installing and running Docker, Hyper-V must be enabled. 
 The following links provide more information and quick tips on how to:
 
- [Install Hyper-V on Windows 10](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v)
- [Manually enable Docker for Windows prerequisites](https://success.docker.com/article/manually-enable-docker-for-windows-prerequisites)
+ [Install Hyper-V on Windows 10] (https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v) and 
+ [Manually enable Docker for Windows prerequisites] (https://success.docker.com/article/manually-enable-docker-for-windows-prerequisites)
 
 ### 3. Galore config tool ###
-Galore config tool is currently available in [KDI jfrog npm] repository. If the repository is not setup, please refer the following     link:
-https://kognifai.visualstudio.com/Kognifai%20Core/_wiki/wikis/PoseidonNext.wiki?         wikiVersion=GBwikiMaster&pagePath=%2FPoseidon%20developers%2FDeveloper%20guides%2FJFrog%3A%20Configure%20NPM%20to%20use%20KDI%20JFrog
+Galore config tool is currently available in [KDI jfrog npm] repository. 
+If the repository is not setup, please refer the following link:
+https://kognifai.visualstudio.com/Kognifai%20Core/_wiki/wikis/PoseidonNext.wiki? wikiVersion=GBwikiMaster&pagePath=%2FPoseidon%20developers%2FDeveloper%20guides%2FJFrog%3A%20Configure%20NPM%20to%20use%20KDI%20JFrog
 
 ### 4. KDI jfrog repository ###
 All the chocolatey packages are available in the private **KDI jfrog** repository. 
