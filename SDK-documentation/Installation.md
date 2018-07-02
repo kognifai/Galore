@@ -38,7 +38,7 @@ This opens a windows PowerShell window and starts the Galore API in a self-hoste
  
 To start PoseidonNext, host the environment type and run the following command in a separate window:
 ```
-poseidon-dev-host --next –applications “C:\Program Files\kognifai\SDK\PoseidonNext”
+poseidon-dev-host –-applications "C:\Program Files\kognifai\SDK\PoseidonNext"
 ```
 ![](.%20Images/2018-06-22%2017_25_34-Cmder.png)
 
