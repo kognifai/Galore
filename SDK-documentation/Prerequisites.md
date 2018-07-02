@@ -11,13 +11,13 @@ The following links provide more information and quick tips on how to:
  [Install Hyper-V on Windows 10] (https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v) and 
  [Manually enable Docker for Windows prerequisites] (https://success.docker.com/article/manually-enable-docker-for-windows-prerequisites)
 
-### 3. Galore config tool ###
-Galore config tool is currently available in [KDI jfrog npm] repository. 
-If the repository is not setup, please refer the following link:
-https://kognifai.visualstudio.com/Kognifai%20Core/_wiki/wikis/PoseidonNext.wiki? wikiVersion=GBwikiMaster&pagePath=%2FPoseidon%20developers%2FDeveloper%20guides%2FJFrog%3A%20Configure%20NPM%20to%20use%20KDI%20JFrog
+### 3. npm JFrog source ###
+Some of the npm packages in the stack are currently only available in the private **KDI JFrog** repository. This is expected to change.
+The node package manager needs to be configured with JFrog as a source. Follow these instruction to set this up.
+[npm source jfrog] (https://kognifai.visualstudio.com/Kognifai%20Core/_wiki/wikis/PoseidonNext.wiki?wikiVersion=GBwikiMaster&pagePath=%2FPoseidon%20developers%2FDeveloper%20guides%2FJFrog%3A%20Configure%20NPM%20to%20use%20KDI%20JFrog)
 
-### 4. KDI jfrog repository ###
-All the chocolatey packages are available in the private **KDI jfrog** repository. 
+### 4. KDI JFrog chocolatey repository ###
+All the chocolatey packages are available in the private **KDI JFrog** repository. 
 For chocolatey to properly discover and install these, we must add this repository as one of the sources for chocolatey. 
 
 To accomplish this, run the following command in command prompt/Powershell under elevated privileges (Run as administrator).
