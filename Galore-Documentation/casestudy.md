@@ -95,7 +95,7 @@ it easier for a user to navigate to the data and for any application
 developer to create context-sensitive user interfaces, dashboards, and
 reports.
 
-\*The asset models are sometimes referred as logical model or semantic model.
+The asset model is sometimes referred as logical model or semantic model.
 
 Our turbine asset model could look something like this:
 
@@ -213,7 +213,7 @@ condition expressions.
 Implicit Derived streams and Drill Down
 =======================================
 
-The Galore asset model allows the creation of implicit streams for drill
+Galore asset model allows the creation of implicit streams for drill
 down. An event stream can be propagated to its parent node and merged
 with event streams from other child nodes. This allows implicit streams
 of events to be formed on each node comprising all the event on all
