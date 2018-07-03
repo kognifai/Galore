@@ -13,4 +13,4 @@ Couchbase administrator username | Administrator
 Couchbase administrator password | password
 
 ## Next Step
-For known issues and workarounds, please see [Troubleshooting](Troubleshooting.md) in the next step.
+Find [Troubleshooting](Troubleshooting.md) for the Galore installation.
