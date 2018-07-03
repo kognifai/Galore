@@ -24,7 +24,7 @@ choco install galorecoreservices
 
 Following are the three system resources which get updated as a result of the Docker installation. You must restart your system after the Docker installation.
 
-1.	Windows Registry - Docker uses the Windows registry to track the location of the installed software. THis is for its internal use.
+1.	Windows Registry - Docker uses the Windows registry to track the location of the installed software. This is for its internal use.
 2.	User groups - Docker needs access to windows file system for storing data files. Docker creates a user group for that purpose and adds a current user to it. Docker internally uses this user group for various user related information.
 3.	Environment variable - It is used for other tools (e.g. cmd.exe and powershell.exe) to find path of the Docker related executables. 
 
@@ -52,12 +52,12 @@ PoseidonNext is now hosted on port 8080. You can open a browser and navigate to 
  
 ### Installation Parameters
 
-Apart from the default switches and options, you can also pass few configuration parameters along with the installation command as following:
+Apart from the default switches and options, you can also pass few configuration parameters along with the installation command as shown below:
 
 ```
 choco install poseidon-galore-dev-stack --params="'/Authority:http://127.0.0.1:80/Security/auth'
 ```
-If these parameters are not passed, the default values are set. The complete list of parameters that can be passed are listed as following:
+If these parameters are not passed, the default values are set. The complete list of parameters that can be passed are listed in the following table:
 
 |Name|	Description|	Default Value
 |-------------------------|---------------|--------
