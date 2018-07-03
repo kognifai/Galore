@@ -12,9 +12,9 @@ The following links provide more information and quick tips on how to:
  [Install Hyper-V on Windows 10](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v) and 
  [Manually enable Docker for Windows prerequisites](https://success.docker.com/article/manually-enable-docker-for-windows-prerequisites)
 
-### 3. npm JFrog source ###
+### 3. Set KDI Jfrog as one of the npm source ###
 Some of the npm packages in the Stack are currently  available only in the private **KDI JFrog** repository which may be available as a public npm repository (npmjs.org) in the future.
-The node package manager needs to be configured with Jfrog as a source. Follow the instructions from [npm source jfrog](https://kognifai.visualstudio.com/Kognifai%20Core/_wiki/wikis/PoseidonNext.wiki?wikiVersion=GBwikiMaster&pagePath=%2FPoseidon%20developers%2FDeveloper%20guides%2FJFrog%3A%20Configure%20NPM%20to%20use%20KDI%20JFrog) to set this up.
+The node package manager needs to be configured with KDI Jfrog as a source. Follow the instructions from [npm source jfrog](https://kognifai.visualstudio.com/Kognifai%20Core/_wiki/wikis/PoseidonNext.wiki?wikiVersion=GBwikiMaster&pagePath=%2FPoseidon%20developers%2FDeveloper%20guides%2FJFrog%3A%20Configure%20NPM%20to%20use%20KDI%20JFrog) to set this up.
 
 
 ### 4. KDI JFrog chocolatey repository ###
