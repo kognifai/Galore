@@ -20,7 +20,7 @@ Kognifai global node modules
 -	generator-poseidon
 -	Poseidon-app-registration-cli
 
-Kognifai local node modules (installed in <INSTALL DIR>/kognifai/SDK/PoseidonNext)
+Kognifai local node modules (installed in ```<INSTALL DIR>```/kognifai/SDK/PoseidonNext)
 - poseidon-home
 - poseidon-user-profile
 - poseidon-user-administration
