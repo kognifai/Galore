@@ -13,26 +13,29 @@ https://chocolatey.org/docs/commands-reference#default-options-and-switches
 
 ### Additional Installation Steps
 
-There is a dependency on **docker-for-windows** package. If this is not previously installed, chocolatey will install it and during the installation a system reboot is required. At this point of time, the following message is displayed in the console window:
+There is a dependency on **docker-for-windows** package. If this is not previously installed, chocolatey will install it and you must restart your system after the installation. At this point of time, the following message is displayed in the console window:
  
  ![](.%20Images/MicrosoftTeams-image.png)
  
-You can now safely close the console and restart windows. After restart, run the following command to continue the installation of core services:
+You can now safely close the console and restart Windows. After restart, run the following command to continue the installation of core services:
 ```
 choco install galorecoreservices
 ```
-After Docker installation, three system resources are updated which needs windows restart to take effect.
+After the Docker installation, the following three system resources are updated for which you need to restart your system.
 
 1.	Windows Registry - Docker uses the Windows registry to track the installed software location for its internal use.
-2.	User groups - Docker needs windows file system access for storing data files. Docker creates a user group for that purpose and adds current user to it. Docker internally uses this user group for various user related information.
+2.	User groups - Docker needs access to windows file system for storing data files. Docker creates a user group for that purpose and adds a current user to it. Docker internally uses this user group for various user related information.
 3.	Environment variable - It is used for other tools (e.g. cmd.exe and powershell.exe) to find path of the Docker related executables. 
 
 ### Post-Installation
-Galore core service is installed as a windows service and it starts automatically. To start a Galore API, open a new command prompt and type “galoreapi” command and press **enter**. 
+Galore core service is installed as a windows service and it starts automatically. 
+
+To start a Galore API 
+- Open a new command prompt and type “galoreapi” command and press **Enter**. 
 
 ![](.%20Images/2018-06-22%2017_22_38-Administrator_%20Command%20Prompt.png)
  
-This opens a windows PowerShell window and starts the Galore API in a self-hosted environment.
+This opens Windows PowerShell and starts the Galore API in a self-hosted environment.
 
 ![](.%20Images/2018-06-22%2017_23_33-Administrator_%20C__WINDOWS_System32_WindowsPowerShell_v1.0_powershell.exe.png )
  
@@ -42,7 +45,7 @@ poseidon-dev-host --applications "C:\Program Files\kognifai\SDK\PoseidonNext"
 ```
 ![](.%20Images/2018-06-22%2017_25_34-Cmder.png)
 
-PoseidonNext is now hosted on port 8080. You can now open a browser and navigate to http://localhost:8080/poseidon-home for the home page of PoseidonNext application and http://localhost:8080/galore-configtool for Galore config tool.
+PoseidonNext is now hosted on port 8080. You can open a browser and navigate to http://localhost:8080/poseidon-home for the home page of PoseidonNext application and http://localhost:8080/galore-configtool for Galore config tool.
 
 ![](.%20Images/Poseidon%20Next.png)
  
