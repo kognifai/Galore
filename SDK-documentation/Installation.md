@@ -5,7 +5,7 @@ To begin the installation of Galore Dev Stack, run the following command:
 ```
 choco install poseidon-galore-dev-stack
 ```
-You can also pass options and switches for customizing the installation. For example, pass the ‘y’ switch (choco install poseidon-galore-dev-stack -y) which will confirm all the prompts asked during installation.
+You can also pass options and switches for customizing the installation. For example, passing the ‘y’ switch (choco install poseidon-galore-dev-stack -y) confirms all the prompts during installation.
 
 Refer the following link for a complete list of default options and switches:
 
@@ -15,7 +15,7 @@ https://chocolatey.org/docs/commands-reference#default-options-and-switches
 
 There is a dependency on **docker-for-windows** package. If in case, this is not previously installed, chocolatey will install it and during the installation a system reboot is required. At this point of time, you see the following message in the console window:
  
- ![](Images/MicrosoftTeams-image.png)
+ ![](.%20Images/MicrosoftTeams-image.png)
  
 You can now safely close the console and restart windows. After restart, run the following command to continue the installation of core services:
 ```
@@ -36,7 +36,7 @@ This opens a windows PowerShell window and starts the Galore API in a self-hoste
 
 ![](.%20Images/2018-06-22%2017_23_33-Administrator_%20C__WINDOWS_System32_WindowsPowerShell_v1.0_powershell.exe.png )
  
-To start PoseidonNext, host the environment type and run the following command in a separate window:
+To start PoseidonNext hosting environment, run the following command in a separate window:
 ```
 poseidon-dev-host --applications "C:\Program Files\kognifai\SDK\PoseidonNext"
 ```
