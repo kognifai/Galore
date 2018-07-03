@@ -1,23 +1,19 @@
 ## Dev Stack SDK [![Gitter Join the chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/kognifai/Lobby)
 
-Welcome to Galore SDK documentation. In this section, you will learn how to install, upgrade, troubleshoot Galore Dev Stack as well as you can know more about  Stack Endpoint values.
+Welcome to Galore SDK documentation!
+
+In this section, you will learn how to install, upgrade, troubleshoot Galore Dev Stack. You can also know  more about  Stack Endpoint values.
 
 - [dev stack Overview](#Overview)
 
-## See Also
-- [Dev stack Installation](Installation.md)
-- [Upgrading Dev stack SDK](Upgrading%20Dev%20stack.md)
-- [Stack Endpoint Values](Stack%20Endpoint%20Values.md)
-- [Troubleshooting](Troubleshooting.md)
-- [Uninstallation](Uninstallation.md)
 
 ## Overview
 
-The following diagram depicts a basic idea on the dev stack SDK.
+The following diagram depicts a basic idea of the dev-Stack-SDK.
 
 ![](.%20Images/Dev%20stack%20SDK%20overview.png)
 
-We use the chocolatey windows package manager (https://chocolatey.org/) to distribute the Meta package. The Meta package takes care of installing and configuring various components of the PoseidonNext and Galore.  The following are the Meta package composition:
+We use the chocolatey windows package manager (https://chocolatey.org/) to distribute the Meta package. The Meta package takes care of installing and configuring various components of the [PoseidonNext](https://github.com/kognifai/PoseidonNext-Framework) and [Galore](https://github.com/kognifai/Galore).  The following are the Meta package composition:
 
 Kognifai global node modules
 -	poseidon-dev-host
@@ -37,4 +33,14 @@ Chocolatey Packages
 
 ## Next Step
 
-Next step is to explore the [Prerequisites](Prerequisites.md) for the installation.
+Find [Prerequisites](Prerequisites.md) for the Galore installation.
+
+## See Also
+- [Dev stack Installation](Installation.md)
+- [Upgrading Dev stack SDK](Upgrading%20Dev%20stack.md)
+- [Stack Endpoint Values](Stack%20Endpoint%20Values.md)
+- [Troubleshooting](Troubleshooting.md)
+- [Uninstallation](Uninstallation.md)
+
+## License
+Read the copyright information and terms and conditions for Usage and Development of the software [here](https://github.com/kognifai/Kognifai/blob/master/License.md#copyright--year-kongsberg-digital-as).
