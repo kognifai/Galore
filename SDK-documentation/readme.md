@@ -28,8 +28,9 @@ Kognifai local node modules (installed in PoseidonNext/SDK folder)
 - galore-configtool
 
 Chocolatey Packages
-- galoreapi
-- galorecoreservices
+- galoreapi - This package installs a REST API which provides programmatic access to read and write operations of Galore. These includes access to various components such as asset model, streams, 
+Running TQL queries, CRUD operations on Nodes and other pipeline operations.
+- galorecoreservices - This package installs a set of Galore WCF windows services. These services act as an interface between various clients and Galore store (Couchbase) and handle operations at a lower level
 
 
 ## See Also
