@@ -1,7 +1,7 @@
 
 ## Dev stack Installation    [![Gitter Join the chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/kognifai/Lobby)
 
-To begin the installation of Galore Dev Stack, run the following command:
+Run the following command to start the Galore Dev Stack installation:
 ```
 choco install poseidon-galore-dev-stack
 ```
@@ -13,7 +13,7 @@ https://chocolatey.org/docs/commands-reference#default-options-and-switches
 
 ### Additional Installation Steps
 
-There is a dependency on **docker-for-windows** package. If in case, this is not previously installed, chocolatey will install it and during the installation a system reboot is required. At this point of time, you see the following message in the console window:
+There is a dependency on **docker-for-windows** package. If this is not previously installed, chocolatey will install it and during the installation a system reboot is required. At this point of time, the following message is displayed in the console window:
  
  ![](.%20Images/MicrosoftTeams-image.png)
  
