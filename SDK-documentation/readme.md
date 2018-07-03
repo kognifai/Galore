@@ -1,3 +1,4 @@
+
 ## Dev Stack SDK [![Gitter Join the chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/kognifai/Lobby)
 
 Welcome to Galore SDK documentation!
@@ -39,6 +40,7 @@ Running TQL queries, CRUD operations on Nodes and other pipeline operations.
 - [Stack Endpoint Values](Stack%20Endpoint%20Values.md)
 - [Troubleshooting](Troubleshooting.md)
 - [Uninstallation](Uninstallation.md)
+- [PoseidonNext Developers Getting Started page](https://github.com/kognifai/PoseidonNext-Framework#developers-getting-started-page)
 
 ## License
 Read the copyright information and terms and conditions for Usage and Development of the software [here](https://github.com/kognifai/Kognifai/blob/master/License.md#copyright--year-kongsberg-digital-as).
