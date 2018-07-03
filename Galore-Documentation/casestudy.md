@@ -99,7 +99,7 @@ The asset model is sometimes referred as logical model or semantic model.
 
 Our turbine asset model could look something like this:
 
-![AssetModel](.%20Images/TurbineAssetModel.png) 
+![AssetModel](.%20Images/TurbineAssetModel.png.PNG) 
 
                             Turbine Asset Model
                       
