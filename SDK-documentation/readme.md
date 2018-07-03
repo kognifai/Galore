@@ -9,7 +9,7 @@ In this section, you will learn how to install, upgrade, troubleshoot Galore Dev
 
 ## Overview
 
-The following diagram depicts a basic idea of the dev Stack SDK. The following are the modules of Dev Stack SDK:
+The following diagram depicts a basic idea of the dev Stack SDK.
 
 ![](.%20Images/Dev%20stack%20SDK%20overview.png)
 
