@@ -13,7 +13,7 @@ The following links provide more information and quick tips on how to:
  [Manually enable Docker for Windows prerequisites](https://success.docker.com/article/manually-enable-docker-for-windows-prerequisites)
 
 ### 3. npm JFrog source ###
-Some of the npm packages in the Stack are currently  available only in the private **KDI JFrog** repository. This is expected to change.
+Some of the npm packages in the Stack are currently  available only in the private **KDI JFrog** repository which may be available as a public npm repository (npmjs.org) in the future.
 The node package manager needs to be configured with Jfrog as a source. Follow the instructions from [npm source jfrog](https://kognifai.visualstudio.com/Kognifai%20Core/_wiki/wikis/PoseidonNext.wiki?wikiVersion=GBwikiMaster&pagePath=%2FPoseidon%20developers%2FDeveloper%20guides%2FJFrog%3A%20Configure%20NPM%20to%20use%20KDI%20JFrog) to set this up.
 
 
