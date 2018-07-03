@@ -5,7 +5,7 @@ Run the following command to start the Galore Dev Stack installation:
 ```
 choco install poseidon-galore-dev-stack
 ```
-You can also pass options and switches for customizing the installation. For example, passing the ‘y’ switch (choco install poseidon-galore-dev-stack -y) confirms all the prompts during installation.
+You can also pass options and switches to customize the installation. For example, passing the ‘y’ switch (choco install poseidon-galore-dev-stack -y) confirms all the prompts during installation.
 
 Refer the following link for a complete list of default options and switches:
 
@@ -17,18 +17,19 @@ There is a dependency on **docker-for-windows** package. If this is not previous
  
  ![](.%20Images/MicrosoftTeams-image.png)
  
-You can now safely close the console and restart Windows. After restart, run the following command to continue the installation of core services:
+You can now safely close the console and restart Windows. After restart, run the following command to continue the core services installation:
 ```
 choco install galorecoreservices
 ```
-After the Docker installation, the following three system resources are updated for which you need to restart your system.
 
-1.	Windows Registry - Docker uses the Windows registry to track the installed software location for its internal use.
+Following are the three system resources which get updated as a result of the Docker installation. You must restart your system after the Docker installation.
+
+1.	Windows Registry - Docker uses the Windows registry to track the location of the installed software. THis is for its internal use.
 2.	User groups - Docker needs access to windows file system for storing data files. Docker creates a user group for that purpose and adds a current user to it. Docker internally uses this user group for various user related information.
 3.	Environment variable - It is used for other tools (e.g. cmd.exe and powershell.exe) to find path of the Docker related executables. 
 
 ### Post-Installation
-Galore core service is installed as a windows service and it starts automatically. 
+Galore core service is installed as a windows service and it automatically starts after installation. 
 
 To start a Galore API 
 - Open a new command prompt and type “galoreapi” command and press **Enter**. 
