@@ -6,4 +6,4 @@ choco upgrade poseidon-galore-dev-stack
 ```
 ## Next Step
 
-Know more about [Stack Endpoint Values](Stack%20Endpoint%20Values.md) in the next step.
+Find [Stack Endpoint Values](Stack%20Endpoint%20Values.md) for the Galore installation.
