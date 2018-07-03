@@ -4,7 +4,7 @@ Welcome to Galore SDK documentation!
 
 In this section, you will learn how to install, upgrade, troubleshoot Galore Dev Stack. You can also know  more about  Stack Endpoint values.
 
-- [dev stack Overview](#Overview)
+- [Dev Stack Overview](#Overview)
 
 
 ## Overview
@@ -13,7 +13,7 @@ The following diagram depicts a basic idea of the dev-Stack-SDK.
 
 ![](.%20Images/Dev%20stack%20SDK%20overview.png)
 
-We use the chocolatey windows package manager (https://chocolatey.org/) to distribute the Meta package. The Meta package takes care of installing and configuring various components of the [PoseidonNext](https://github.com/kognifai/PoseidonNext-Framework) and [Galore](https://github.com/kognifai/Galore).  The following are the Meta package composition:
+We use the chocolatey windows package manager (https://chocolatey.org/) to distribute the meta package. The meta package takes care of installing and configuring various components of the [PoseidonNext](https://github.com/kognifai/PoseidonNext-Framework) and [Galore](https://github.com/kognifai/Galore).  The following are the meta package composition:
 
 Kognifai global node modules
 -	poseidon-dev-host
