@@ -21,7 +21,7 @@ Kognifai global node modules
 -	poseidon-dev-host - A command line utility that provides hosting, API, and identity provider services for developers. For more information on PoseidonNext Developers Getting Started page, refer the [PoseidonNext Developers Getting Started page](https://github.com/kognifai/PoseidonNext-Framework/blob/master/Developers-Getting-Started.md).
 
 -	generator-poseidon -  Yeoman generator for scaffolding Poseidon Next applications or Data Adapters.  For more information on PoseidonNext Developers Getting Started page, refer the [PoseidonNext Developers Getting Started page](https://github.com/kognifai/PoseidonNext-Framework/blob/master/Developers-Getting-Started.md).
--	Poseidon-app-registration-cli - A command line utility which helps you with the registration of the applications and data adapters. For more information on Application and data adapter registration tool, refer the [Application and data adapter registration tool](https://github.com/kognifai/PoseidonNext-Framework/blob/master/PoseidonNext-documentation/Guides/CLI-tool-for-registering-apps-and-data-adapters.md).
+-	Poseidon-app-registration-cli - A command line utility that helps you with the registration of the applications and data adapters. For more information on Application and data adapter registration tool, refer the [Application and data adapter registration tool](https://github.com/kognifai/PoseidonNext-Framework/blob/master/PoseidonNext-documentation/Guides/CLI-tool-for-registering-apps-and-data-adapters.md).
 
 Kognifai local node modules (installed in ```<INSTALL DIR>```/kognifai/SDK/PoseidonNext)
 - poseidon-home - Home page for the sample applications.
