@@ -9,7 +9,7 @@ The Galore documentation is organized into three sections for you to choose  you
  ### SDK documentation
 SDK documentation provides information on how to install, upgrade, troubleshoot the Galore Dev Stack(Chocolatey meta package) as well as provides information on Stack Endpoint values.
  
-[dev stack SDK](SDK-documentation/readme.md )
+[Dev stack SDK](SDK-documentation/readme.md )
 
 ### Code Samples
 WCF sample codes are availble in the following link for you to download and reuse them as per your requirements.
