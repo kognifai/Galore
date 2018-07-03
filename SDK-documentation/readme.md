@@ -31,9 +31,6 @@ Chocolatey Packages
 - galoreapi
 - galorecoreservices
 
-## Next Step
-
-Find [Prerequisites](Prerequisites.md) for the Galore installation.
 
 ## See Also
 - [Dev stack Installation](Installation.md)
@@ -44,3 +41,7 @@ Find [Prerequisites](Prerequisites.md) for the Galore installation.
 
 ## License
 Read the copyright information and terms and conditions for Usage and Development of the software [here](https://github.com/kognifai/Kognifai/blob/master/License.md#copyright--year-kongsberg-digital-as).
+
+## Next Step
+
+Find [Prerequisites](Prerequisites.md) for the Galore installation.
