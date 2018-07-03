@@ -45,4 +45,4 @@ If you have KDI Integration AD, enter your email address in the ```<USERNAME>```
 
 ## Next Step
 
-Once you are ready for the dev stack installation, refer [Installation](Installation.md) procedures.
+Find [Installation](Installation.md) for the Galore installation.
