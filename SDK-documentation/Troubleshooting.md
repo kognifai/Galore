@@ -10,4 +10,4 @@ Please ensure to stop these hostings before running the uninstallation or upgrad
 For this, please run npm upgrade separately (to upgrade local modules, you have to run this command in C:\Program Files\kognifai\SDK\PoseidonNext folder).
 
 ## Next Step
-If you are sure to uninstall the Chocolatey package and to know more about how to uninstall, please see [Uninstallation](Uninstallation.md)
+Find [Uninstallation](Uninstallation.md) to uninstall Galore.
