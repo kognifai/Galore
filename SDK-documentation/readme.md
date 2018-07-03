@@ -10,10 +10,6 @@ In this section, you will learn how to install, upgrade, troubleshoot Galore Dev
 ## Overview
 
 The following diagram depicts a basic idea of the dev Stack SDK. The following are the modules of Dev Stack SDK:
- - Kognifai global node modules- This contains a list of packages which you can install globally and they are not directory specific.
- - Kognifai local node modules- This contains a list of packages which you can install locally and they are directory specific.
- - Chocolatey Packages- This contains galore packages which you can install from KDI Jfrog.
-
 
 ![](.%20Images/Dev%20stack%20SDK%20overview.png)
 
