@@ -16,7 +16,6 @@ The following links provide more information and quick tips on how to:
 Some of the npm packages in the Stack are currently  available only in the private **KDI JFrog** repository which may be available as a public npm repository (npmjs.org) in the future.
 The node package manager needs to be configured with KDI Jfrog as a source. Follow the instructions from [npm source jfrog](https://kognifai.visualstudio.com/Kognifai%20Core/_wiki/wikis/PoseidonNext.wiki?wikiVersion=GBwikiMaster&pagePath=%2FPoseidon%20developers%2FDeveloper%20guides%2FJFrog%3A%20Configure%20NPM%20to%20use%20KDI%20JFrog) to set this up.
 
-
 ### 4. KDI JFrog chocolatey repository ###
 The chocolatey packages are available in the private **KDI JFrog** repository. 
 For chocolatey to properly discover and install these packages, we must add this repository as one of the sources for chocolatey. 
