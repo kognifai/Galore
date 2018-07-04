@@ -5,6 +5,17 @@ Run the following command to upgrade the Dev Stack package:
 ```
 choco upgrade poseidon-galore-dev-stack
 ```
+## See Also
+ 
+- [Dev stack Installation](Installation.md)
+- [Prerequisites](Prerequisites.md)
+- [Stack Endpoint Values](Stack%20Endpoint%20Values.md)
+- [Troubleshooting](Troubleshooting.md)
+- [Uninstallation](Uninstallation.md)
+ 
+ 
+
+
 ## Next Step
 
 Find [Stack Endpoint Values](Stack%20Endpoint%20Values.md) for the Galore installation.
