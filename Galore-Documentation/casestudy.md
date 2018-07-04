@@ -46,7 +46,7 @@ into our system. They are:
 -   Actual prices
 
 In order to get all these data connected to our Galore system, we
-use a suitable Kongsberg Edge solution \<insert reference\>. Here we 
+use a suitable [Kongsberg Edge solution](https://github.com/kognifai/IoT/blob/master/SDK%20Documentation/Working%20with%20Connector%20SDK.md). Here we 
 setup the **Connectors** to gather all the data from the various data
 producing systems. The Edge solution automatically sets up an asset
 model in Galore that might look something like this:
