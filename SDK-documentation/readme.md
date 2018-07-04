@@ -2,9 +2,9 @@
 
 ## Dev Stack SDK [![Gitter Join the chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/kognifai/Lobby)
 
-Welcome to Galore SDK documentation!
+Welcome to Galore Dev Stack SDK documentation!
 
-In this section, you will learn how to install, upgrade, troubleshoot Galore Dev Stack. You can also know  more about  Stack Endpoint values.
+In this section, you will learn how to install, upgrade, and troubleshoot Galore Dev Stack. You can also know  more about  Stack Endpoint values.
 
 - [Dev Stack Overview](#Overview)
 
