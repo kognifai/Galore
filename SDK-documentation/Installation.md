@@ -1,5 +1,5 @@
 
-## Dev stack Installation    [![Gitter Join the chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/kognifai/Lobby)
+## Dev Stack Installation    [![Gitter Join the chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/kognifai/Lobby)
 
 Run the following command to start the Galore Dev Stack installation:
 ```
@@ -24,9 +24,9 @@ choco install galorecoreservices
 
 Following are the three system resources which get updated as a result of the Docker installation. You must restart your system after the Docker installation.
 
-1.	Windows Registry - Docker uses the Windows registry to track the location of the installed software. This is for its internal use.
-2.	User groups - Docker needs access to windows file system for storing data files. Docker creates a user group for that purpose and adds a current user to it. Docker internally uses this user group for various user related information.
-3.	Environment variable - It is used for other tools (e.g. cmd.exe and powershell.exe) to find path of the Docker related executables. 
+1.	**Windows Registry**- Docker uses the Windows registry to track the location of the installed software. This is for its internal use.
+2.	**User groups**- Docker needs access to Windows file system for storing data files. Docker creates a user group for that purpose and adds a current user to it. Docker internally uses this user group for various user related information.
+3.	**Environment variable**- This is used for other tools (e.g. cmd.exe and powershell.exe) to find path of the Docker related executables. 
 
 ### Post-Installation
 Galore core service is installed as a windows service and it automatically starts after installation. 
