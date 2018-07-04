@@ -43,6 +43,19 @@ If you have KDI Integration AD, enter your email address in the ```<USERNAME>```
 
 ![](.%20Images/2018-06-22%2017_19_05-kdi.png)
 
+## See Also
+ 
+- [Dev stack Installation](Installation.md)
+
+- [Upgrading Dev Stack SDK](Upgrading%20Dev%20stack.md)
+
+- [Stack Endpoint Values](Stack%20Endpoint%20Values.md)
+
+- [Troubleshooting](Troubleshooting.md)
+
+- [Uninstallation](Uninstallation.md)
+ 
+
 ## Next Step
 
 Find [Installation](Installation.md) for the Galore installation.
