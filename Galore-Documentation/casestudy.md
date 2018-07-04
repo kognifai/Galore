@@ -174,7 +174,7 @@ model.
 
 See [TQL documentation](TQL%20Syntax.md) for more details.
 
-1.  Production forecast
+### 1.  Production forecast ###
 
 Wind turbines have a defined relationship between wind speed and power output which are called the power curve. We can add the power curve to Galore asset model, either as an attribute or as a sample set stream, the latter has an advantage of keeping a history of power curves which is useful if the turbine is modified over the lifetime, in a way, it changes the power curve. In these cases, the power curve must be entered manually using the Galore config tool.
 
@@ -200,7 +200,7 @@ from each individual turbine. The input of the query uses a path
 with wildcards to select all the individual forecast streams and sums
 them to a farm level forecast stream.
 
-2.  High bearing temperature warning
+### 2.  High bearing temperature warning ###
 
 Now, we add a calculator and event node to the bearing node in the asset
 model
