@@ -20,4 +20,4 @@ Find [Stack Endpoint Values](Stack%20Endpoint%20Values.md) for the Galore instal
 
 ## Previous Step
 
-Find [Dev Stack Installation] step for more information on Dev Stack Installation.
+Find [Dev stack Installation](Installation.md) step for more information on Dev Stack Installation.
