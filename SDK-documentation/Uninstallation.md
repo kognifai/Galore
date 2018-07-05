@@ -8,6 +8,6 @@ choco uninstall poseidon-galore-dev-stack
 
 
 
-Previous Step
+## Previous Step
 
 Find  [Troubleshooting](Troubleshooting.md) to read more on Troubleshooting.
