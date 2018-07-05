@@ -13,9 +13,11 @@ choco upgrade poseidon-galore-dev-stack
 - [Troubleshooting](Troubleshooting.md)
 - [Uninstallation](Uninstallation.md)
  
- 
-
 
 ## Next Step
 
 Find [Stack Endpoint Values](Stack%20Endpoint%20Values.md) for the Galore installation.
+
+## Previous Step
+
+Find [Dev Stack Installation] step for more information on Dev Stack Installation.
