@@ -17,7 +17,8 @@ For this, please run npm upgrade separately (to upgrade local modules, you have 
 - [Stack Endpoint Values](Stack%20Endpoint%20Values.md)
 - [Uninstallation](Uninstallation.md)
  
- 
-
 ## Next Step
 Find [Uninstallation](Uninstallation.md) to uninstall Galore.
+
+## Previous Step
+Find [Stack Endpoint Values](Stack%20Endpoint%20Values.md) step for information on Stack Endpoint Values.
