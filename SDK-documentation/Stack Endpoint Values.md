@@ -22,3 +22,6 @@ Couchbase administrator password | password
 
 ## Next Step
 Find [Troubleshooting](Troubleshooting.md) for the Galore installation.
+
+## Previous Step
+Find [Upgrading Dev Stack SDK](Upgrading%20Dev%20stack.md) step for more information on Upgrading.
