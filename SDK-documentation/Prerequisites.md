@@ -45,7 +45,7 @@ If you have KDI Integration AD, enter your email address in the ```<USERNAME>```
 
 ## See Also
  
-- [Dev stack Installation](Installation.md)
+- [Dev Stack Installation](Installation.md)
 
 - [Upgrading Dev Stack SDK](Upgrading%20Dev%20stack.md)
 
@@ -59,3 +59,7 @@ If you have KDI Integration AD, enter your email address in the ```<USERNAME>```
 ## Next Step
 
 Find [Installation](Installation.md) for the Galore installation.
+
+## Previous Step
+
+Find [Dev Stack Installation](Installation.md) for more information on Prerequisites.
