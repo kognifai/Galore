@@ -81,3 +81,7 @@ ApiUrl|	Galore API URL|	http://localhost:5050
 ## Next Step
 
 Find [Upgrading](Upgrading%20Dev%20stack.md) for the Galore installation.
+
+## Previous Step
+
+Find [Prerequisites](Prerequisites.md) for more information on Prerequisites.
