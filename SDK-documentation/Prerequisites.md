@@ -62,4 +62,4 @@ Find [Installation](Installation.md) for the Galore installation.
 
 ## Previous Step
 
-Find [Dev Stack Installation](Installation.md) for more information on Prerequisites.
+Find [Dev Stack Installation](Installation.md) for more information on Dev Stack SDK.
