@@ -1,4 +1,9 @@
 
+## Prerequisites
+
+Refer [Prerequisites](Prerequisites.md) to know more about how to install the Chocolatey package, and how to set the  KDI Jfrog as one of the npm source before you begin the Dev Stack installation.
+
+
 ## Dev Stack Installation    [![Gitter Join the chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/kognifai/Lobby)
 
 Run the following command to start the Galore Dev Stack installation:
