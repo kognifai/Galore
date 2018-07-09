@@ -28,7 +28,7 @@ Kognifai local node modules (installed in ```<INSTALL DIR>```/kognifai/SDK/Posei
 - poseidon-user-profile - This displays the user profile information which can be updated.
 - poseidon-user-administration - This is a user management application for the identity provider. 
 - poseidon-test-pages - These are the sample pages which showcase different services and integrations in PoseidonNext.
-- galore-configtool - This is an angular application which plays a key role in this eco-system and allows users to view and configure various assets for which data needs to be stored and retrieved. 
+- galore-configtool - This is an angular application which plays a key role in this ecosystem and allows users to view and configure various assets for which data needs to be stored and retrieved. 
 
 Chocolatey Packages
 - galoreapi - This package installs a REST API which provides programmatic access to read and write operations of Galore. These includes access to various components such as asset model, streams, Running TQL queries, CRUD operations on Nodes and other pipeline operations.
