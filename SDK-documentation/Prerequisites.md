@@ -1,7 +1,7 @@
 ## Prerequisites [![Gitter Join the chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/kognifai/Lobby)
 
 Following are the prerequisites of Galore Dev Stack Installation:
-### 1. Chocolatey Package ###
+### 1. Install the Chocolatey Package ###
 Install Chocolatey package from its official website https://chocolatey.org/install
 
 ### 2. Enable Virtualization in the BIOS
@@ -21,9 +21,9 @@ The following links provide more information and quick tips on how to:
 Some of the npm packages in the Stack are currently  available only in the private **KDI JFrog** repository which may be available as a public npm repository (npmjs.org) in the near future.
 The node package manager needs to be configured with KDI Jfrog as a source, follow the instructions from [npm source jfrog](https://kognifai.visualstudio.com/Kognifai%20Core/_wiki/wikis/PoseidonNext.wiki?wikiVersion=GBwikiMaster&pagePath=%2FPoseidon%20developers%2FDeveloper%20guides%2FJFrog%3A%20Configure%20NPM%20to%20use%20KDI%20JFrog) to set this up.
 
-### 5. KDI JFrog chocolatey repository ###
+### 5. Set KDI JFrog repository as one of the soruce for Chocolatey package ###
 The chocolatey packages are available in the private **KDI JFrog** repository. 
-For chocolatey to properly discover and install these packages, we must add this repository as one of the sources for chocolatey. 
+For chocolatey to properly discover and install these packages, we must add this repository as one of the sources for chocolatey package. 
 
 To accomplish this, run the following command in command prompt/Powershell under elevated privileges (Run as an administrator).
 ```
