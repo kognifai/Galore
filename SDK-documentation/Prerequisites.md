@@ -4,7 +4,7 @@ Following are the prerequisites of Galore Dev Stack Installation:
 ### 1. Install the Chocolatey Package ###
 Install Chocolatey package from its official website https://chocolatey.org/install
 
-### 2. Enable Virtualization in the BIOS
+### 2. Enable Virtualization in the BIOS ###
 
 Virutalization must be enabled in the BIOS before installing Hyper-V on Windows.
 
