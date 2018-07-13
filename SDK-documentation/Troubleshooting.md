@@ -35,13 +35,15 @@ If your Docker is running and still issues persist with Galore Dev Stack SDK the
  -	 Kognifai Galore LogRelay Services
     
   
-### 3)	Uninstallation of a Galore package fails, when Galore API or PoseidonNext hosting is in progress and you want to uninstall the Galore package. 
-Please ensure to stop these hostings before running the uninstallation or upgrade command.
+### 3)	Uninstallation of a Galore package fails
+When Galore API or PoseidonNext hosting is in progress and you want to uninstall the Galore package. Please ensure to stop these hostings before running the uninstallation or upgrade command.
 
-### 4)	PoseidonNext uses a dedicated 8080 port. Please ensure that no other application uses this port.
+### 4)	Poseidon Next uses a dedicated 8080 port. 
+
+When Poseidon Next uses a dedicated 8080 port, ensure that no other application uses this port.
 
 ### 5)	Under exceptional conditions, you may want to upgrade PoseidonNext packages and not the entire stack.
-For this, please run npm upgrade separately (to upgrade local modules, you have to run this command in C:\Program Files\kognifai\SDK\PoseidonNext folder).
+For this, run npm upgrade separately (to upgrade local modules, you have to run this command in C:\Program Files\kognifai\SDK\PoseidonNext folder).
 
 ## See Also
  
