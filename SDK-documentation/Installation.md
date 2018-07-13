@@ -75,7 +75,7 @@ ApiUrl|	Galore API URL|	http://localhost:5050
 
 1.	Always **login as an administrator user** to perform write operations such as creating asset nodes, events and so on.
 
-2. For more information on "Resolving problems with the SDK", see [Troubleshooting](Troubleshooting.md) and refer first and second issues.
+2. For more information on "Resolving problems with the SDK", see [Troubleshooting](Troubleshooting.md) specifically Known issue 1 and 2.
 
 
 ## See Also
