@@ -42,7 +42,7 @@ When Galore API or PoseidonNext hosting is in progress and you want to uninstall
 
 When Poseidon Next uses a dedicated 8080 port, ensure that no other application uses this port.
 
-### 5)	Under exceptional conditions, you may want to upgrade PoseidonNext packages and not the entire stack.
+### 5)	Under exceptional conditions, you may want to upgrade Poseidon Next packages and not the entire stack.
 For this, run npm upgrade separately (to upgrade local modules, you have to run this command in C:\Program Files\kognifai\SDK\PoseidonNext folder).
 
 ## See Also
