@@ -33,7 +33,7 @@ Following are the three system resources which get updated as a result of the Do
 2.	**User groups**- Docker needs access to Windows file system for storing data files. Docker creates a user group for that purpose and adds a current user to it. Docker internally uses this user group for various user related information.
 3.	**Environment variable**- This is used for other tools (e.g. cmd.exe and powershell.exe) to find path of the Docker related executables. 
 
-### Post-Installation
+### Post-installation
 Galore core service is installed as a windows service and it automatically starts after installation. 
 
 To start a Galore API 
@@ -68,6 +68,15 @@ If these parameters are not passed, the default values are set. The complete lis
 |-------------------------|---------------|--------
 Authority|	URL of the Platform authentication server that issues tokens|	http://localhost:8080/Security/auth
 ApiUrl|	Galore API URL|	http://localhost:5050
+
+
+
+## Key points you should consider after Galore Dev Stack installation
+
+1.	Always **login as an administrator user** to perform write operations such as creating asset nodes, events and so on.
+
+2. For more information on "Resolving problems with the SDK", see [Troubleshooting](Troubleshooting.md)
+
 
 ## See Also
  
