@@ -15,7 +15,7 @@ After Galore Dev stack installation, if you encounter issues with Docker then do
    The Docker starts every time when you start or restart your computer.
 
 ### 2) When SDK doesn't work but the Docker is running with no issues
-If your Docker is running and still issues persist with Galore Dev Stack SDK, do the following steps:
+If your Docker is running and still issues persist with Galore Dev Stack SDK then do the following steps:
    -	Start Docker container
    -	Start or restart Galore services
 
