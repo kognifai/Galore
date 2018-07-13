@@ -29,9 +29,9 @@ If your Docker is running and still issues persist with Galore Dev Stack SDK, do
   
  2. Right-click on  the following services to start or restart the **Galore services** manually from Services Manager.
    
-  - 	Kognifai Galore Config Services 
-  -	 Kognifai Galore Core Services
-  -	 Kognifai Galore LogRelay Services
+ - 	Kognifai Galore Config Services 
+ -	 Kognifai Galore Core Services
+ -	 Kognifai Galore LogRelay Services
     
   
 ### 3)	Uninstallation of a Galore package fails, when Galore API or PoseidonNext hosting is in progress and you want to uninstall the Galore package. 
