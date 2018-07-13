@@ -73,7 +73,7 @@ ApiUrl|	Galore API URL|	http://localhost:5050
 
 ## Key points you should consider after Galore Dev Stack installation
 
-1.	Always **login as an administrator user** to perform write operations such as creating asset nodes, events and so on.
+1.	Always **login as an administrator user** to perform write operations (e.g. creating asset nodes, events and etc).
 
 2. For more information on "Resolving problems with the SDK", see [Troubleshooting](Troubleshooting.md) specifically Known issue 1 and 2.
 
