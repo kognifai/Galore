@@ -4,13 +4,13 @@
 
 After Galore Dev stack installation, if you encounter issues with Docker then do the following steps to run Docker automatically every time when you login:
 
-   To start Docker automatically when you log in:
+ To start Docker automatically when you log in:
    
-   1.	Right-click on the Docker and select **Settings**.
-    
+  1.	Right-click on the Docker and select **Settings**.
+  
    The Docker Settings page is displayed.
   
-   2.	From the Docker Settings page, Under **General**, select the **Start Docker when you log in** check box.
+  2.	From the Docker Settings page, Under **General**, select the **Start Docker when you log in** check box.
    
    The Docker starts every time when you start or restart your computer.
 
@@ -27,15 +27,13 @@ If your Docker is running and still issues persist with Galore Dev Stack SDK, do
       docker start db500
    ```
   
- 2.	Start or restart the **Galore services** manually from Services Manager.
+ 2. Right-click on  the following services to start or restart the **Galore services** manually from Services Manager.
    
-   a)	Right-click on these services manually and select start or restart:
-   - 	Kognifai Galore Config Services 
-   -	 Kognifai Galore Core Services
-   -	 Kognifai Galore LogRelay Services
+  - 	Kognifai Galore Config Services 
+  -	 Kognifai Galore Core Services
+  -	 Kognifai Galore LogRelay Services
     
   
-
 ### 3)	Uninstallation of a Galore package fails, when Galore API or PoseidonNext hosting is in progress and you want to uninstall the Galore package. 
 Please ensure to stop these hostings before running the uninstallation or upgrade command.
 
