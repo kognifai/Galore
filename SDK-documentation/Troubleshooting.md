@@ -9,6 +9,7 @@ After Galore Dev stack installation, if you encounter issues with Docker then do
   1.	Right-click on the Docker and select **Settings**.
   
    The Docker Settings page is displayed.
+  ![](.%20Images/Docker.jpg)
   
   2.	From the Docker Settings page, Under **General**, select the **Start Docker when you log in** check box.
    
