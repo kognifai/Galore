@@ -2,16 +2,16 @@
 
 ### 1) If Docker doesn't work
 
-After Galore Dev stack installation, if you encounter issues with Docker then do the following steps to run Docker automatically every time when you login:
+After Galore Dev stack installation, if you encounter issues with Docker then do the following steps to automatically start Docker every time when you login:
 
- To start Docker automatically when you log in:
+ To automatically start Docker when you log in:
    
   1.	Right-click on the Docker and select **Settings**.
   
    The Docker Settings page is displayed.
   ![](.%20Images/Docker.jpg)
   
-  2.	From the Docker Settings page, Under **General**, select the **Start Docker when you log in** check box.
+  2.	From the Docker Settings page, under **General**, select the **Start Docker when you log in** check box.
    
    The Docker starts every time when you start or restart your computer.
 
