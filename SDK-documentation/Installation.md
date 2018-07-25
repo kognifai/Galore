@@ -18,9 +18,13 @@ https://chocolatey.org/docs/commands-reference#default-options-and-switches
 
 ### Additional Installation Steps
 
-There is a dependency on **docker-for-windows** package. If this is not previously installed, chocolatey will install it and you must restart your system after the installation. At this point of time, the following message is displayed in the console window:
+There is a dependency on **docker-for-windows** package. If this is not previously installed, chocolatey will install it and you must restart your system after the installation. At this point of time, the following message is displayed in the console window.
  
  ![](.%20Images/MicrosoftTeams-image.png)
+ 
+ > Note: If you encounter any Docker error after restarting your system, see [If Docker Doesn't Work](Troubleshooting.md) to resolve it.
+
+> If the Dev Stack SDK doesn't work, see [When SDK doesn't work but the Docker is running with no issues](Troubleshooting.md) to resolve it.
  
 You can now safely close the console and restart Windows. After restart, run the following command to continue the core services installation:
 ```
