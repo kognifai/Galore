@@ -45,6 +45,7 @@ namespace Kognifai.Galore.Sample
 
                     command.Attributes.Add("nodeType", nodeType);
                     command.ContextSelector = currentcontext;
+                    command.User = "admin";
 
                     await _configService.ExecuteAsync(new List<Command>() { command }); //This call will create an asset node in Galore.
 
